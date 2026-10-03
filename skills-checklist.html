@@ -3,305 +3,998 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Skills Checklist | Korus Talent</title>
-<meta name="description" content="Complete your Korus Talent professional skills checklist.">
+
+<title>Professional Skills Checklist | Korus Talent</title>
+
+<meta name="description"
+content="Complete your Korus Talent professional skills checklist for healthcare staffing opportunities.">
+
 <style>
 :root{
-  --navy:#10233f;
-  --blue:#1f5eff;
-  --blue2:#eaf0ff;
-  --text:#182235;
+  --navy:#0b1f3a;
+  --navy2:#102d52;
+  --blue:#245cff;
+  --blue2:#5b7cff;
+  --light-blue:#eef3ff;
+  --bg:#f5f8fc;
+  --white:#ffffff;
+  --text:#172033;
   --muted:#667085;
-  --border:#d9e0ea;
-  --bg:#f5f7fb;
-  --white:#fff;
-  --success:#16834b;
-  --shadow:0 12px 35px rgba(16,35,63,.08);
+  --border:#dfe5ee;
+  --green:#12a05c;
+  --red:#d92d20;
+  --shadow:0 18px 50px rgba(15,35,65,.08);
+  --shadow2:0 8px 25px rgba(15,35,65,.06);
 }
-*{box-sizing:border-box}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
 body{
   margin:0;
-  font-family:Inter,Arial,Helvetica,sans-serif;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
   color:var(--text);
   background:var(--bg);
   line-height:1.55;
 }
-a{text-decoration:none;color:inherit}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+/* ================= HEADER ================= */
+
 .header{
-  background:#fff;
-  border-bottom:1px solid #e8edf3;
   position:sticky;
   top:0;
-  z-index:20;
+  z-index:100;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(223,229,238,.9);
 }
+
 .header-inner{
-  max-width:1180px;
+  max-width:1200px;
+  min-height:76px;
   margin:auto;
-  min-height:74px;
+  padding:0 24px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:0 22px;
 }
+
 .logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
   font-size:24px;
-  font-weight:800;
+  font-weight:850;
+  letter-spacing:-.7px;
   color:var(--navy);
-  letter-spacing:-.5px;
 }
-.logo span{color:var(--blue)}
-.back{
+
+.logo-mark{
+  width:38px;
+  height:38px;
+  border-radius:12px;
+  display:grid;
+  place-items:center;
+  color:white;
+  font-size:18px;
+  font-weight:900;
+  background:linear-gradient(135deg,var(--blue),#7b8cff);
+  box-shadow:0 8px 20px rgba(36,92,255,.22);
+}
+
+.logo span{
   color:var(--blue);
-  font-weight:700;
-  font-size:14px;
 }
+
+.back-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 16px;
+  border:1px solid var(--border);
+  border-radius:10px;
+  background:#fff;
+  color:var(--navy);
+  font-size:14px;
+  font-weight:750;
+  transition:.2s ease;
+}
+
+.back-btn:hover{
+  border-color:#b9c7e8;
+  transform:translateY(-1px);
+  box-shadow:var(--shadow2);
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 10% 20%,rgba(91,124,255,.16),transparent 28%),
+    radial-gradient(circle at 90% 10%,rgba(36,92,255,.13),transparent 30%),
+    linear-gradient(135deg,#071b34 0%,#102d52 55%,#183d6b 100%);
+  color:white;
+}
+
+.hero-inner{
+  max-width:1200px;
+  margin:auto;
+  padding:72px 24px 76px;
+  position:relative;
+  z-index:2;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:60px;
+  align-items:center;
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:7px 12px;
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:999px;
+  background:rgba(255,255,255,.08);
+  color:#dce6ff;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.5px;
+  text-transform:uppercase;
+}
+
+.eyebrow-dot{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:#7da0ff;
+  box-shadow:0 0 0 5px rgba(125,160,255,.12);
+}
+
+.hero h1{
+  margin:20px 0 14px;
+  font-size:clamp(36px,5vw,58px);
+  line-height:1.05;
+  letter-spacing:-2px;
+}
+
+.hero h1 span{
+  color:#8da8ff;
+}
+
+.hero p{
+  max-width:680px;
+  margin:0;
+  color:#c8d5e8;
+  font-size:17px;
+}
+
+.hero-note{
+  margin-top:25px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.hero-pill{
+  padding:8px 12px;
+  border-radius:8px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.13);
+  font-size:12px;
+  color:#e1e9f7;
+}
+
+/* Hero visual */
+
+.hero-visual{
+  position:relative;
+  min-height:300px;
+}
+
+.visual-card{
+  position:absolute;
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.15);
+  backdrop-filter:blur(12px);
+  border-radius:20px;
+  padding:22px;
+  box-shadow:0 20px 60px rgba(0,0,0,.18);
+}
+
+.visual-main{
+  width:82%;
+  right:0;
+  top:15px;
+}
+
+.visual-small{
+  width:55%;
+  left:0;
+  bottom:0;
+}
+
+.visual-title{
+  color:#fff;
+  font-weight:800;
+  margin-bottom:14px;
+}
+
+.visual-line{
+  height:9px;
+  background:rgba(255,255,255,.13);
+  border-radius:99px;
+  margin:9px 0;
+}
+
+.visual-line.w1{width:88%}
+.visual-line.w2{width:65%}
+.visual-line.w3{width:76%}
+
+.visual-rating{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:7px;
+  margin-top:15px;
+}
+
+.visual-rating span{
+  padding:8px 4px;
+  text-align:center;
+  border-radius:7px;
+  background:rgba(255,255,255,.1);
+  font-size:11px;
+}
+
+/* ================= PAGE ================= */
+
 .container{
-  max-width:1050px;
-  margin:0 auto;
+  max-width:1100px;
+  margin:auto;
   padding:42px 20px 70px;
 }
-.hero{
-  text-align:center;
-  margin-bottom:30px;
-}
-.hero h1{
-  margin:0 0 8px;
-  font-size:36px;
-  color:var(--navy);
-}
-.hero p{
-  margin:0 auto;
-  max-width:720px;
-  color:var(--muted);
-}
-.card{
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:16px;
-  box-shadow:var(--shadow);
-  padding:28px;
+
+.progress-wrap{
+  position:sticky;
+  top:76px;
+  z-index:50;
   margin-bottom:22px;
 }
-.card h2{
-  margin:0 0 5px;
-  font-size:21px;
+
+.progress-card{
+  background:rgba(255,255,255,.95);
+  backdrop-filter:blur(10px);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:13px 16px;
+  box-shadow:var(--shadow2);
+}
+
+.progress-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:15px;
+  margin-bottom:8px;
+}
+
+.progress-label{
+  font-size:13px;
+  font-weight:800;
   color:var(--navy);
 }
+
+.progress-count{
+  font-size:12px;
+  color:var(--muted);
+}
+
+.progress-bar{
+  height:7px;
+  border-radius:99px;
+  background:#edf1f6;
+  overflow:hidden;
+}
+
+.progress-fill{
+  width:0%;
+  height:100%;
+  border-radius:99px;
+  background:linear-gradient(90deg,var(--blue),#7892ff);
+  transition:.25s ease;
+}
+
+/* ================= CARDS ================= */
+
+.card{
+  background:var(--white);
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:30px;
+  margin-bottom:22px;
+  box-shadow:var(--shadow);
+}
+
+.card-header{
+  display:flex;
+  align-items:flex-start;
+  gap:14px;
+  margin-bottom:22px;
+}
+
+.card-icon{
+  flex:0 0 42px;
+  height:42px;
+  display:grid;
+  place-items:center;
+  border-radius:12px;
+  background:var(--light-blue);
+  color:var(--blue);
+  font-weight:900;
+}
+
+.card h2{
+  margin:0;
+  color:var(--navy);
+  font-size:21px;
+  letter-spacing:-.3px;
+}
+
 .card .sub{
-  margin:0 0 20px;
+  margin:4px 0 0;
   color:var(--muted);
   font-size:14px;
 }
+
+/* ================= FORM ================= */
+
 .grid{
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:17px;
+  gap:19px;
 }
+
 .field label{
   display:block;
-  font-size:13px;
-  font-weight:700;
   margin-bottom:7px;
-}
-input,select,textarea{
-  width:100%;
-  border:1px solid #cfd7e3;
-  border-radius:9px;
-  padding:12px 13px;
-  font:inherit;
-  color:var(--text);
-  background:#fff;
-  outline:none;
-}
-input:focus,select:focus,textarea:focus{
-  border-color:var(--blue);
-  box-shadow:0 0 0 3px rgba(31,94,255,.10);
-}
-.required{color:#d92d20}
-.notice{
-  background:var(--blue2);
-  border:1px solid #cfdbff;
-  border-radius:11px;
-  padding:13px 15px;
-  color:#28416e;
-  font-size:14px;
-  margin-top:18px;
-}
-#checklistArea{display:none}
-.section{
-  border:1px solid var(--border);
-  border-radius:12px;
-  overflow:hidden;
-  margin-top:18px;
-}
-.section-title{
-  background:#f8faff;
-  border-bottom:1px solid var(--border);
-  padding:14px 17px;
+  color:#27344a;
+  font-size:13px;
   font-weight:800;
+}
+
+.required{
+  color:var(--red);
+}
+
+input,
+select,
+textarea{
+  width:100%;
+  border:1px solid #cfd7e4;
+  border-radius:11px;
+  padding:12px 14px;
+  background:#fff;
+  color:var(--text);
+  font:inherit;
+  outline:none;
+  transition:.18s ease;
+}
+
+input:hover,
+select:hover,
+textarea:hover{
+  border-color:#aebbd0;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+  border-color:var(--blue);
+  box-shadow:0 0 0 4px rgba(36,92,255,.09);
+}
+
+.notice{
+  margin-top:22px;
+  padding:16px 18px;
+  border-radius:12px;
+  border:1px solid #d6e0ff;
+  background:linear-gradient(135deg,#f1f5ff,#f8faff);
+  color:#30466f;
+  font-size:13px;
+}
+
+.notice strong{
   color:var(--navy);
 }
+
+/* ================= CHECKLIST ================= */
+
+#checklistArea{
+  display:none;
+}
+
+.checklist-intro{
+  margin-bottom:20px;
+  padding:18px 20px;
+  border-radius:15px;
+  background:linear-gradient(135deg,#0b1f3a,#173d6c);
+  color:#fff;
+}
+
+.checklist-intro h2{
+  margin:0 0 4px;
+  font-size:21px;
+}
+
+.checklist-intro p{
+  margin:0;
+  color:#c9d6e8;
+  font-size:13px;
+}
+
+.section{
+  margin-top:20px;
+  border:1px solid var(--border);
+  border-radius:15px;
+  overflow:hidden;
+  background:#fff;
+}
+
+.section-title{
+  padding:16px 18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+  background:linear-gradient(135deg,#f7f9ff,#eef3ff);
+  border-bottom:1px solid var(--border);
+  color:var(--navy);
+  font-weight:850;
+}
+
+.section-number{
+  min-width:28px;
+  height:28px;
+  display:inline-grid;
+  place-items:center;
+  border-radius:8px;
+  background:#dce6ff;
+  color:var(--blue);
+  font-size:12px;
+}
+
+.section-heading{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
 .skill-row{
   display:grid;
-  grid-template-columns:minmax(0,1fr) 235px;
-  gap:18px;
+  grid-template-columns:minmax(0,1fr) 290px;
+  gap:20px;
   align-items:center;
-  padding:13px 17px;
+  padding:15px 18px;
   border-bottom:1px solid #edf0f4;
+  transition:.15s ease;
 }
-.skill-row:last-child{border-bottom:0}
-.skill-name{font-size:14px}
-.skill-note{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+
+.skill-row:last-child{
+  border-bottom:0;
+}
+
+.skill-row:hover{
+  background:#fbfcff;
+}
+
+.skill-name{
+  font-size:14px;
+  font-weight:650;
+}
+
+.skill-note{
+  display:block;
+  margin-top:2px;
+  color:var(--muted);
+  font-size:11px;
+}
+
 .rating{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:6px;
 }
+
 .rating label{
-  position:relative;
   margin:0;
+  position:relative;
 }
+
 .rating input{
   position:absolute;
   opacity:0;
   pointer-events:none;
 }
+
 .rating span{
   display:block;
+  padding:9px 3px;
   text-align:center;
-  padding:7px 4px;
-  border:1px solid #d3dae5;
-  border-radius:7px;
-  font-size:12px;
-  font-weight:700;
-  cursor:pointer;
+  border:1px solid #d4dbe7;
+  border-radius:8px;
   background:#fff;
+  color:#475467;
+  font-size:11px;
+  font-weight:800;
+  cursor:pointer;
+  transition:.15s ease;
 }
+
+.rating span:hover{
+  border-color:#9db0e4;
+  background:#f6f8ff;
+}
+
 .rating input:checked + span{
-  background:var(--blue);
   color:#fff;
+  background:var(--blue);
   border-color:var(--blue);
+  box-shadow:0 5px 14px rgba(36,92,255,.2);
 }
+
 .rating-legend{
   display:flex;
   flex-wrap:wrap;
-  gap:9px 18px;
-  color:var(--muted);
-  font-size:12px;
-  margin:15px 0 2px;
-}
-.attestation{
-  background:#fafbfc;
-  border:1px solid var(--border);
-  padding:16px;
+  gap:8px 18px;
+  margin-top:16px;
+  padding:12px 15px;
   border-radius:10px;
-  margin-top:20px;
+  background:#f8fafc;
+  color:var(--muted);
+  font-size:11px;
 }
+
+.rating-legend b{
+  color:var(--navy);
+}
+
+/* ================= ATTESTATION ================= */
+
+.attestation{
+  padding:18px;
+  border:1px solid var(--border);
+  border-radius:13px;
+  background:#fafbfd;
+}
+
 .checkbox{
   display:flex;
-  gap:10px;
   align-items:flex-start;
-  font-size:14px;
+  gap:11px;
+  font-size:13px;
 }
-.checkbox input{width:auto;margin-top:4px}
+
+.checkbox input{
+  width:auto;
+  margin-top:4px;
+  accent-color:var(--blue);
+}
+
 .actions{
   display:flex;
-  gap:12px;
   justify-content:flex-end;
+  gap:10px;
   margin-top:22px;
 }
+
 button{
   border:0;
-  border-radius:9px;
-  padding:12px 22px;
+  border-radius:11px;
+  padding:13px 21px;
   font:inherit;
   font-weight:800;
   cursor:pointer;
+  transition:.18s ease;
 }
-.btn-primary{background:var(--blue);color:#fff}
-.btn-secondary{background:#eef2f7;color:var(--navy)}
+
+.btn-primary{
+  color:#fff;
+  background:linear-gradient(135deg,var(--blue),#4e73ff);
+  box-shadow:0 8px 18px rgba(36,92,255,.2);
+}
+
+.btn-primary:hover{
+  transform:translateY(-1px);
+  box-shadow:0 11px 23px rgba(36,92,255,.25);
+}
+
+.btn-secondary{
+  color:var(--navy);
+  background:#eef2f7;
+}
+
+.btn-secondary:hover{
+  background:#e4e9f1;
+}
+
 .success{
   display:none;
+  margin-top:18px;
+  padding:15px;
+  border-radius:11px;
   background:#ecfdf3;
   border:1px solid #b7ebcb;
   color:#12643a;
-  border-radius:10px;
-  padding:14px;
-  margin-top:18px;
+  font-size:13px;
 }
+
+/* ================= FOOTER ================= */
+
 .footer{
+  padding:35px 20px;
   text-align:center;
-  padding:30px 20px;
+  border-top:1px solid var(--border);
+  background:#fff;
   color:var(--muted);
   font-size:13px;
 }
-.small{
-  font-size:12px;
-  color:var(--muted);
+
+.footer a{
+  color:var(--blue);
+  font-weight:700;
 }
-@media(max-width:700px){
-  .hero h1{font-size:29px}
-  .card{padding:20px}
-  .grid{grid-template-columns:1fr}
-  .skill-row{grid-template-columns:1fr}
-  .rating{max-width:360px}
-  .actions{flex-direction:column}
-  button{width:100%}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:800px){
+
+  .hero-grid{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .hero-visual{
+    display:none;
+  }
+
+  .hero-inner{
+    padding:55px 20px;
+  }
+
+  .hero h1{
+    letter-spacing:-1.3px;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .card{
+    padding:21px;
+    border-radius:16px;
+  }
+
+  .skill-row{
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+
+  .rating{
+    max-width:100%;
+  }
+
+  .progress-wrap{
+    top:76px;
+  }
+}
+
+@media(max-width:560px){
+
+  .header-inner{
+    padding:0 15px;
+  }
+
+  .logo{
+    font-size:20px;
+  }
+
+  .logo-mark{
+    width:33px;
+    height:33px;
+  }
+
+  .back-btn{
+    padding:8px 10px;
+    font-size:12px;
+  }
+
+  .hero-inner{
+    padding:45px 18px;
+  }
+
+  .hero h1{
+    font-size:36px;
+  }
+
+  .hero p{
+    font-size:15px;
+  }
+
+  .container{
+    padding:25px 12px 50px;
+  }
+
+  .card{
+    padding:17px;
+  }
+
+  .section-title{
+    padding:14px;
+  }
+
+  .skill-row{
+    padding:14px;
+  }
+
+  .actions{
+    flex-direction:column;
+  }
+
+  button{
+    width:100%;
+  }
+
+  .rating span{
+    font-size:10px;
+    padding:9px 2px;
+  }
 }
 </style>
 </head>
 
 <body>
+
+<!-- ================= HEADER ================= -->
+
 <header class="header">
   <div class="header-inner">
-    <a href="index.html" class="logo">Korus <span>Talent</span></a>
-    <a href="index.html" class="back">← Back to Website</a>
+
+    <a href="index.html" class="logo">
+      <span class="logo-mark">K</span>
+      Korus <span>Talent</span>
+    </a>
+
+    <a href="index.html" class="back-btn">
+      ← Back to Website
+    </a>
+
   </div>
 </header>
 
-<main class="container">
-  <div class="hero">
-    <h1>Professional Skills Checklist</h1>
-    <p>
-      Please select your position or specialty below. The appropriate skills checklist
-      will appear based on your selected profession.
-    </p>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+  <div class="hero-inner">
+
+    <div class="hero-grid">
+
+      <div>
+
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          Korus Talent · Healthcare Staffing
+        </div>
+
+        <h1>
+          Professional<br>
+          <span>Skills Checklist</span>
+        </h1>
+
+        <p>
+          Tell us about your clinical skills and professional experience.
+          Select your specialty and complete the checklist below so our
+          recruitment team can better understand your experience.
+        </p>
+
+        <div class="hero-note">
+          <span class="hero-pill">✓ Specialty-Based Checklist</span>
+          <span class="hero-pill">✓ 1–4 Experience Rating</span>
+          <span class="hero-pill">✓ Secure Submission</span>
+        </div>
+
+      </div>
+
+      <div class="hero-visual">
+
+        <div class="visual-card visual-main">
+
+          <div class="visual-title">
+            Clinical Skills Assessment
+          </div>
+
+          <div class="visual-line w1"></div>
+          <div class="visual-line w2"></div>
+          <div class="visual-line w3"></div>
+
+          <div class="visual-rating">
+            <span>No Experience</span>
+            <span>Limited</span>
+            <span>Experienced</span>
+            <span>Highly Experienced</span>
+          </div>
+
+        </div>
+
+        <div class="visual-card visual-small">
+
+          <div class="visual-title">
+            Korus Talent
+          </div>
+
+          <div class="visual-line w2"></div>
+          <div class="visual-line w3"></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
 
-  <form id="skillsForm"
-        action="https://formsubmit.co/info@korustalent.com"
-        method="POST">
+</section>
 
-    <input type="hidden" name="_subject" value="Korus Talent - Skills Checklist Submission">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_next" value="https://korustalent.com/skills-checklist.html?submitted=1">
 
-    <div class="card">
-      <h2>Candidate Information</h2>
-      <p class="sub">Please provide your basic information before completing the checklist.</p>
+<!-- ================= MAIN ================= -->
+
+<main class="container">
+
+  <div class="progress-wrap">
+
+    <div class="progress-card">
+
+      <div class="progress-top">
+        <span class="progress-label">Checklist Progress</span>
+        <span class="progress-count" id="progressText">0% Complete</span>
+      </div>
+
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <form
+    id="skillsForm"
+    action="https://formsubmit.co/info@korustalent.com"
+    method="POST"
+  >
+
+    <!-- FormSubmit settings -->
+
+    <input
+      type="hidden"
+      name="_subject"
+      value="Korus Talent - Skills Checklist Submission"
+    >
+
+    <input
+      type="hidden"
+      name="_captcha"
+      value="false"
+    >
+
+    <input
+      type="hidden"
+      name="_template"
+      value="table"
+    >
+
+    <input
+      type="hidden"
+      name="_next"
+      value="https://korustalent.com/skills-checklist.html?submitted=1"
+    >
+
+
+    <!-- ================= CANDIDATE INFORMATION ================= -->
+
+    <section class="card">
+
+      <div class="card-header">
+
+        <div class="card-icon">01</div>
+
+        <div>
+          <h2>Candidate Information</h2>
+          <p class="sub">
+            Please provide your basic information before completing the checklist.
+          </p>
+        </div>
+
+      </div>
+
 
       <div class="grid">
-        <div class="field">
-          <label>Full Name <span class="required">*</span></label>
-          <input type="text" name="Full Name" required>
-        </div>
 
         <div class="field">
-          <label>Email Address <span class="required">*</span></label>
-          <input type="email" name="Email" required>
+          <label>
+            Full Name <span class="required">*</span>
+          </label>
+
+          <input
+            type="text"
+            name="Full Name"
+            placeholder="Enter your full name"
+            required
+          >
         </div>
 
-        <div class="field">
-          <label>Phone Number <span class="required">*</span></label>
-          <input type="tel" name="Phone" required>
-        </div>
 
         <div class="field">
-          <label>Position / Specialty <span class="required">*</span></label>
-          <select id="position" name="Position / Specialty" required>
+          <label>
+            Email Address <span class="required">*</span>
+          </label>
+
+          <input
+            type="email"
+            name="Email"
+            placeholder="name@example.com"
+            required
+          >
+        </div>
+
+
+        <div class="field">
+          <label>
+            Phone Number <span class="required">*</span>
+          </label>
+
+          <input
+            type="tel"
+            name="Phone"
+            placeholder="Enter phone number"
+            required
+          >
+        </div>
+
+
+        <div class="field">
+
+          <label>
+            Position / Specialty <span class="required">*</span>
+          </label>
+
+          <select
+            id="position"
+            name="Position / Specialty"
+            required
+          >
+
             <option value="">Select your position</option>
+
             <optgroup label="Nursing">
+
               <option value="RN - Med Surg">RN - Med Surg</option>
               <option value="RN - Telemetry">RN - Telemetry</option>
               <option value="RN - PCU / Stepdown">RN - PCU / Stepdown</option>
@@ -320,34 +1013,96 @@ button{
               <option value="RN - Utilization Review">RN - Utilization Review</option>
               <option value="LPN / LVN">LPN / LVN</option>
               <option value="CNA">CNA</option>
+
             </optgroup>
 
+
             <optgroup label="Allied Health">
-              <option value="Sterile Processing Technician">Sterile Processing Technician</option>
-              <option value="Radiologic Technologist">Radiologic Technologist</option>
-              <option value="CT Technologist">CT Technologist</option>
-              <option value="MRI Technologist">MRI Technologist</option>
-              <option value="Nuclear Medicine Technologist">Nuclear Medicine Technologist</option>
-              <option value="Ultrasound / Sonographer">Ultrasound / Sonographer</option>
-              <option value="Respiratory Therapist">Respiratory Therapist</option>
-              <option value="Physical Therapist">Physical Therapist</option>
-              <option value="Physical Therapist Assistant">Physical Therapist Assistant</option>
-              <option value="Occupational Therapist">Occupational Therapist</option>
-              <option value="Occupational Therapist Assistant">Occupational Therapist Assistant</option>
-              <option value="Speech Language Pathologist">Speech Language Pathologist</option>
-              <option value="Pharmacy Technician">Pharmacy Technician</option>
-              <option value="Medical Laboratory Technician">Medical Laboratory Technician</option>
-              <option value="Medical Laboratory Scientist">Medical Laboratory Scientist</option>
-              <option value="Other Allied Health">Other Allied Health</option>
+
+              <option value="Sterile Processing Technician">
+                Sterile Processing Technician
+              </option>
+
+              <option value="Radiologic Technologist">
+                Radiologic Technologist
+              </option>
+
+              <option value="CT Technologist">
+                CT Technologist
+              </option>
+
+              <option value="MRI Technologist">
+                MRI Technologist
+              </option>
+
+              <option value="Nuclear Medicine Technologist">
+                Nuclear Medicine Technologist
+              </option>
+
+              <option value="Ultrasound / Sonographer">
+                Ultrasound / Sonographer
+              </option>
+
+              <option value="Respiratory Therapist">
+                Respiratory Therapist
+              </option>
+
+              <option value="Physical Therapist">
+                Physical Therapist
+              </option>
+
+              <option value="Physical Therapist Assistant">
+                Physical Therapist Assistant
+              </option>
+
+              <option value="Occupational Therapist">
+                Occupational Therapist
+              </option>
+
+              <option value="Occupational Therapist Assistant">
+                Occupational Therapist Assistant
+              </option>
+
+              <option value="Speech Language Pathologist">
+                Speech Language Pathologist
+              </option>
+
+              <option value="Pharmacy Technician">
+                Pharmacy Technician
+              </option>
+
+              <option value="Medical Laboratory Technician">
+                Medical Laboratory Technician
+              </option>
+
+              <option value="Medical Laboratory Scientist">
+                Medical Laboratory Scientist
+              </option>
+
+              <option value="Other Allied Health">
+                Other Allied Health
+              </option>
+
             </optgroup>
 
             <option value="Other">Other</option>
+
           </select>
+
         </div>
 
+
         <div class="field">
-          <label>Years of Experience <span class="required">*</span></label>
-          <select name="Years of Experience" required>
+
+          <label>
+            Years of Experience <span class="required">*</span>
+          </label>
+
+          <select
+            name="Years of Experience"
+            required
+          >
+
             <option value="">Select</option>
             <option>Less than 1 year</option>
             <option>1-2 years</option>
@@ -355,80 +1110,212 @@ button{
             <option>6-10 years</option>
             <option>11-15 years</option>
             <option>16+ years</option>
+
           </select>
+
         </div>
+
 
         <div class="field">
-          <label>Current / Most Recent Facility</label>
-          <input type="text" name="Current / Most Recent Facility">
+
+          <label>
+            Current / Most Recent Facility
+          </label>
+
+          <input
+            type="text"
+            name="Current / Most Recent Facility"
+            placeholder="Hospital / Facility name"
+          >
+
         </div>
+
       </div>
 
+
       <div class="notice">
-        <strong>Rating scale:</strong> 1 = No Experience &nbsp;|&nbsp;
-        2 = Limited Experience &nbsp;|&nbsp;
-        3 = Experienced / Can Perform &nbsp;|&nbsp;
+
+        <strong>Rating Scale:</strong>
+
+        1 = No Experience &nbsp; | &nbsp;
+        2 = Limited Experience &nbsp; | &nbsp;
+        3 = Experienced / Can Perform &nbsp; | &nbsp;
         4 = Highly Experienced / Can Teach or Supervise
+
       </div>
-    </div>
+
+    </section>
+
+
+    <!-- ================= DYNAMIC CHECKLIST ================= -->
 
     <div id="checklistArea"></div>
 
-    <div class="card" id="finalCard" style="display:none;">
-      <h2>Candidate Attestation</h2>
-      <p class="sub">Please review your answers before submitting.</p>
+
+    <!-- ================= FINAL ================= -->
+
+    <section
+      class="card"
+      id="finalCard"
+      style="display:none;"
+    >
+
+      <div class="card-header">
+
+        <div class="card-icon">03</div>
+
+        <div>
+
+          <h2>Candidate Attestation</h2>
+
+          <p class="sub">
+            Please review your answers before submitting.
+          </p>
+
+        </div>
+
+      </div>
+
 
       <div class="attestation">
+
         <label class="checkbox">
-          <input type="checkbox" name="Candidate Attestation" value="I certify that the information provided is accurate." required>
+
+          <input
+            type="checkbox"
+            name="Candidate Attestation"
+            value="I certify that the information provided is accurate."
+            required
+          >
+
           <span>
-            I certify that the information provided in this skills checklist is accurate
-            and reflects my professional experience to the best of my knowledge.
+
+            I certify that the information provided in this skills
+            checklist is accurate and reflects my professional
+            experience to the best of my knowledge.
+
             <span class="required">*</span>
+
           </span>
+
         </label>
+
       </div>
 
-      <div class="grid" style="margin-top:18px;">
+
+      <div
+        class="grid"
+        style="margin-top:20px;"
+      >
+
         <div class="field">
-          <label>Additional Comments</label>
-          <textarea name="Additional Comments" rows="4" placeholder="Optional"></textarea>
+
+          <label>
+            Additional Comments
+          </label>
+
+          <textarea
+            name="Additional Comments"
+            rows="4"
+            placeholder="Optional"
+          ></textarea>
+
         </div>
+
+
         <div class="field">
-          <label>Date <span class="required">*</span></label>
-          <input type="date" id="dateField" name="Submission Date" required>
+
+          <label>
+            Date <span class="required">*</span>
+          </label>
+
+          <input
+            type="date"
+            id="dateField"
+            name="Submission Date"
+            required
+          >
+
         </div>
+
       </div>
+
 
       <div class="actions">
-        <button type="reset" class="btn-secondary" id="resetBtn">Reset</button>
-        <button type="submit" class="btn-primary">Submit Skills Checklist</button>
+
+        <button
+          type="reset"
+          class="btn-secondary"
+          id="resetBtn"
+        >
+          Reset
+        </button>
+
+        <button
+          type="submit"
+          class="btn-primary"
+        >
+          Submit Skills Checklist
+        </button>
+
       </div>
 
-      <div class="success" id="successMessage">
-        Your checklist has been submitted. Thank you.
+
+      <div
+        class="success"
+        id="successMessage"
+      >
+        Your checklist has been submitted successfully.
+        Thank you for completing the Korus Talent skills checklist.
       </div>
-    </div>
+
+    </section>
+
   </form>
+
 </main>
 
+
+<!-- ================= FOOTER ================= -->
+
 <footer class="footer">
-  © 2026 Korus Talent. All rights reserved. · <a href="mailto:info@korustalent.com">info@korustalent.com</a>
+
+  © 2026 Korus Talent. All rights reserved.
+
+  ·
+
+  <a href="mailto:info@korustalent.com">
+    info@korustalent.com
+  </a>
+
 </footer>
 
+
 <script>
+
+/* =========================================================
+   CHECKLIST DATA
+   ========================================================= */
+
 const checklistData = {
+
   "RN - Med Surg": {
+
     sections: {
+
       "Patient Care & Assessment": [
+
         "Head-to-toe assessment",
         "Vital signs and pain assessment",
         "Neurological assessment",
         "Fall risk assessment and prevention",
         "Admission and discharge assessment",
         "Patient education"
+
       ],
+
       "Medication & IV Therapy": [
+
         "Medication administration",
         "IV medication administration",
         "IV push medications",
@@ -436,8 +1323,11 @@ const checklistData = {
         "Peripheral IV insertion",
         "Central line care",
         "Blood product administration"
+
       ],
+
       "Clinical Skills": [
+
         "Wound care and dressing changes",
         "Urinary catheter care",
         "NG/feeding tube care",
@@ -445,877 +1335,1549 @@ const checklistData = {
         "Specimen collection",
         "Diabetic care and insulin administration",
         "PICC/port care"
+
       ],
+
       "Monitoring & Documentation": [
+
         "Telemetry/basic rhythm recognition",
         "Electronic documentation",
         "Care plan documentation",
         "Patient safety and infection prevention",
         "Rapid response participation"
+
       ]
+
     }
+
   },
 
+
   "RN - Telemetry": {
+
     sections: {
+
       "Cardiac Monitoring": [
+
         "Telemetry monitoring",
         "Basic rhythm interpretation",
         "12-lead ECG recognition",
         "Recognition of dysrhythmias",
         "Chest pain assessment",
         "Cardiac medication monitoring"
+
       ],
+
       "Medication & IV Therapy": [
+
         "IV medication administration",
         "IV push medications",
         "Peripheral IV insertion",
         "Central line care",
         "Anticoagulant administration",
         "Medication titration"
+
       ],
+
       "Clinical Care": [
+
         "Head-to-toe assessment",
         "Oxygen therapy",
         "Blood product administration",
         "Wound care",
         "Fall prevention",
         "Patient education"
+
       ]
+
     }
+
   },
 
+
   "RN - PCU / Stepdown": {
+
     sections: {
+
       "Assessment & Monitoring": [
+
         "Advanced patient assessment",
         "Continuous cardiac monitoring",
         "Telemetry rhythm interpretation",
         "Hemodynamic monitoring",
         "Recognition of patient deterioration",
         "Rapid response participation"
+
       ],
+
       "IV / Medication Management": [
+
         "IV push medications",
         "Central line management",
         "PICC care",
         "Medication titration",
         "High-alert medications",
         "Blood product administration"
+
       ],
+
       "Clinical Skills": [
+
         "Oxygen delivery devices",
         "Non-invasive ventilation",
         "Wound care",
         "NG/feeding tube care",
         "Urinary catheter management",
         "Sepsis assessment and intervention"
+
       ]
+
     }
+
   },
 
+
   "RN - ICU": {
+
     sections: {
+
       "Critical Care Assessment": [
+
         "Comprehensive critical care assessment",
         "Hemodynamic monitoring",
         "Recognition of acute deterioration",
         "Sepsis management",
         "Shock assessment and management",
         "Neurological assessment"
+
       ],
+
       "Lines / Monitoring": [
+
         "Arterial line management",
         "Central venous catheter management",
         "PICC management",
         "CVP monitoring",
         "Blood product administration",
         "Specimen collection"
+
       ],
+
       "Critical Care Equipment & Therapies": [
+
         "Mechanical ventilation monitoring",
         "Non-invasive ventilation",
         "CRRT exposure/management",
         "Infusion pump management",
         "Medication titration",
         "Emergency response"
+
       ],
+
       "Medication & Safety": [
+
         "Vasopressor titration",
         "Sedation/analgesia management",
         "Anticoagulation therapy",
         "High-alert medications",
         "Code/emergency response",
         "Infection prevention"
+
       ]
+
     }
+
   },
 
+
   "RN - OR": {
+
     sections: {
+
       "Operating Room Roles": [
+
         "Circulating nurse responsibilities",
         "Scrub nurse responsibilities",
         "Pre-operative assessment",
         "Post-operative handoff",
         "Surgical count process",
         "Specimen handling"
+
       ],
+
       "Sterile Technique": [
+
         "Sterile field maintenance",
         "Surgical aseptic technique",
         "Surgical hand preparation",
         "PPE and infection prevention",
         "Instrument handling",
         "Room turnover"
+
       ],
+
       "Surgical Procedures": [
+
         "General surgery",
         "Orthopedic surgery",
         "Gynecologic surgery",
         "Urologic surgery",
         "Vascular surgery",
         "ENT surgery"
+
       ]
+
     }
+
   },
 
+
   "RN - PACU": {
+
     sections: {
+
       "Post-Anesthesia Assessment": [
+
         "Airway assessment",
         "Respiratory assessment",
         "Cardiovascular monitoring",
         "Neurological assessment",
         "Pain assessment",
         "Post-anesthesia recovery assessment"
+
       ],
+
       "Clinical Management": [
+
         "Oxygen therapy",
         "Medication administration",
         "IV therapy",
         "Post-operative bleeding assessment",
         "Nausea/vomiting management",
         "Emergency response"
+
       ]
+
     }
+
   },
 
+
   "RN - ER / Emergency": {
+
     sections: {
+
       "Emergency Assessment": [
+
         "Triage assessment",
         "Rapid patient assessment",
         "Emergency stabilization",
         "Trauma assessment",
         "Sepsis recognition",
         "Stroke assessment"
+
       ],
+
       "Emergency Procedures": [
+
         "IV insertion",
         "Blood draws",
         "12-lead ECG",
         "Medication administration",
         "Wound care",
         "Emergency airway support"
+
       ],
+
       "Critical Events": [
+
         "Code Blue response",
         "Rapid response",
         "Chest pain management",
         "Stroke protocol",
         "Trauma response",
         "Mass casualty/emergency preparedness"
+
       ]
+
     }
+
   },
 
+
   "RN - NICU": {
+
     sections: {
+
       "Neonatal Assessment": [
+
         "Neonatal physical assessment",
         "Vital signs monitoring",
         "Thermoregulation",
         "Feeding assessment",
         "Growth monitoring",
         "Developmental care"
+
       ],
+
       "Neonatal Clinical Skills": [
+
         "IV therapy",
         "Umbilical line care",
         "Central line care",
         "Phototherapy",
         "Neonatal medication administration",
         "Respiratory support"
+
       ]
+
     }
+
   },
 
+
   "RN - PICU": {
+
     sections: {
+
       "Pediatric Critical Care": [
+
         "Pediatric assessment",
         "Pediatric medication administration",
         "Pediatric pain assessment",
         "Hemodynamic monitoring",
         "Respiratory monitoring",
         "Family-centered care"
+
       ],
+
       "Critical Care Skills": [
+
         "Central line care",
         "Arterial line care",
         "Ventilator monitoring",
         "Medication titration",
         "Emergency response",
         "Sepsis management"
+
       ]
+
     }
+
   },
 
+
   "RN - Labor & Delivery": {
+
     sections: {
+
       "Maternal Assessment": [
+
         "Maternal assessment",
         "Fetal monitoring",
         "Contraction monitoring",
         "Labor assessment",
         "Pain management",
         "Postpartum assessment"
+
       ],
+
       "Delivery & Emergency Skills": [
+
         "Vaginal delivery support",
         "Cesarean section support",
         "Newborn stabilization",
         "Postpartum hemorrhage response",
         "Hypertensive emergency management",
         "Fetal distress response"
+
       ]
+
     }
+
   },
+
 
   "RN - Mother Baby": {
+
     sections: {
-      "Postpartum Care": [
+
+      "Maternal Care": [
+
         "Postpartum assessment",
-        "Maternal vital signs",
         "Fundal assessment",
-        "Postpartum hemorrhage assessment",
-        "Pain management",
-        "Discharge education"
+        "Lochia assessment",
+        "Breastfeeding support",
+        "Maternal education",
+        "Pain management"
+
       ],
+
       "Newborn Care": [
+
         "Newborn assessment",
+        "Newborn vital signs",
         "Newborn feeding support",
         "Newborn safety",
-        "Circumcision care",
-        "Parent education",
-        "Newborn screening support"
+        "Newborn screening",
+        "Parent education"
+
       ]
+
     }
+
   },
+
 
   "RN - Rehab": {
+
     sections: {
-      "Rehabilitation Nursing": [
-        "Functional assessment",
-        "Mobility assistance",
-        "Fall prevention",
-        "ADL support",
-        "Patient/family education",
-        "Discharge planning"
+
+      "Patient Assessment": [
+
+        "Head-to-toe assessment",
+        "Neurological assessment",
+        "Fall risk assessment",
+        "Pain assessment",
+        "Mobility assessment",
+        "Functional assessment"
+
       ],
-      "Clinical Skills": [
+
+      "Clinical Care": [
+
         "Medication administration",
         "Wound care",
+        "Oxygen therapy",
+        "Diabetic management",
         "Catheter care",
-        "Diabetes management",
-        "Pain management",
-        "Transfer techniques"
+        "Patient education"
+
       ]
+
     }
+
   },
+
 
   "RN - Oncology": {
+
     sections: {
+
       "Oncology Assessment": [
+
         "Oncology patient assessment",
-        "Symptom management",
         "Pain assessment",
+        "Chemotherapy side-effect assessment",
+        "Neutropenic precautions",
         "Infection prevention",
-        "Oncology emergency recognition",
         "Patient education"
+
       ],
-      "Treatment & Medication": [
-        "Chemotherapy administration",
+
+      "Clinical Skills": [
+
         "Central line care",
-        "Port access/care",
+        "Port access",
         "Blood product administration",
         "Medication administration",
-        "Extravasation recognition"
+        "Symptom management",
+        "Palliative/supportive care"
+
       ]
+
     }
+
   },
 
+
   "RN - Dialysis": {
+
     sections: {
+
       "Dialysis Care": [
+
         "Hemodialysis patient assessment",
-        "Dialysis machine setup/monitoring",
+        "Dialysis machine setup",
         "AV fistula assessment",
         "AV graft assessment",
         "Dialysis catheter care",
-        "Fluid management"
+        "Pre/post dialysis assessment"
+
       ],
-      "Complications & Safety": [
+
+      "Clinical Management": [
+
+        "Fluid management",
+        "Electrolyte monitoring",
         "Hypotension management",
-        "Dialysis reaction recognition",
+        "Medication administration",
         "Infection prevention",
-        "Medication management",
-        "Emergency response",
-        "Patient education"
+        "Emergency response"
+
       ]
+
     }
+
   },
 
+
   "RN - Case Manager": {
+
     sections: {
+
       "Case Management": [
-        "Patient assessment",
+
         "Care coordination",
         "Discharge planning",
         "Utilization review",
-        "Resource coordination",
-        "Readmission prevention"
+        "Patient resource coordination",
+        "Interdisciplinary collaboration",
+        "Patient education"
+
       ],
-      "Communication & Documentation": [
-        "Interdisciplinary communication",
-        "Patient/family education",
-        "Documentation",
-        "Insurance/authorization coordination",
-        "Community resource referral",
-        "Follow-up planning"
+
+      "Documentation & Communication": [
+
+        "Electronic medical record documentation",
+        "Insurance authorization",
+        "Clinical documentation review",
+        "Physician communication",
+        "Care plan development",
+        "Follow-up coordination"
+
       ]
+
     }
+
   },
+
 
   "RN - Utilization Review": {
+
     sections: {
+
       "Utilization Review": [
-        "Clinical record review",
+
+        "Clinical documentation review",
         "Medical necessity review",
-        "Level-of-care review",
+        "Level of care review",
         "Admission review",
         "Concurrent review",
-        "Denial/appeal support"
+        "Retrospective review"
+
       ],
-      "Documentation & Systems": [
-        "EHR review",
-        "Clinical criteria application",
-        "Authorization documentation",
-        "Interdisciplinary communication",
-        "Payer communication",
-        "Case documentation"
+
+      "Payer & Documentation Skills": [
+
+        "InterQual criteria",
+        "MCG criteria",
+        "Insurance authorization",
+        "Denial prevention",
+        "Clinical validation",
+        "Physician advisor communication"
+
       ]
+
     }
+
   },
+
 
   "LPN / LVN": {
+
     sections: {
+
       "Patient Care": [
-        "Vital signs",
-        "Patient assessment",
-        "Medication administration",
-        "Wound care",
-        "Diabetic care",
+
+        "Head-to-toe assessment",
+        "Vital signs monitoring",
+        "Pain assessment",
+        "Fall prevention",
+        "Patient hygiene",
         "Patient education"
+
       ],
-      "Clinical Procedures": [
-        "Peripheral IV care",
+
+      "Medication & Clinical Skills": [
+
+        "Medication administration",
+        "Subcutaneous injections",
+        "IM injections",
+        "Wound care",
         "Urinary catheter care",
-        "NG/feeding tube care",
-        "Specimen collection",
-        "Injections",
+        "Blood glucose monitoring",
+        "Insulin administration",
         "Oxygen therapy"
+
       ]
+
     }
+
   },
+
 
   "CNA": {
+
     sections: {
-      "Patient Care": [
+
+      "Basic Patient Care": [
+
         "Activities of daily living",
-        "Bathing and personal hygiene",
+        "Bathing and hygiene",
         "Feeding assistance",
-        "Toileting",
-        "Bed making",
-        "Patient positioning"
+        "Mobility assistance",
+        "Patient positioning",
+        "Vital signs"
+
       ],
-      "Safety & Clinical Support": [
-        "Vital signs",
-        "Patient transfers",
-        "Ambulation assistance",
+
+      "Safety & Documentation": [
+
         "Fall prevention",
         "Infection prevention",
-        "Patient observation/reporting"
+        "Patient safety",
+        "Intake and output",
+        "Patient observation",
+        "Documentation"
+
       ]
+
     }
+
   },
 
+
   "Sterile Processing Technician": {
+
     sections: {
-      "Decontamination": [
-        "Point-of-use instrument handling",
-        "Manual cleaning",
-        "Ultrasonic cleaning",
-        "Washer/disinfector operation",
-        "PPE and decontamination safety",
-        "Inspection after cleaning"
+
+      "Sterile Processing": [
+
+        "Decontamination",
+        "Instrument inspection",
+        "Instrument assembly",
+        "Sterilization",
+        "Packaging",
+        "Sterile storage"
+
       ],
-      "Sterilization": [
+
+      "Equipment & Quality": [
+
         "Steam sterilization",
         "Low-temperature sterilization",
         "Biological indicators",
         "Chemical indicators",
-        "Sterilizer loading",
-        "Sterilization documentation"
-      ],
-      "Instrument & Case Preparation": [
-        "Instrument identification",
-        "Instrument inspection",
-        "Instrument assembly",
-        "Surgical tray assembly",
-        "Case cart preparation",
-        "OR support"
+        "Surgical instrument identification",
+        "OR case cart preparation"
+
       ]
+
     }
+
   },
+
 
   "Radiologic Technologist": {
+
     sections: {
-      "Imaging Procedures": [
-        "Routine X-ray",
-        "Portable/mobile X-ray",
+
+      "Radiology Procedures": [
+
+        "General radiography",
+        "Portable radiography",
+        "Fluoroscopy assistance",
         "Trauma imaging",
-        "Fluoroscopy support",
-        "Orthopedic imaging",
-        "Patient positioning"
+        "Patient positioning",
+        "Contrast administration"
+
       ],
-      "Radiation Safety & Equipment": [
-        "Radiation protection",
-        "ALARA principles",
+
+      "Safety & Equipment": [
+
+        "Radiation safety",
+        "PPE and infection prevention",
         "Equipment operation",
         "Image quality evaluation",
-        "Contrast safety",
-        "PACS/RIS documentation"
+        "Patient identification",
+        "EMR/PACS documentation"
+
       ]
+
     }
+
   },
+
 
   "CT Technologist": {
+
     sections: {
+
       "CT Procedures": [
-        "Routine CT",
-        "CT head/brain",
+
+        "CT head",
         "CT chest",
         "CT abdomen/pelvis",
+        "CT trauma",
         "CT angiography",
-        "Trauma CT"
+        "Contrast administration"
+
       ],
-      "Contrast & Safety": [
-        "Contrast screening",
-        "Contrast administration",
-        "IV access",
-        "Contrast reaction recognition",
+
+      "Safety & Patient Care": [
+
         "Radiation safety",
-        "Patient positioning"
+        "Contrast reaction management",
+        "Patient screening",
+        "IV access",
+        "Image quality evaluation",
+        "PACS documentation"
+
       ]
+
     }
+
   },
+
 
   "MRI Technologist": {
+
     sections: {
+
       "MRI Procedures": [
-        "Routine MRI",
+
+        "MRI patient screening",
         "Brain MRI",
         "Spine MRI",
-        "Musculoskeletal MRI",
-        "Abdominal/pelvic MRI",
-        "MRA/MRV"
+        "Joint MRI",
+        "Abdominal MRI",
+        "Contrast-enhanced MRI"
+
       ],
+
       "MRI Safety": [
-        "MRI screening",
-        "Implant/device screening",
-        "MRI safety zones",
-        "Contrast screening",
-        "Contrast administration",
-        "Emergency response in MRI environment"
+
+        "MRI safety screening",
+        "Implant screening",
+        "Contrast safety",
+        "Patient monitoring",
+        "Emergency procedures",
+        "PACS documentation"
+
       ]
+
     }
+
   },
+
 
   "Nuclear Medicine Technologist": {
+
     sections: {
-      "Nuclear Medicine Procedures": [
-        "Nuclear medicine imaging",
-        "SPECT",
-        "SPECT/CT",
-        "PET/PET-CT",
+
+      "Nuclear Medicine": [
+
         "Radiopharmaceutical preparation",
-        "Patient preparation"
+        "Radiopharmaceutical administration",
+        "Patient preparation",
+        "Nuclear medicine imaging",
+        "SPECT procedures",
+        "PET procedures"
+
       ],
-      "Radiation Safety": [
+
+      "Safety & Quality": [
+
         "Radiation safety",
         "Radiopharmaceutical handling",
-        "Dose measurement",
-        "Radiation contamination control",
         "Quality control",
+        "Patient identification",
+        "Emergency procedures",
         "Documentation"
+
       ]
+
     }
+
   },
+
 
   "Ultrasound / Sonographer": {
+
     sections: {
+
       "Ultrasound Procedures": [
-        "General ultrasound",
+
         "Abdominal ultrasound",
         "Pelvic ultrasound",
-        "OB/GYN ultrasound",
+        "Obstetric ultrasound",
         "Vascular ultrasound",
-        "Small parts ultrasound"
+        "Small parts ultrasound",
+        "Patient positioning"
+
       ],
+
       "Technical Skills": [
-        "Patient positioning",
+
         "Image optimization",
         "Doppler techniques",
-        "Measurements and documentation",
-        "PACS documentation",
-        "Equipment operation"
+        "Measurements",
+        "Patient communication",
+        "Equipment operation",
+        "PACS documentation"
+
       ]
+
     }
+
   },
 
+
   "Respiratory Therapist": {
+
     sections: {
+
       "Respiratory Assessment": [
+
         "Respiratory assessment",
         "Oxygen therapy",
         "Pulse oximetry",
-        "ABG collection/interpretation",
-        "Respiratory treatments",
-        "Patient education"
+        "ABG interpretation",
+        "Airway assessment",
+        "Respiratory treatments"
+
       ],
-      "Airway & Ventilation": [
-        "Airway management",
+
+      "Critical Care": [
+
         "Mechanical ventilation",
         "Non-invasive ventilation",
-        "Ventilator setup",
-        "Ventilator monitoring",
-        "Airway suctioning"
+        "Ventilator troubleshooting",
+        "Airway suctioning",
+        "Emergency airway support",
+        "Code response"
+
       ]
+
     }
+
   },
+
 
   "Physical Therapist": {
+
     sections: {
-      "Assessment & Evaluation": [
-        "Patient evaluation",
-        "Functional mobility assessment",
+
+      "Patient Assessment": [
+
+        "Functional assessment",
+        "Mobility assessment",
         "Strength assessment",
-        "Range-of-motion assessment",
+        "Range of motion assessment",
         "Gait assessment",
-        "Treatment planning"
+        "Fall risk assessment"
+
       ],
-      "Treatment Skills": [
+
+      "Therapy Skills": [
+
         "Therapeutic exercise",
         "Gait training",
-        "Transfer training",
         "Balance training",
-        "Neuromuscular re-education",
+        "Transfer training",
+        "Assistive device training",
         "Patient education"
+
       ]
+
     }
+
   },
 
-  "Physical Therapist Assistant": {
-    sections: {
-      "Treatment Skills": [
-        "Therapeutic exercise",
-        "Gait training",
-        "Transfer training",
-        "Balance training",
-        "Mobility training",
-        "Patient education"
-      ],
-      "Clinical Support": [
-        "Treatment documentation",
-        "Vital signs monitoring",
-        "Safety/fall prevention",
-        "Assistive device training",
-        "Therapeutic activities",
-        "Patient communication"
-      ]
-    }
-  },
 
   "Occupational Therapist": {
+
     sections: {
-      "Assessment": [
+
+      "Patient Assessment": [
+
         "Functional assessment",
         "ADL assessment",
-        "Cognitive assessment",
         "Upper extremity assessment",
+        "Cognitive assessment",
         "Home safety assessment",
-        "Treatment planning"
+        "Patient goal setting"
+
       ],
-      "Treatment Skills": [
+
+      "Therapy Skills": [
+
         "ADL training",
-        "Therapeutic activities",
-        "Cognitive rehabilitation",
-        "Fine motor training",
         "Adaptive equipment training",
-        "Patient education"
+        "Fine motor activities",
+        "Patient education",
+        "Home exercise programs",
+        "Discharge planning"
+
       ]
+
     }
+
   },
 
-  "Occupational Therapist Assistant": {
-    sections: {
-      "Treatment Skills": [
-        "ADL training",
-        "Therapeutic activities",
-        "Fine motor activities",
-        "Cognitive activities",
-        "Adaptive equipment training",
-        "Patient education"
-      ],
-      "Documentation & Safety": [
-        "Treatment documentation",
-        "Patient safety",
-        "Fall prevention",
-        "Vital signs monitoring",
-        "Progress reporting",
-        "Interdisciplinary communication"
-      ]
-    }
-  },
 
   "Speech Language Pathologist": {
+
     sections: {
+
       "Assessment": [
+
         "Speech assessment",
         "Language assessment",
-        "Cognitive-communication assessment",
+        "Cognitive assessment",
         "Swallowing assessment",
-        "Voice assessment",
-        "Treatment planning"
+        "Communication assessment",
+        "Patient history"
+
       ],
-      "Treatment Skills": [
-        "Dysphagia treatment",
+
+      "Treatment": [
+
+        "Swallow therapy",
         "Speech therapy",
         "Language therapy",
-        "Cognitive-communication therapy",
-        "Patient/family education",
-        "Documentation"
+        "Cognitive therapy",
+        "Patient education",
+        "Caregiver education"
+
       ]
+
     }
+
   },
+
 
   "Pharmacy Technician": {
+
     sections: {
+
       "Pharmacy Operations": [
+
         "Medication preparation",
-        "Medication labeling",
-        "Medication inventory",
+        "Medication dispensing",
         "Prescription processing",
-        "Medication storage",
+        "Inventory management",
+        "Medication labeling",
         "Pharmacy documentation"
+
       ],
+
       "Safety & Compliance": [
+
         "Medication safety",
         "Controlled substance procedures",
-        "Sterile compounding exposure",
+        "Patient identification",
+        "Sterile compounding",
         "Non-sterile compounding",
-        "Barcode verification",
-        "Error reporting"
+        "Quality control"
+
       ]
+
     }
+
   },
 
+
   "Medical Laboratory Technician": {
+
     sections: {
-      "Laboratory Skills": [
-        "Specimen collection/processing",
+
+      "Laboratory Procedures": [
+
+        "Specimen collection",
+        "Specimen processing",
         "Hematology",
         "Chemistry",
         "Microbiology",
-        "Urinalysis",
-        "Blood bank exposure"
+        "Urinalysis"
+
       ],
-      "Laboratory Operations": [
+
+      "Quality & Safety": [
+
         "Quality control",
+        "Laboratory safety",
         "Equipment operation",
         "Result verification",
         "Specimen identification",
-        "PPE/infection prevention",
-        "Laboratory documentation"
+        "Documentation"
+
       ]
+
     }
+
   },
+
 
   "Medical Laboratory Scientist": {
+
     sections: {
-      "Laboratory Skills": [
+
+      "Laboratory Testing": [
+
         "Hematology",
-        "Chemistry",
+        "Clinical chemistry",
         "Microbiology",
+        "Blood bank",
         "Immunology",
-        "Urinalysis",
-        "Blood bank"
+        "Urinalysis"
+
       ],
-      "Laboratory Operations": [
+
+      "Laboratory Quality": [
+
         "Quality control",
         "Quality assurance",
-        "Instrument operation",
-        "Result interpretation",
-        "Specimen processing",
-        "Laboratory documentation"
+        "Instrument calibration",
+        "Result verification",
+        "Specimen management",
+        "Laboratory safety"
+
       ]
+
     }
+
   },
+
 
   "Other Allied Health": {
+
     sections: {
+
       "Professional Skills": [
-        "Patient/client assessment",
+
+        "Patient assessment",
+        "Patient communication",
         "Patient safety",
         "Infection prevention",
-        "Equipment operation",
-        "Documentation",
+        "Electronic documentation",
         "Patient education"
+
       ],
-      "Role-Specific Competencies": [
-        "Can perform core duties independently",
-        "Can perform duties with supervision",
-        "Can troubleshoot routine issues",
-        "Can use role-specific equipment",
-        "Can communicate with interdisciplinary teams",
-        "Can document services accurately"
+
+      "Clinical / Technical Skills": [
+
+        "Equipment operation",
+        "Clinical procedures",
+        "Specimen handling",
+        "Emergency response",
+        "Interdisciplinary collaboration",
+        "Quality and safety procedures"
+
       ]
+
     }
+
   },
 
+
   "Other": {
+
     sections: {
+
       "Professional Skills": [
-        "Core duties of the position",
-        "Patient/client interaction",
-        "Safety procedures",
-        "Documentation",
-        "Equipment/technology use",
-        "Communication"
+
+        "Patient assessment",
+        "Patient communication",
+        "Patient safety",
+        "Infection prevention",
+        "Electronic documentation",
+        "Patient education"
+
       ],
-      "Role-Specific Competencies": [
-        "Can perform core duties independently",
-        "Can perform duties with supervision",
-        "Can troubleshoot routine issues",
-        "Can follow applicable policies/procedures",
-        "Can work with interdisciplinary teams",
-        "Can document work accurately"
+
+      "Role-Specific Skills": [
+
+        "Equipment operation",
+        "Clinical procedures",
+        "Emergency response",
+        "Interdisciplinary collaboration",
+        "Quality and safety procedures",
+        "Professional communication"
+
       ]
+
     }
+
   }
+
 };
 
-const position = document.getElementById("position");
-const checklistArea = document.getElementById("checklistArea");
-const finalCard = document.getElementById("finalCard");
-const form = document.getElementById("skillsForm");
-const dateField = document.getElementById("dateField");
 
-dateField.value = new Date().toISOString().split("T")[0];
+/* =========================================================
+   ELEMENTS
+   ========================================================= */
 
-function renderChecklist(role){
-  const data = checklistData[role];
-  if(!data){
+const positionSelect =
+  document.getElementById("position");
+
+const checklistArea =
+  document.getElementById("checklistArea");
+
+const finalCard =
+  document.getElementById("finalCard");
+
+const form =
+  document.getElementById("skillsForm");
+
+const dateField =
+  document.getElementById("dateField");
+
+const progressFill =
+  document.getElementById("progressFill");
+
+const progressText =
+  document.getElementById("progressText");
+
+
+/* =========================================================
+   DATE
+   ========================================================= */
+
+const today =
+  new Date().toISOString().split("T")[0];
+
+dateField.value = today;
+
+
+/* =========================================================
+   CREATE CHECKLIST
+   ========================================================= */
+
+positionSelect.addEventListener("change", function(){
+
+  const position = this.value;
+
+  checklistArea.innerHTML = "";
+
+  finalCard.style.display = "none";
+
+  updateProgress();
+
+  if(!position || !checklistData[position]){
     checklistArea.style.display = "none";
-    finalCard.style.display = "none";
-    checklistArea.innerHTML = "";
     return;
   }
 
-  let html = `
-    <div class="card">
-      <h2>${role} Skills Checklist</h2>
-      <p class="sub">Rate your current experience for each skill. Please answer honestly based on your professional experience.</p>
-      <div class="rating-legend">
-        <span><strong>1</strong> No Experience</span>
-        <span><strong>2</strong> Limited Experience</span>
-        <span><strong>3</strong> Experienced / Can Perform</span>
-        <span><strong>4</strong> Highly Experienced / Can Teach</span>
-      </div>
+  checklistArea.style.display = "block";
+
+  const wrapper =
+    document.createElement("section");
+
+  wrapper.className = "card";
+
+  const intro =
+    document.createElement("div");
+
+  intro.className = "checklist-intro";
+
+  intro.innerHTML = `
+    <h2>${escapeHTML(position)} Skills Checklist</h2>
+    <p>
+      Please rate your experience with each skill below.
+      Select one rating for every skill.
+    </p>
   `;
 
-  let index = 0;
+  wrapper.appendChild(intro);
 
-  Object.entries(data.sections).forEach(([section, skills]) => {
-    html += `<div class="section">
-      <div class="section-title">${section}</div>`;
 
-    skills.forEach(skill => {
-      index++;
-      const safe = skill.replace(/[^a-zA-Z0-9]/g,"_");
-      html += `
-        <div class="skill-row">
-          <div class="skill-name">
-            <strong>${skill}</strong>
-            <span class="skill-note">Select one rating</span>
-          </div>
-          <div class="rating">
-            ${[1,2,3,4].map(n => `
-              <label>
-                <input type="radio" name="Skill - ${role} - ${section} - ${skill}" value="${n}" required>
-                <span>${n}</span>
-              </label>
-            `).join("")}
-          </div>
-        </div>`;
+  let sectionNumber = 0;
+
+
+  Object.entries(
+    checklistData[position].sections
+  ).forEach(([sectionName, skills]) => {
+
+    sectionNumber++;
+
+    const section =
+      document.createElement("div");
+
+    section.className = "section";
+
+
+    const sectionTitle =
+      document.createElement("div");
+
+    sectionTitle.className = "section-title";
+
+    sectionTitle.innerHTML = `
+      <div class="section-heading">
+        <span class="section-number">
+          ${sectionNumber}
+        </span>
+
+        <span>
+          ${escapeHTML(sectionName)}
+        </span>
+      </div>
+    `;
+
+    section.appendChild(sectionTitle);
+
+
+    skills.forEach((skill, index) => {
+
+      const row =
+        document.createElement("div");
+
+      row.className = "skill-row";
+
+
+      const skillText =
+        document.createElement("div");
+
+      skillText.innerHTML = `
+        <div class="skill-name">
+          ${escapeHTML(skill)}
+        </div>
+
+        <span class="skill-note">
+          Select your level of experience
+        </span>
+      `;
+
+
+      const rating =
+        document.createElement("div");
+
+      rating.className = "rating";
+
+
+      /*
+       IMPORTANT:
+       The position is NOT included in the input name.
+
+       OLD:
+       Skill - RN - Med Surg - Patient Care & Assessment - Head-to-toe assessment
+
+       NEW:
+       Skill - Patient Care & Assessment - Head-to-toe assessment
+
+       This fixes the long FormSubmit field name.
+      */
+
+      for(let value = 1; value <= 4; value++){
+
+        const label =
+          document.createElement("label");
+
+        const input =
+          document.createElement("input");
+
+        input.type = "radio";
+
+        /*
+         IMPORTANT FIELD NAME
+        */
+
+        input.name =
+          `Skill - ${sectionName} - ${skill}`;
+
+        input.value =
+          `${value} - ${getRatingText(value)}`;
+
+        input.required = true;
+
+        input.addEventListener(
+          "change",
+          updateProgress
+        );
+
+
+        const span =
+          document.createElement("span");
+
+        span.textContent = value;
+
+
+        label.appendChild(input);
+
+        label.appendChild(span);
+
+        rating.appendChild(label);
+
+      }
+
+
+      row.appendChild(skillText);
+
+      row.appendChild(rating);
+
+      section.appendChild(row);
+
     });
 
-    html += `</div>`;
+
+    wrapper.appendChild(section);
+
   });
 
-  html += `</div>`;
 
-  checklistArea.innerHTML = html;
-  checklistArea.style.display = "block";
+  const legend =
+    document.createElement("div");
+
+  legend.className =
+    "rating-legend";
+
+  legend.innerHTML = `
+    <span><b>1</b> — No Experience</span>
+    <span><b>2</b> — Limited Experience</span>
+    <span><b>3</b> — Experienced / Can Perform</span>
+    <span><b>4</b> — Highly Experienced / Can Teach or Supervise</span>
+  `;
+
+  wrapper.appendChild(legend);
+
+
+  checklistArea.appendChild(wrapper);
+
   finalCard.style.display = "block";
-  window.scrollTo({top: checklistArea.offsetTop - 90, behavior:"smooth"});
-}
 
-position.addEventListener("change", () => renderChecklist(position.value));
-
-document.getElementById("resetBtn").addEventListener("click", () => {
   setTimeout(() => {
-    checklistArea.style.display = "none";
-    finalCard.style.display = "none";
-    checklistArea.innerHTML = "";
-    position.value = "";
-    dateField.value = new Date().toISOString().split("T")[0];
-  }, 0);
+
+    finalCard.scrollIntoView({
+      behavior:"smooth",
+      block:"start"
+    });
+
+  },100);
+
+  updateProgress();
+
 });
 
-form.addEventListener("submit", () => {
-  const submitButton = form.querySelector('button[type="submit"]');
-  submitButton.disabled = true;
-  submitButton.textContent = "Submitting...";
-});
 
-if(new URLSearchParams(window.location.search).get("submitted") === "1"){
-  const msg = document.getElementById("successMessage");
-  msg.style.display = "block";
-  msg.textContent = "Your skills checklist has been submitted successfully. Thank you.";
+/* =========================================================
+   RATING TEXT
+   ========================================================= */
+
+function getRatingText(value){
+
+  if(value === 1)
+    return "No Experience";
+
+  if(value === 2)
+    return "Limited Experience";
+
+  if(value === 3)
+    return "Experienced / Can Perform";
+
+  return "Highly Experienced / Can Teach or Supervise";
+
 }
+
+
+/* =========================================================
+   PROGRESS
+   ========================================================= */
+
+function updateProgress(){
+
+  if(!positionSelect.value){
+
+    progressFill.style.width = "0%";
+
+    progressText.textContent =
+      "0% Complete";
+
+    return;
+  }
+
+
+  const inputs =
+    checklistArea.querySelectorAll(
+      'input[type="radio"]'
+    );
+
+
+  if(!inputs.length){
+
+    progressFill.style.width = "0%";
+
+    progressText.textContent =
+      "0% Complete";
+
+    return;
+  }
+
+
+  const names = new Set();
+
+  inputs.forEach(input => {
+    names.add(input.name);
+  });
+
+
+  let completed = 0;
+
+
+  names.forEach(name => {
+
+    const selected =
+      checklistArea.querySelector(
+        `input[name="${CSS.escape(name)}"]:checked`
+      );
+
+    if(selected){
+      completed++;
+    }
+
+  });
+
+
+  const percentage =
+    Math.round(
+      (completed / names.size) * 100
+    );
+
+
+  progressFill.style.width =
+    percentage + "%";
+
+  progressText.textContent =
+    `${percentage}% Complete · ${completed}/${names.size} Skills`;
+
+}
+
+
+/* =========================================================
+   HTML ESCAPE
+   ========================================================= */
+
+function escapeHTML(value){
+
+  return String(value)
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#039;");
+
+}
+
+
+/* =========================================================
+   FORM SUBMIT
+   ========================================================= */
+
+form.addEventListener("submit", function(e){
+
+  /*
+   Make sure all generated skill ratings are completed.
+  */
+
+  const requiredInputs =
+    checklistArea.querySelectorAll(
+      'input[type="radio"][required]'
+    );
+
+
+  const names = new Set();
+
+  requiredInputs.forEach(input => {
+    names.add(input.name);
+  });
+
+
+  for(const name of names){
+
+    const checked =
+      checklistArea.querySelector(
+        `input[name="${CSS.escape(name)}"]:checked`
+      );
+
+    if(!checked){
+
+      e.preventDefault();
+
+      alert(
+        "Please complete all skill ratings before submitting the checklist."
+      );
+
+      return;
+    }
+
+  }
+
+});
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+document
+  .getElementById("resetBtn")
+  .addEventListener("click", function(){
+
+    setTimeout(() => {
+
+      checklistArea.innerHTML = "";
+
+      checklistArea.style.display =
+        "none";
+
+      finalCard.style.display =
+        "none";
+
+      positionSelect.value = "";
+
+      dateField.value =
+        new Date()
+          .toISOString()
+          .split("T")[0];
+
+      updateProgress();
+
+      window.scrollTo({
+        top:0,
+        behavior:"smooth"
+      });
+
+    },10);
+
+  });
+
+
+/* =========================================================
+   SUBMITTED MESSAGE
+   ========================================================= */
+
+const params =
+  new URLSearchParams(
+    window.location.search
+  );
+
+if(params.get("submitted") === "1"){
+
+  const message =
+    document.getElementById(
+      "successMessage"
+    );
+
+  if(message){
+
+    message.style.display =
+      "block";
+
+  }
+
+}
+
 </script>
+
 </body>
 </html>
