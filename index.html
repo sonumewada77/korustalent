@@ -1,37 +1,17 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <meta
-    name="description"
-    content="Korus Talent provides staffing and recruitment solutions across Healthcare, IT and Non-IT sectors in the United States and India."
-  />
-
-  <title>Korus Talent | Staffing & Recruitment</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Korus Talent connects qualified professionals with employers across healthcare, IT, and non-IT staffing.">
+  <title>Korus Talent | Connecting Talent With Opportunity</title>
 
   <style>
-    :root {
-      --navy: #0b1f3a;
-      --navy-2: #102d50;
-      --blue: #1769aa;
-      --blue-light: #eaf4fb;
-      --text: #182433;
-      --muted: #667085;
-      --light: #f7f9fc;
-      --border: #e3e8ef;
-      --white: #ffffff;
-      --success: #18794e;
-      --shadow: 0 12px 35px rgba(11, 31, 58, 0.08);
-      --radius: 14px;
-      --max: 1180px;
-    }
-
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
     html {
@@ -39,141 +19,168 @@
     }
 
     body {
-      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Arial, sans-serif;
-      color: var(--text);
-      background: var(--white);
+      font-family: Arial, Helvetica, sans-serif;
+      color: #172033;
+      background: #ffffff;
       line-height: 1.6;
     }
 
     a {
-      color: inherit;
       text-decoration: none;
+      color: inherit;
     }
 
     button,
     input,
-    select,
-    textarea {
+    textarea,
+    select {
       font: inherit;
     }
 
     .container {
-      width: min(92%, var(--max));
-      margin: 0 auto;
+      width: min(1180px, 92%);
+      margin: auto;
     }
 
-    /* ================= HEADER ================= */
-
+    /* HEADER */
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(255, 255, 255, 0.97);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(12px);
+      background: rgba(255,255,255,.97);
+      border-bottom: 1px solid #e7eaf0;
     }
 
     .nav {
-      height: 76px;
+      min-height: 76px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 30px;
+      gap: 25px;
     }
 
     .logo {
       font-size: 25px;
       font-weight: 800;
-      letter-spacing: -0.6px;
-      color: var(--navy);
+      letter-spacing: -.5px;
+      color: #123b66;
     }
 
     .logo span {
-      color: var(--blue);
+      color: #168b8b;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 26px;
+      gap: 25px;
+    }
+
+    .nav-links a {
       font-size: 14px;
       font-weight: 600;
       color: #344054;
     }
 
     .nav-links a:hover {
-      color: var(--blue);
+      color: #168b8b;
     }
 
     .nav-cta {
-      padding: 11px 18px;
-      border-radius: 8px;
-      background: var(--navy);
+      background: #123b66;
       color: white !important;
+      padding: 11px 18px;
+      border-radius: 7px;
     }
 
-    .nav-cta:hover {
-      background: var(--blue);
+    .more {
+      position: relative;
     }
 
-    .menu-btn {
-      display: none;
+    .more-btn {
       border: 0;
       background: transparent;
-      font-size: 25px;
       cursor: pointer;
+      font-weight: 600;
+      color: #344054;
+      padding: 10px 4px;
     }
 
-    /* ================= HERO ================= */
+    .more-menu {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 42px;
+      width: 220px;
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      box-shadow: 0 15px 35px rgba(0,0,0,.12);
+      overflow: hidden;
+    }
 
+    .more-menu.show {
+      display: block;
+    }
+
+    .more-menu a {
+      display: block;
+      padding: 13px 16px;
+      font-size: 14px;
+      border-bottom: 1px solid #f0f1f3;
+    }
+
+    .more-menu a:last-child {
+      border-bottom: 0;
+    }
+
+    .more-menu a:hover {
+      background: #f5f9fb;
+      color: #168b8b;
+    }
+
+    /* HERO */
     .hero {
-      background: linear-gradient(115deg, #f5f9fd 0%, #ffffff 62%);
-      padding: 105px 0 95px;
-      border-bottom: 1px solid var(--border);
+      background: linear-gradient(135deg, #f5fafc 0%, #eef6f8 55%, #f8fbfc 100%);
+      padding: 90px 0 85px;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 70px;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 60px;
       align-items: center;
     }
 
     .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--blue);
-      background: var(--blue-light);
+      display: inline-block;
+      background: #e2f3f3;
+      color: #126c70;
       padding: 7px 12px;
-      border-radius: 999px;
-      margin-bottom: 20px;
+      border-radius: 30px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .6px;
+      margin-bottom: 18px;
     }
 
-    .hero h1 {
-      font-size: clamp(42px, 5vw, 65px);
-      line-height: 1.06;
-      letter-spacing: -2.5px;
-      color: var(--navy);
-      max-width: 700px;
-      margin-bottom: 24px;
-    }
-
-    .hero h1 span {
-      color: var(--blue);
+    h1 {
+      font-size: clamp(40px, 5vw, 65px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+      color: #102f50;
+      margin-bottom: 22px;
     }
 
     .hero p {
-      max-width: 650px;
       font-size: 18px;
-      color: var(--muted);
-      margin-bottom: 32px;
+      max-width: 650px;
+      color: #526071;
+      margin-bottom: 30px;
     }
 
-    .hero-buttons {
+    .buttons {
       display: flex;
       flex-wrap: wrap;
       gap: 13px;
@@ -183,560 +190,246 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 13px 20px;
-      border-radius: 8px;
-      border: 1px solid transparent;
+      padding: 13px 21px;
+      border-radius: 7px;
+      border: 1px solid #123b66;
       font-weight: 700;
       font-size: 14px;
       cursor: pointer;
-      transition: 0.2s ease;
     }
 
     .btn-primary {
-      background: var(--navy);
+      background: #123b66;
       color: white;
     }
 
-    .btn-primary:hover {
-      background: var(--blue);
-      transform: translateY(-1px);
-    }
-
     .btn-secondary {
-      border-color: var(--border);
       background: white;
-      color: var(--navy);
-    }
-
-    .btn-secondary:hover {
-      border-color: var(--blue);
-      color: var(--blue);
+      color: #123b66;
     }
 
     .hero-card {
       background: white;
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 30px;
-      box-shadow: var(--shadow);
+      padding: 32px;
+      border-radius: 15px;
+      box-shadow: 0 18px 50px rgba(18,59,102,.10);
+      border: 1px solid #e5edf1;
     }
 
-    .hero-card-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-bottom: 20px;
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 20px;
+    .hero-card h3 {
+      color: #123b66;
+      margin-bottom: 18px;
+      font-size: 21px;
     }
 
-    .hero-card-title {
-      font-weight: 800;
-      color: var(--navy);
+    .hero-list {
+      list-style: none;
     }
 
-    .status {
-      font-size: 12px;
-      color: var(--success);
-      background: #eaf7f0;
-      padding: 5px 9px;
-      border-radius: 999px;
-      font-weight: 700;
+    .hero-list li {
+      padding: 12px 0;
+      border-bottom: 1px solid #edf0f3;
+      color: #4b5868;
     }
 
-    .coverage {
-      display: grid;
-      gap: 14px;
+    .hero-list li:last-child {
+      border-bottom: 0;
     }
 
-    .coverage-item {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding: 15px;
-      background: var(--light);
-      border-radius: 10px;
-    }
-
-    .coverage-icon {
-      width: 42px;
-      height: 42px;
-      border-radius: 9px;
-      background: white;
-      display: grid;
-      place-items: center;
-      color: var(--blue);
-      font-weight: 800;
-      border: 1px solid var(--border);
-    }
-
-    .coverage-item strong {
-      display: block;
-      color: var(--navy);
-    }
-
-    .coverage-item small {
-      color: var(--muted);
-    }
-
-    /* ================= TRUST BAR ================= */
-
-    .trust-bar {
-      border-bottom: 1px solid var(--border);
+    /* TRUST */
+    .trust {
+      padding: 20px 0;
+      border-bottom: 1px solid #edf0f3;
       background: white;
     }
 
     .trust-inner {
-      min-height: 82px;
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      gap: 25px;
-    }
-
-    .trust-item {
+      gap: 20px;
+      flex-wrap: wrap;
       color: #667085;
       font-size: 13px;
       font-weight: 600;
     }
 
-    /* ================= SECTIONS ================= */
-
+    /* SECTIONS */
     section {
-      padding: 90px 0;
+      padding: 82px 0;
     }
 
     .section-head {
       max-width: 720px;
-      margin-bottom: 42px;
-    }
-
-    .section-label {
-      color: var(--blue);
-      font-size: 13px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 10px;
+      margin-bottom: 40px;
     }
 
     .section-head h2 {
-      color: var(--navy);
-      font-size: clamp(30px, 4vw, 43px);
+      font-size: 37px;
       line-height: 1.15;
-      letter-spacing: -1.2px;
-      margin-bottom: 14px;
+      color: #102f50;
+      margin-bottom: 12px;
+      letter-spacing: -.8px;
     }
 
     .section-head p {
-      color: var(--muted);
+      color: #667085;
       font-size: 16px;
     }
 
-    /* ================= WHO WE SERVE ================= */
-
-    .serve-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .serve-card {
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 28px;
-      background: white;
-      transition: 0.2s ease;
-    }
-
-    .serve-card:hover {
-      box-shadow: var(--shadow);
-      transform: translateY(-3px);
-    }
-
-    .serve-number {
-      color: var(--blue);
-      font-size: 13px;
-      font-weight: 800;
-      margin-bottom: 20px;
-    }
-
-    .serve-card h3 {
-      color: var(--navy);
-      font-size: 21px;
-      margin-bottom: 10px;
-    }
-
-    .serve-card p {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    /* ================= INDUSTRIES ================= */
-
-    .industries {
-      background: var(--light);
-    }
-
-    .industry-grid {
+    /* CARDS */
+    .grid-3 {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 22px;
     }
 
-    .industry-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 32px;
-    }
-
-    .industry-tag {
-      display: inline-block;
-      font-size: 12px;
-      font-weight: 800;
-      color: var(--blue);
-      background: var(--blue-light);
-      padding: 6px 9px;
-      border-radius: 6px;
-      margin-bottom: 18px;
-    }
-
-    .industry-card h3 {
-      font-size: 23px;
-      color: var(--navy);
-      margin-bottom: 10px;
-    }
-
-    .industry-card p {
-      color: var(--muted);
-      font-size: 14px;
-      margin-bottom: 18px;
-    }
-
-    .industry-list {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-    }
-
-    .industry-list li {
-      background: #f5f7fa;
-      border: 1px solid var(--border);
-      padding: 6px 9px;
-      border-radius: 6px;
-      font-size: 12px;
-      color: #475467;
-    }
-
-    /* ================= SERVICES ================= */
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .service-card {
-      border: 1px solid var(--border);
-      padding: 25px;
+    .card {
+      padding: 28px;
+      border: 1px solid #e6e9ed;
       border-radius: 12px;
+      background: white;
     }
 
-    .service-card h3 {
-      font-size: 18px;
-      color: var(--navy);
-      margin-bottom: 8px;
+    .card:hover {
+      box-shadow: 0 12px 35px rgba(0,0,0,.06);
     }
 
-    .service-card p {
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    /* ================= OPPORTUNITIES ================= */
-
-    .jobs {
-      background: var(--light);
-    }
-
-    .job-grid {
+    .card-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 10px;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      place-items: center;
+      background: #e8f5f5;
+      color: #126c70;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      color: #173b5d;
+      margin-bottom: 9px;
+      font-size: 19px;
+    }
+
+    .card p {
+      color: #667085;
+      font-size: 14px;
+    }
+
+    .soft {
+      background: #f7fafb;
+    }
+
+    /* JOBS */
+    .jobs {
+      display: grid;
+      gap: 15px;
     }
 
     .job-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 13px;
-      padding: 25px;
-    }
-
-    .job-sector {
-      font-size: 11px;
-      color: var(--blue);
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.7px;
-      margin-bottom: 10px;
-    }
-
-    .job-card h3 {
-      color: var(--navy);
-      font-size: 19px;
-      margin-bottom: 10px;
-    }
-
-    .job-location {
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 15px;
-    }
-
-    .job-meta {
+      border: 1px solid #e3e7eb;
+      border-radius: 11px;
+      padding: 22px;
       display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-      margin-bottom: 20px;
-    }
-
-    .job-meta span {
-      background: #f5f7fa;
-      border: 1px solid var(--border);
-      padding: 5px 8px;
-      border-radius: 5px;
-      font-size: 11px;
-      color: #475467;
-    }
-
-    .job-link {
-      color: var(--blue);
-      font-size: 13px;
-      font-weight: 800;
-    }
-
-    /* ================= WHY ================= */
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
       align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      background: white;
     }
 
-    .why-box {
-      background: var(--navy);
-      color: white;
-      padding: 42px;
-      border-radius: 16px;
+    .job-info h3 {
+      color: #173b5d;
+      margin-bottom: 5px;
     }
 
-    .why-box h3 {
-      font-size: 29px;
-      line-height: 1.2;
-      margin-bottom: 16px;
-    }
-
-    .why-box p {
-      color: #cbd5e1;
-    }
-
-    .why-list {
-      display: grid;
-      gap: 22px;
-    }
-
-    .why-item {
-      display: flex;
-      gap: 16px;
-    }
-
-    .why-check {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      background: var(--blue-light);
-      color: var(--blue);
-      display: grid;
-      place-items: center;
-      flex: 0 0 auto;
-      font-weight: 800;
-    }
-
-    .why-item h4 {
-      color: var(--navy);
-      margin-bottom: 4px;
-    }
-
-    .why-item p {
-      color: var(--muted);
+    .job-info p {
+      color: #667085;
       font-size: 14px;
     }
 
-    /* ================= PROCESS ================= */
-
-    .process {
-      background: var(--light);
+    .job-tags {
+      display: flex;
+      gap: 7px;
+      flex-wrap: wrap;
+      margin-top: 10px;
     }
 
-    .process-grid {
+    .tag {
+      background: #eef6f8;
+      color: #23636b;
+      padding: 5px 9px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    /* PROCESS */
+    .steps {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 18px;
     }
 
-    .process-card {
-      background: white;
-      border: 1px solid var(--border);
+    .step {
+      position: relative;
       padding: 25px;
+      border: 1px solid #e4e8ed;
       border-radius: 12px;
     }
 
-    .process-no {
-      color: var(--blue);
+    .number {
       font-size: 13px;
       font-weight: 800;
-      margin-bottom: 17px;
-    }
-
-    .process-card h3 {
-      color: var(--navy);
-      font-size: 18px;
-      margin-bottom: 7px;
-    }
-
-    .process-card p {
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    /* ================= CTA ================= */
-
-    .cta {
-      padding: 70px 0;
-    }
-
-    .cta-box {
-      background: var(--navy);
-      border-radius: 18px;
-      padding: 52px;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 30px;
-    }
-
-    .cta-box h2 {
-      font-size: 34px;
-      line-height: 1.15;
-      margin-bottom: 10px;
-    }
-
-    .cta-box p {
-      color: #cbd5e1;
-      max-width: 650px;
-    }
-
-    .cta-buttons {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .cta .btn-secondary {
-      background: white;
-    }
-
-    /* ================= ABOUT ================= */
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 65px;
-      align-items: center;
-    }
-
-    .about-text p {
-      color: var(--muted);
-      margin-bottom: 18px;
-    }
-
-    .coverage-box {
-      border: 1px solid var(--border);
-      border-radius: 15px;
-      padding: 30px;
-      background: var(--light);
-    }
-
-    .coverage-box h3 {
-      color: var(--navy);
-      margin-bottom: 20px;
-    }
-
-    .country {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 18px;
+      color: #168b8b;
       margin-bottom: 12px;
     }
 
-    .country strong {
-      color: var(--navy);
-      display: block;
+    /* CTA */
+    .cta {
+      background: #123b66;
+      color: white;
+      border-radius: 18px;
+      padding: 50px;
     }
 
-    .country span {
-      font-size: 13px;
-      color: var(--muted);
+    .cta h2 {
+      font-size: 34px;
+      margin-bottom: 10px;
     }
 
-    /* ================= CONTACT ================= */
-
-    .contact {
-      background: var(--light);
+    .cta p {
+      color: #d9e5ef;
+      max-width: 680px;
+      margin-bottom: 25px;
     }
 
+    .cta .btn-primary {
+      background: white;
+      color: #123b66;
+      border-color: white;
+    }
+
+    /* CONTACT */
     .contact-grid {
       display: grid;
-      grid-template-columns: 0.8fr 1.2fr;
-      gap: 50px;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 45px;
+      align-items: start;
     }
 
-    .contact-info h2 {
-      color: var(--navy);
-      font-size: 35px;
-      line-height: 1.2;
-      margin-bottom: 15px;
+    .contact-details p {
+      margin-bottom: 14px;
+      color: #667085;
     }
 
-    .contact-info > p {
-      color: var(--muted);
-      margin-bottom: 28px;
+    .contact-details strong {
+      color: #173b5d;
     }
 
-    .contact-point {
-      margin-bottom: 18px;
-    }
-
-    .contact-point strong {
-      display: block;
-      color: var(--navy);
-    }
-
-    .contact-point span {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .form {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 30px;
+    form {
+      display: grid;
+      gap: 14px;
     }
 
     .form-row {
@@ -745,11 +438,7 @@
       gap: 14px;
     }
 
-    .field {
-      margin-bottom: 15px;
-    }
-
-    .field label {
+    label {
       display: block;
       font-size: 13px;
       font-weight: 700;
@@ -757,240 +446,162 @@
       margin-bottom: 6px;
     }
 
-    .field input,
-    .field select,
-    .field textarea {
+    input,
+    textarea,
+    select {
       width: 100%;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 11px 12px;
+      border: 1px solid #d8dde5;
+      border-radius: 7px;
+      padding: 12px 13px;
       outline: none;
       background: white;
     }
 
-    .field input:focus,
-    .field select:focus,
-    .field textarea:focus {
-      border-color: var(--blue);
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: #168b8b;
     }
 
-    .field textarea {
-      min-height: 120px;
+    textarea {
+      min-height: 125px;
       resize: vertical;
     }
 
-    /* ================= FOOTER ================= */
-
+    /* FOOTER */
     footer {
-      background: #08182d;
+      background: #0e2238;
       color: white;
-      padding: 55px 0 25px;
+      padding: 50px 0 25px;
     }
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr 1fr;
-      gap: 35px;
-      padding-bottom: 40px;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 35px;
     }
 
-    .footer-brand h3 {
-      font-size: 23px;
-      margin-bottom: 10px;
+    footer h3,
+    footer h4 {
+      margin-bottom: 13px;
     }
 
-    .footer-brand p {
-      color: #aeb9c8;
-      font-size: 13px;
-      max-width: 330px;
+    footer p,
+    footer a {
+      color: #b8c5d2;
+      font-size: 14px;
     }
 
-    .footer-col h4 {
-      font-size: 13px;
-      margin-bottom: 15px;
-    }
-
-    .footer-col a {
-      display: block;
-      color: #aeb9c8;
-      font-size: 13px;
-      margin-bottom: 9px;
-    }
-
-    .footer-col a:hover {
+    footer a:hover {
       color: white;
     }
 
-    .footer-bottom {
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      padding-top: 20px;
-      color: #8996a8;
-      font-size: 12px;
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
+    .footer-links {
+      display: grid;
+      gap: 8px;
     }
 
-    /* ================= JOB MODAL ================= */
+    .copyright {
+      border-top: 1px solid rgba(255,255,255,.12);
+      padding-top: 20px;
+      color: #91a1b1;
+      font-size: 12px;
+    }
 
+    /* MODAL */
     .modal {
+      display: none;
       position: fixed;
       inset: 0;
-      background: rgba(7, 20, 38, 0.65);
+      background: rgba(10,25,40,.62);
       z-index: 2000;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
+      padding: 25px;
+      overflow-y: auto;
     }
 
-    .modal.active {
-      display: flex;
+    .modal.show {
+      display: grid;
+      place-items: center;
     }
 
     .modal-box {
-      background: white;
       width: min(700px, 100%);
-      max-height: 90vh;
-      overflow-y: auto;
-      border-radius: 15px;
+      background: white;
+      border-radius: 14px;
       padding: 30px;
       position: relative;
     }
 
-    .modal-close {
+    .close {
       position: absolute;
       right: 18px;
-      top: 14px;
+      top: 13px;
       border: 0;
-      background: transparent;
-      font-size: 25px;
+      background: none;
+      font-size: 26px;
       cursor: pointer;
       color: #667085;
     }
 
     .modal-box h2 {
-      color: var(--navy);
-      margin-bottom: 7px;
+      color: #123b66;
+      margin-bottom: 8px;
     }
 
-    .modal-location {
-      color: var(--muted);
-      margin-bottom: 25px;
-      font-size: 14px;
+    .modal-box p {
+      color: #667085;
     }
 
-    .modal-section {
-      margin-bottom: 20px;
-    }
-
-    .modal-section h4 {
-      color: var(--navy);
-      margin-bottom: 6px;
-    }
-
-    .modal-section p,
-    .modal-section li {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .modal-section ul {
-      padding-left: 20px;
-    }
-
-    /* ================= RESPONSIVE ================= */
-
-    @media (max-width: 950px) {
-
-      .nav-links {
+    /* MOBILE */
+    @media (max-width: 850px) {
+      .nav-links > a {
         display: none;
-        position: absolute;
-        top: 76px;
-        left: 0;
-        right: 0;
-        background: white;
-        border-bottom: 1px solid var(--border);
-        padding: 20px;
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .nav-links.open {
-        display: flex;
-      }
-
-      .menu-btn {
-        display: block;
       }
 
       .hero-grid,
-      .why-grid,
-      .about-grid,
       .contact-grid {
         grid-template-columns: 1fr;
       }
 
-      .hero {
-        padding: 75px 0;
+      .grid-3 {
+        grid-template-columns: 1fr;
       }
 
-      .serve-grid,
-      .industry-grid,
-      .service-grid,
-      .job-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .process-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .footer-grid {
+      .steps {
         grid-template-columns: 1fr 1fr;
       }
 
-      .cta-box {
-        flex-direction: column;
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .job-card {
         align-items: flex-start;
+        flex-direction: column;
       }
     }
 
-    @media (max-width: 650px) {
-
-      section {
+    @media (max-width: 560px) {
+      .hero {
         padding: 65px 0;
       }
 
-      .hero h1 {
-        font-size: 42px;
+      section {
+        padding: 60px 0;
       }
 
-      .trust-inner {
-        flex-wrap: wrap;
-        padding: 20px 0;
-      }
-
-      .serve-grid,
-      .industry-grid,
-      .service-grid,
-      .job-grid,
-      .process-grid,
-      .footer-grid,
+      .steps,
       .form-row {
         grid-template-columns: 1fr;
       }
 
-      .cta-box {
-        padding: 35px 25px;
+      .cta {
+        padding: 30px 22px;
       }
 
-      .hero-card {
-        padding: 22px;
-      }
-
-      .footer-bottom {
-        flex-direction: column;
+      h1 {
+        font-size: 42px;
       }
     }
   </style>
@@ -998,1670 +609,711 @@
 
 <body>
 
-  <!-- ================= HEADER ================= -->
+<header>
+  <div class="container nav">
 
-  <header>
+    <a href="#top" class="logo">Korus <span>Talent</span></a>
 
-    <div class="container nav">
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#industries">Industries</a>
+      <a href="#services">Services</a>
+      <a href="#opportunities">Opportunities</a>
+      <a href="#employers">Employers</a>
+      <a href="#contact">Contact</a>
 
-      <a href="#top" class="logo">
-        Korus <span>Talent</span>
-      </a>
+      <div class="more">
+        <button class="more-btn" onclick="toggleMore()">More ▾</button>
 
-      <button class="menu-btn" id="menuBtn">
-        ☰
-      </button>
-
-      <nav class="nav-links" id="navLinks">
-
-        <a href="#about">About</a>
-
-        <a href="#industries">Industries</a>
-
-        <a href="#services">Services</a>
-
-        <a href="#opportunities">Opportunities</a>
-
-        <a href="#employers">For Employers</a>
-
-        <a href="#contact">Contact</a>
-
-        <a href="#opportunities" class="nav-cta">
-          Find Jobs
-        </a>
-
-      </nav>
-
-    </div>
-
-  </header>
-
-
-  <main id="top">
-
-    <!-- ================= HERO ================= -->
-
-    <section class="hero">
-
-      <div class="container hero-grid">
-
-        <div>
-
-          <div class="eyebrow">
-            Staffing & Recruitment
-          </div>
-
-          <h1>
-            Connecting
-            <span>Talent</span>
-            With Opportunity.
-          </h1>
-
-          <p>
-            Korus Talent connects qualified professionals with organizations
-            across the United States and India, supporting staffing and
-            recruitment needs across Healthcare, IT and Non-IT sectors.
-          </p>
-
-          <div class="hero-buttons">
-
-            <a href="#opportunities" class="btn btn-primary">
-              Explore Opportunities
-            </a>
-
-            <a href="#employers" class="btn btn-secondary">
-              Partner With Us
-            </a>
-
-          </div>
-
+        <div class="more-menu" id="moreMenu">
+          <a href="skills-checklist.html">Skills Checklist</a>
+          <a href="#contact">Professional References</a>
+          <a href="#contact">Candidate Portal</a>
+          <a href="#contact">Contact Korus Talent</a>
         </div>
-
-
-        <div class="hero-card">
-
-          <div class="hero-card-top">
-
-            <div class="hero-card-title">
-              Our Focus
-            </div>
-
-            <div class="status">
-              US & India
-            </div>
-
-          </div>
-
-
-          <div class="coverage">
-
-            <div class="coverage-item">
-
-              <div class="coverage-icon">
-                HC
-              </div>
-
-              <div>
-                <strong>Healthcare</strong>
-
-                <small>
-                  Nursing, Allied Health & Healthcare Professionals
-                </small>
-              </div>
-
-            </div>
-
-
-            <div class="coverage-item">
-
-              <div class="coverage-icon">
-                IT
-              </div>
-
-              <div>
-                <strong>Information Technology</strong>
-
-                <small>
-                  Technology, Infrastructure, Data & Digital Talent
-                </small>
-              </div>
-
-            </div>
-
-
-            <div class="coverage-item">
-
-              <div class="coverage-icon">
-                NI
-              </div>
-
-              <div>
-                <strong>Non-IT</strong>
-
-                <small>
-                  Corporate, Operations, Finance, Sales & Support
-                </small>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
       </div>
 
-    </section>
+      <a href="#opportunities" class="nav-cta">Find Jobs</a>
+    </nav>
+
+  </div>
+</header>
 
 
-    <!-- ================= TRUST BAR ================= -->
+<main id="top">
 
-    <div class="trust-bar">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
 
-      <div class="container trust-inner">
+      <div>
+        <span class="eyebrow">Talent & Workforce Solutions</span>
 
-        <div class="trust-item">
-          Contract Staffing
+        <h1>Connecting Talent With Opportunity.</h1>
+
+        <p>
+          Korus Talent connects qualified professionals with employers
+          through focused recruitment, staffing, and workforce solutions
+          across healthcare, IT, and non-IT sectors.
+        </p>
+
+        <div class="buttons">
+          <a href="#opportunities" class="btn btn-primary">
+            Explore Opportunities
+          </a>
+
+          <a href="#contact" class="btn btn-secondary">
+            Partner With Us
+          </a>
         </div>
+      </div>
 
-        <div class="trust-item">
-          Permanent Recruitment
-        </div>
+      <div class="hero-card">
+        <h3>What We Support</h3>
 
-        <div class="trust-item">
-          Contract-to-Hire
-        </div>
-
-        <div class="trust-item">
-          Candidate Sourcing
-        </div>
-
-        <div class="trust-item">
-          United States & India
-        </div>
-
+        <ul class="hero-list">
+          <li>Healthcare Professionals</li>
+          <li>IT & Technology Talent</li>
+          <li>Non-IT Professionals</li>
+          <li>Contract & Temporary Staffing</li>
+          <li>Direct Hire & Permanent Recruitment</li>
+          <li>Workforce Recruitment Support</li>
+        </ul>
       </div>
 
     </div>
+  </section>
 
 
-    <!-- ================= WHO WE SERVE ================= -->
+  <!-- TRUST -->
+  <div class="trust">
+    <div class="container trust-inner">
+      <span>Healthcare Staffing</span>
+      <span>IT Recruitment</span>
+      <span>Non-IT Recruitment</span>
+      <span>Contract Staffing</span>
+      <span>Direct Hire</span>
+      <span>U.S. & India Coverage</span>
+    </div>
+  </div>
 
-    <section id="about">
 
-      <div class="container">
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
 
-        <div class="section-head">
+      <div class="section-head">
+        <h2>Built Around People, Process & Opportunity</h2>
 
-          <div class="section-label">
-            Who We Serve
-          </div>
+        <p>
+          Korus Talent focuses on understanding the needs of both
+          professionals and organizations, then connecting the right
+          talent with the right opportunity.
+        </p>
+      </div>
 
-          <h2>
-            Recruitment solutions built around people and organizations.
-          </h2>
+      <div class="grid-3">
 
+        <div class="card">
+          <div class="card-icon">01</div>
+          <h3>For Professionals</h3>
           <p>
-            We support professionals looking for their next opportunity and
-            organizations looking for qualified talent across multiple
-            industries.
+            Access contract, temporary, and permanent opportunities
+            aligned with your experience and career goals.
           </p>
-
         </div>
 
+        <div class="card">
+          <div class="card-icon">02</div>
+          <h3>For Employers</h3>
+          <p>
+            Recruitment support designed to help organizations
+            identify and connect with qualified talent.
+          </p>
+        </div>
 
-        <div class="serve-grid">
-
-          <div class="serve-card">
-
-            <div class="serve-number">
-              01
-            </div>
-
-            <h3>
-              Professionals
-            </h3>
-
-            <p>
-              Connect with relevant contract, permanent and contract-to-hire
-              opportunities based on your experience and career goals.
-            </p>
-
-          </div>
-
-
-          <div class="serve-card" id="employers">
-
-            <div class="serve-number">
-              02
-            </div>
-
-            <h3>
-              Employers
-            </h3>
-
-            <p>
-              Access qualified candidates through targeted sourcing,
-              screening and recruitment support.
-            </p>
-
-          </div>
-
-
-          <div class="serve-card">
-
-            <div class="serve-number">
-              03
-            </div>
-
-            <h3>
-              Staffing & MSP Partners
-            </h3>
-
-            <p>
-              Recruitment support for organizations and staffing programs
-              requiring candidate sourcing and delivery.
-            </p>
-
-          </div>
-
+        <div class="card">
+          <div class="card-icon">03</div>
+          <h3>For Staffing Partners</h3>
+          <p>
+            Recruitment support for workforce programs, staffing
+            partnerships, and ongoing talent requirements.
+          </p>
         </div>
 
       </div>
+    </div>
+  </section>
 
-    </section>
 
+  <!-- INDUSTRIES -->
+  <section id="industries" class="soft">
+    <div class="container">
 
-    <!-- ================= INDUSTRIES ================= -->
+      <div class="section-head">
+        <h2>Industries We Serve</h2>
+        <p>
+          Our recruitment approach can support organizations across
+          multiple professional sectors.
+        </p>
+      </div>
 
-    <section class="industries" id="industries">
+      <div class="grid-3">
 
-      <div class="container">
-
-        <div class="section-head">
-
-          <div class="section-label">
-            Industries
-          </div>
-
-          <h2>
-            Talent across Healthcare, IT and Non-IT.
-          </h2>
-
+        <div class="card">
+          <div class="card-icon">H</div>
+          <h3>Healthcare</h3>
           <p>
-            Our recruiting focus spans specialized healthcare roles,
-            technology positions and a range of corporate and operational
-            functions.
+            RN, LPN/LVN, CNA, allied health, case management,
+            utilization review and other healthcare professionals.
           </p>
-
         </div>
 
+        <div class="card">
+          <div class="card-icon">IT</div>
+          <h3>Information Technology</h3>
+          <p>
+            Technology professionals across technical, support,
+            development, infrastructure and related functions.
+          </p>
+        </div>
 
-        <div class="industry-grid">
-
-
-          <div class="industry-card">
-
-            <span class="industry-tag">
-              Healthcare
-            </span>
-
-            <h3>
-              Healthcare Staffing
-            </h3>
-
-            <p>
-              Supporting healthcare organizations with qualified clinical
-              and allied professionals.
-            </p>
-
-            <ul class="industry-list">
-
-              <li>RN</li>
-              <li>LPN / LVN</li>
-              <li>CNA</li>
-              <li>Allied Health</li>
-              <li>Case Management</li>
-              <li>Clinical Roles</li>
-
-            </ul>
-
-          </div>
-
-
-          <div class="industry-card">
-
-            <span class="industry-tag">
-              Information Technology
-            </span>
-
-            <h3>
-              IT Staffing
-            </h3>
-
-            <p>
-              Connecting organizations with technology professionals across
-              technical and digital functions.
-            </p>
-
-            <ul class="industry-list">
-
-              <li>Software Development</li>
-              <li>Cloud</li>
-              <li>Data</li>
-              <li>Infrastructure</li>
-              <li>IT Support</li>
-              <li>Technology</li>
-
-            </ul>
-
-          </div>
-
-
-          <div class="industry-card">
-
-            <span class="industry-tag">
-              Non-IT
-            </span>
-
-            <h3>
-              Non-IT Staffing
-            </h3>
-
-            <p>
-              Recruitment support for corporate, administrative and
-              operational positions.
-            </p>
-
-            <ul class="industry-list">
-
-              <li>Finance</li>
-              <li>Operations</li>
-              <li>Administration</li>
-              <li>Sales</li>
-              <li>Customer Support</li>
-              <li>Corporate Roles</li>
-
-            </ul>
-
-          </div>
-
+        <div class="card">
+          <div class="card-icon">N</div>
+          <h3>Non-IT</h3>
+          <p>
+            Professional and operational talent across a range
+            of business and workforce functions.
+          </p>
         </div>
 
       </div>
+    </div>
+  </section>
 
-    </section>
 
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
 
-    <!-- ================= SERVICES ================= -->
+      <div class="section-head">
+        <h2>Recruitment & Staffing Services</h2>
+        <p>
+          Flexible recruitment support based on workforce requirements.
+        </p>
+      </div>
 
-    <section id="services">
+      <div class="grid-3">
 
-      <div class="container">
-
-        <div class="section-head">
-
-          <div class="section-label">
-            Our Services
-          </div>
-
-          <h2>
-            Flexible recruitment solutions.
-          </h2>
-
+        <div class="card">
+          <div class="card-icon">01</div>
+          <h3>Contract Staffing</h3>
           <p>
-            We support organizations across different hiring models,
-            from short-term staffing requirements to permanent recruitment.
+            Connect with qualified professionals for temporary
+            and contract workforce requirements.
           </p>
-
         </div>
 
+        <div class="card">
+          <div class="card-icon">02</div>
+          <h3>Contract-to-Hire</h3>
+          <p>
+            Recruitment support for organizations evaluating
+            talent for longer-term employment.
+          </p>
+        </div>
 
-        <div class="service-grid">
+        <div class="card">
+          <div class="card-icon">03</div>
+          <h3>Direct Hire</h3>
+          <p>
+            Search and recruitment support for permanent
+            professional positions.
+          </p>
+        </div>
 
+        <div class="card">
+          <div class="card-icon">04</div>
+          <h3>Candidate Sourcing</h3>
+          <p>
+            Targeted sourcing and outreach based on position
+            requirements.
+          </p>
+        </div>
 
-          <div class="service-card">
+        <div class="card">
+          <div class="card-icon">05</div>
+          <h3>Candidate Screening</h3>
+          <p>
+            Initial profile review and qualification screening
+            before candidate presentation.
+          </p>
+        </div>
 
-            <h3>
-              Contract Staffing
-            </h3>
-
-            <p>
-              Talent for temporary and project-based workforce requirements.
-            </p>
-
-          </div>
-
-
-          <div class="service-card">
-
-            <h3>
-              Contract-to-Hire
-            </h3>
-
-            <p>
-              Flexible hiring arrangements that can transition to permanent
-              employment when appropriate.
-            </p>
-
-          </div>
-
-
-          <div class="service-card">
-
-            <h3>
-              Direct Hire
-            </h3>
-
-            <p>
-              Recruitment support for organizations seeking permanent talent.
-            </p>
-
-          </div>
-
-
-          <div class="service-card">
-
-            <h3>
-              Candidate Sourcing
-            </h3>
-
-            <p>
-              Targeted sourcing based on role requirements, skills and
-              location.
-            </p>
-
-          </div>
-
-
-          <div class="service-card">
-
-            <h3>
-              Candidate Screening
-            </h3>
-
-            <p>
-              Initial review of qualifications and experience before
-              candidate presentation.
-            </p>
-
-          </div>
-
-
-          <div class="service-card">
-
-            <h3>
-              Workforce Recruitment Support
-            </h3>
-
-            <p>
-              Recruitment assistance for employers, staffing companies and
-              workforce programs.
-            </p>
-
-          </div>
-
+        <div class="card">
+          <div class="card-icon">06</div>
+          <h3>Workforce Recruitment Support</h3>
+          <p>
+            Recruitment support for ongoing staffing requirements
+            and workforce programs.
+          </p>
         </div>
 
       </div>
-
-    </section>
-
-
-    <!-- ================= OPPORTUNITIES ================= -->
-
-    <section class="jobs" id="opportunities">
-
-      <div class="container">
-
-        <div class="section-head">
-
-          <div class="section-label">
-            Current Opportunities
-          </div>
-
-          <h2>
-            Find your next opportunity.
-          </h2>
-
-          <p>
-            Browse available positions and review the requirements before
-            submitting your application.
-          </p>
-
-        </div>
+    </div>
+  </section>
 
 
-        <div class="job-grid">
+  <!-- OPPORTUNITIES -->
+  <section id="opportunities" class="soft">
+    <div class="container">
 
-
-          <div class="job-card">
-
-            <div class="job-sector">
-              Healthcare
-            </div>
-
-            <h3>
-              RN – Med Surg / Tele
-            </h3>
-
-            <div class="job-location">
-              Columbus, OH · United States
-            </div>
-
-            <div class="job-meta">
-
-              <span>Contract</span>
-              <span>36 Hours</span>
-              <span>Healthcare</span>
-
-            </div>
-
-            <a
-              href="#"
-              class="job-link"
-              onclick="openJob('rn-med-surg'); return false;"
-            >
-              View Position →
-            </a>
-
-          </div>
-
-
-          <div class="job-card">
-
-            <div class="job-sector">
-              Healthcare
-            </div>
-
-            <h3>
-              RN – PCU
-            </h3>
-
-            <div class="job-location">
-              Multiple US Locations
-            </div>
-
-            <div class="job-meta">
-
-              <span>Contract</span>
-              <span>36 Hours</span>
-              <span>Healthcare</span>
-
-            </div>
-
-            <a
-              href="#"
-              class="job-link"
-              onclick="openJob('rn-pcu'); return false;"
-            >
-              View Position →
-            </a>
-
-          </div>
-
-
-          <div class="job-card">
-
-            <div class="job-sector">
-              Healthcare
-            </div>
-
-            <h3>
-              LPN / LVN
-            </h3>
-
-            <div class="job-location">
-              Texas · United States
-            </div>
-
-            <div class="job-meta">
-
-              <span>Contract</span>
-              <span>40 Hours</span>
-              <span>Healthcare</span>
-
-            </div>
-
-            <a
-              href="#"
-              class="job-link"
-              onclick="openJob('lvn'); return false;"
-            >
-              View Position →
-            </a>
-
-          </div>
-
-        </div>
-
-
-        <div style="text-align:center; margin-top:32px;">
-
-          <p style="font-size:13px; color:#667085;">
-
-            Job listings shown above are sample frontend entries for website
-            review. Live openings should be added only when available.
-
-          </p>
-
-        </div>
-
+      <div class="section-head">
+        <h2>Current Opportunities</h2>
+        <p>
+          Explore representative opportunities. Availability and
+          requirements may change, so candidates should confirm
+          current details with a recruiter.
+        </p>
       </div>
 
-    </section>
+      <div class="jobs">
 
+        <div class="job-card">
+          <div class="job-info">
+            <h3>RN – Med Surg / Tele</h3>
+            <p>Columbus, OH</p>
 
-    <!-- ================= WHY KORUS ================= -->
-
-    <section>
-
-      <div class="container why-grid">
-
-
-        <div class="why-box">
-
-          <h3>
-            A practical approach to recruitment.
-          </h3>
-
-          <p>
-            Korus Talent focuses on understanding the requirement,
-            identifying relevant professionals and maintaining clear
-            communication throughout the recruitment process.
-          </p>
-
-        </div>
-
-
-        <div class="why-list">
-
-
-          <div class="why-item">
-
-            <div class="why-check">
-              ✓
+            <div class="job-tags">
+              <span class="tag">Registered Nurse</span>
+              <span class="tag">13 Weeks</span>
+              <span class="tag">Travel</span>
             </div>
-
-            <div>
-
-              <h4>
-                Role-focused sourcing
-              </h4>
-
-              <p>
-                Candidate searches are aligned with the position,
-                qualifications and hiring requirements.
-              </p>
-
-            </div>
-
           </div>
-
-
-          <div class="why-item">
-
-            <div class="why-check">
-              ✓
-            </div>
-
-            <div>
-
-              <h4>
-                Clear communication
-              </h4>
-
-              <p>
-                Candidates and hiring partners receive relevant information
-                throughout the recruitment process.
-              </p>
-
-            </div>
-
-          </div>
-
-
-          <div class="why-item">
-
-            <div class="why-check">
-              ✓
-            </div>
-
-            <div>
-
-              <h4>
-                Flexible hiring models
-              </h4>
-
-              <p>
-                Contract, contract-to-hire and permanent recruitment support
-                depending on the requirement.
-              </p>
-
-            </div>
-
-          </div>
-
-
-          <div class="why-item">
-
-            <div class="why-check">
-              ✓
-            </div>
-
-            <div>
-
-              <h4>
-                US & India coverage
-              </h4>
-
-              <p>
-                Recruitment activity can support opportunities and talent
-                across both markets.
-              </p>
-
-            </div>
-
-          </div>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= PROCESS ================= -->
-
-    <section class="process">
-
-      <div class="container">
-
-        <div class="section-head">
-
-          <div class="section-label">
-            Our Process
-          </div>
-
-          <h2>
-            From requirement to recruitment.
-          </h2>
-
-        </div>
-
-
-        <div class="process-grid">
-
-
-          <div class="process-card">
-
-            <div class="process-no">
-              STEP 01
-            </div>
-
-            <h3>
-              Understand
-            </h3>
-
-            <p>
-              We review the position, hiring requirements and candidate
-              profile needed.
-            </p>
-
-          </div>
-
-
-          <div class="process-card">
-
-            <div class="process-no">
-              STEP 02
-            </div>
-
-            <h3>
-              Source
-            </h3>
-
-            <p>
-              We identify professionals whose background aligns with the
-              opportunity.
-            </p>
-
-          </div>
-
-
-          <div class="process-card">
-
-            <div class="process-no">
-              STEP 03
-            </div>
-
-            <h3>
-              Screen
-            </h3>
-
-            <p>
-              Candidate qualifications and relevant experience are reviewed
-              before presentation.
-            </p>
-
-          </div>
-
-
-          <div class="process-card">
-
-            <div class="process-no">
-              STEP 04
-            </div>
-
-            <h3>
-              Connect
-            </h3>
-
-            <p>
-              Qualified candidates are connected with the hiring organization
-              for the next stage.
-            </p>
-
-          </div>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= CTA ================= -->
-
-    <section class="cta">
-
-      <div class="container">
-
-        <div class="cta-box">
-
-          <div>
-
-            <h2>
-              Looking for your next opportunity?
-            </h2>
-
-            <p>
-              Explore available positions or connect with our recruitment
-              team to discuss opportunities.
-            </p>
-
-          </div>
-
-
-          <div class="cta-buttons">
-
-            <a
-              href="#opportunities"
-              class="btn btn-secondary"
-            >
-              Find Jobs
-            </a>
-
-            <a
-              href="#contact"
-              class="btn btn-secondary"
-            >
-              Contact Us
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= ABOUT ================= -->
-
-    <section>
-
-      <div class="container about-grid">
-
-
-        <div class="about-text">
-
-          <div class="section-label">
-            About Korus Talent
-          </div>
-
-          <h2
-            style="
-              font-size:40px;
-              line-height:1.15;
-              color:var(--navy);
-              margin-bottom:20px;
-            "
-          >
-            Connecting organizations with people who can move work forward.
-          </h2>
-
-          <p>
-            Korus Talent is a staffing and recruitment company focused on
-            connecting qualified professionals with organizations across
-            Healthcare, IT and Non-IT functions.
-          </p>
-
-          <p>
-            Our approach is centered on targeted sourcing, candidate
-            screening and clear communication between professionals and
-            hiring organizations.
-          </p>
-
-        </div>
-
-
-        <div class="coverage-box">
-
-          <h3>
-            Geographic Coverage
-          </h3>
-
-
-          <div class="country">
-
-            <strong>
-              United States
-            </strong>
-
-            <span>
-              Staffing and recruitment opportunities across US markets.
-            </span>
-
-          </div>
-
-
-          <div class="country">
-
-            <strong>
-              India
-            </strong>
-
-            <span>
-              Recruitment support for professionals and organizations
-              operating in the Indian market.
-            </span>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= CONTACT ================= -->
-
-    <section class="contact" id="contact">
-
-      <div class="container contact-grid">
-
-
-        <div class="contact-info">
-
-          <div class="section-label">
-            Contact
-          </div>
-
-          <h2>
-            Let's discuss your hiring needs.
-          </h2>
-
-          <p>
-            Whether you are an employer looking for talent or a professional
-            exploring opportunities, you can reach out to our team.
-          </p>
-
-
-          <div class="contact-point">
-
-            <strong>
-              Staffing & Recruitment
-            </strong>
-
-            <span>
-              Healthcare · IT · Non-IT
-            </span>
-
-          </div>
-
-
-          <div class="contact-point">
-
-            <strong>
-              Coverage
-            </strong>
-
-            <span>
-              United States · India
-            </span>
-
-          </div>
-
-
-          <div class="contact-point">
-
-            <strong>
-              Email
-            </strong>
-
-            <span>
-              info@korustalent.com
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <!-- CONTACT FORM -->
-
-        <form
-          class="form"
-          action="https://formsubmit.co/info@korustalent.com"
-          method="POST"
-        >
-
-          <input
-            type="hidden"
-            name="_subject"
-            value="Korus Talent Website Inquiry"
-          />
-
-          <input
-            type="hidden"
-            name="_captcha"
-            value="false"
-          />
-
-
-          <div class="form-row">
-
-            <div class="field">
-
-              <label>
-                First Name
-              </label>
-
-              <input
-                type="text"
-                name="first_name"
-                required
-              />
-
-            </div>
-
-
-            <div class="field">
-
-              <label>
-                Last Name
-              </label>
-
-              <input
-                type="text"
-                name="last_name"
-                required
-              />
-
-            </div>
-
-          </div>
-
-
-          <div class="form-row">
-
-            <div class="field">
-
-              <label>
-                Email
-              </label>
-
-              <input
-                type="email"
-                name="email"
-                required
-              />
-
-            </div>
-
-
-            <div class="field">
-
-              <label>
-                Phone
-              </label>
-
-              <input
-                type="tel"
-                name="phone"
-              />
-
-            </div>
-
-          </div>
-
-
-          <div class="field">
-
-            <label>
-              I am a
-            </label>
-
-            <select
-              name="inquiry_type"
-              required
-            >
-
-              <option value="">
-                Select one
-              </option>
-
-              <option>
-                Job Seeker
-              </option>
-
-              <option>
-                Employer
-              </option>
-
-              <option>
-                Staffing / MSP Partner
-              </option>
-
-              <option>
-                Other
-              </option>
-
-            </select>
-
-          </div>
-
-
-          <div class="field">
-
-            <label>
-              Message
-            </label>
-
-            <textarea
-              name="message"
-              placeholder="Tell us how we can help..."
-              required
-            ></textarea>
-
-          </div>
-
 
           <button
-            type="submit"
             class="btn btn-primary"
-          >
-            Send Inquiry
+            onclick="openJob('RN – Med Surg / Tele','Columbus, OH','13-week contract opportunity. Contact Korus Talent for current pay, schedule, and qualification details.')">
+            View Position
+          </button>
+        </div>
+
+
+        <div class="job-card">
+          <div class="job-info">
+            <h3>RN – PCU</h3>
+            <p>Multiple Locations</p>
+
+            <div class="job-tags">
+              <span class="tag">Registered Nurse</span>
+              <span class="tag">PCU</span>
+              <span class="tag">36 / 48 Hours</span>
+            </div>
+          </div>
+
+          <button
+            class="btn btn-primary"
+            onclick="openJob('RN – PCU','Multiple Locations','PCU opportunities may be available in selected U.S. locations. Contact Korus Talent for current openings and requirements.')">
+            View Position
+          </button>
+        </div>
+
+
+        <div class="job-card">
+          <div class="job-info">
+            <h3>LPN / LVN</h3>
+            <p>Texas & Other Locations</p>
+
+            <div class="job-tags">
+              <span class="tag">LPN / LVN</span>
+              <span class="tag">Contract</span>
+              <span class="tag">Healthcare</span>
+            </div>
+          </div>
+
+          <button
+            class="btn btn-primary"
+            onclick="openJob('LPN / LVN','Texas & Other Locations','LPN/LVN opportunities may be available based on current client requirements. Contact Korus Talent for current details.')">
+            View Position
+          </button>
+        </div>
+
+      </div>
+
+      <p style="margin-top:18px;font-size:12px;color:#7a8492;">
+        Note: Job listings shown here are representative website entries.
+        Confirm current availability, compensation, schedule and requirements
+        directly with Korus Talent before applying.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- WHY -->
+  <section>
+    <div class="container">
+
+      <div class="section-head">
+        <h2>Why Work With Korus Talent?</h2>
+        <p>
+          A practical recruitment approach focused on communication,
+          candidate quality, and workforce requirements.
+        </p>
+      </div>
+
+      <div class="grid-3">
+
+        <div class="card">
+          <div class="card-icon">✓</div>
+          <h3>Focused Sourcing</h3>
+          <p>
+            Targeted candidate sourcing based on position-specific
+            requirements.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">✓</div>
+          <h3>Qualification Review</h3>
+          <p>
+            Candidate information is reviewed against the stated
+            requirements before presentation.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">✓</div>
+          <h3>Clear Communication</h3>
+          <p>
+            Straightforward communication between candidates,
+            recruiters and staffing partners.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PROCESS -->
+  <section class="soft">
+    <div class="container">
+
+      <div class="section-head">
+        <h2>Our Recruitment Process</h2>
+      </div>
+
+      <div class="steps">
+
+        <div class="step">
+          <div class="number">STEP 01</div>
+          <h3>Understand</h3>
+          <p>
+            Review the role, workforce requirement and candidate profile.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="number">STEP 02</div>
+          <h3>Source</h3>
+          <p>
+            Identify professionals who align with the stated requirements.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="number">STEP 03</div>
+          <h3>Screen</h3>
+          <p>
+            Review qualifications, experience and relevant documentation.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="number">STEP 04</div>
+          <h3>Connect</h3>
+          <p>
+            Present qualified candidates and support communication
+            through the recruitment process.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- EMPLOYERS -->
+  <section id="employers">
+    <div class="container">
+
+      <div class="cta">
+        <h2>Looking for Qualified Talent?</h2>
+
+        <p>
+          Tell us about your staffing requirement and our recruitment
+          team can review the opportunity and determine how we can support.
+        </p>
+
+        <a href="#contact" class="btn btn-primary">
+          Discuss Your Requirement
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ABOUT COMPANY -->
+  <section>
+    <div class="container">
+
+      <div class="section-head">
+        <h2>About Korus Talent</h2>
+
+        <p>
+          Korus Talent is a recruitment and staffing company focused on
+          connecting organizations with qualified professionals across
+          healthcare, IT and non-IT sectors.
+        </p>
+
+        <p style="margin-top:15px;">
+          Our approach combines candidate sourcing, screening and
+          recruitment support with a focus on clear communication
+          throughout the hiring process.
+        </p>
+      </div>
+
+      <div class="grid-3">
+
+        <div class="card">
+          <h3>Healthcare Expertise</h3>
+          <p>
+            Recruitment support across nursing, allied health and
+            related healthcare positions.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Flexible Workforce Support</h3>
+          <p>
+            Support for contract, temporary, contract-to-hire and
+            permanent recruitment needs.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Geographic Coverage</h3>
+          <p>
+            Recruitment support serving opportunities across the
+            United States and India.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CONTACT -->
+  <section id="contact" class="soft">
+    <div class="container">
+
+      <div class="section-head">
+        <h2>Let's Connect</h2>
+        <p>
+          Candidates and organizations can contact Korus Talent using
+          the form below.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+
+        <div class="contact-details">
+          <p><strong>Email</strong><br>
+            info@korustalent.com
+          </p>
+
+          <p><strong>Coverage</strong><br>
+            United States & India
+          </p>
+
+          <p><strong>For Candidates</strong><br>
+            Contact us regarding available opportunities and recruitment
+            requirements.
+          </p>
+
+          <p><strong>For Employers</strong><br>
+            Share your workforce requirement with our recruitment team.
+          </p>
+        </div>
+
+
+        <form
+          action="https://formsubmit.co/info@korustalent.com"
+          method="POST">
+
+          <input type="hidden" name="_subject" value="New Inquiry - Korus Talent Website">
+          <input type="hidden" name="_captcha" value="false">
+
+          <div class="form-row">
+            <div>
+              <label>Full Name *</label>
+              <input type="text" name="Full Name" required>
+            </div>
+
+            <div>
+              <label>Email *</label>
+              <input type="email" name="Email" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label>Phone</label>
+              <input type="tel" name="Phone">
+            </div>
+
+            <div>
+              <label>I am a</label>
+              <select name="Inquiry Type">
+                <option>Candidate</option>
+                <option>Employer</option>
+                <option>Staffing Partner</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label>Message *</label>
+            <textarea name="Message" required></textarea>
+          </div>
+
+          <button class="btn btn-primary" type="submit">
+            Send Message
           </button>
 
         </form>
 
       </div>
+    </div>
+  </section>
 
-    </section>
-
-  </main>
-
-
-  <!-- ================= FOOTER ================= -->
-
-  <footer>
-
-    <div class="container">
+</main>
 
 
-      <div class="footer-grid">
+<!-- FOOTER -->
+<footer>
+  <div class="container">
 
+    <div class="footer-grid">
 
-        <div class="footer-brand">
+      <div>
+        <h3>Korus Talent</h3>
 
-          <h3>
-            Korus Talent
-          </h3>
-
-          <p>
-            Staffing and recruitment solutions across Healthcare, IT and
-            Non-IT sectors in the United States and India.
-          </p>
-
-        </div>
-
-
-        <div class="footer-col">
-
-          <h4>
-            Company
-          </h4>
-
-          <a href="#about">
-            About
-          </a>
-
-          <a href="#industries">
-            Industries
-          </a>
-
-          <a href="#services">
-            Services
-          </a>
-
-          <a href="#contact">
-            Contact
-          </a>
-
-        </div>
-
-
-        <div class="footer-col">
-
-          <h4>
-            Talent
-          </h4>
-
-          <a href="#opportunities">
-            Find Jobs
-          </a>
-
-          <a href="#contact">
-            Submit Resume
-          </a>
-
-          <a href="#contact">
-            Contact Recruitment
-          </a>
-
-        </div>
-
-
-        <div class="footer-col">
-
-          <h4>
-            Employers
-          </h4>
-
-          <a href="#employers">
-            Staffing Solutions
-          </a>
-
-          <a href="#contact">
-            Request Talent
-          </a>
-
-          <a href="#contact">
-            Partner With Us
-          </a>
-
-        </div>
-
-
+        <p>
+          Connecting qualified professionals with workforce
+          opportunities across healthcare, IT and non-IT sectors.
+        </p>
       </div>
 
+      <div>
+        <h4>Quick Links</h4>
 
-      <div class="footer-bottom">
-
-        <div>
-          © 2026 Korus Talent. All rights reserved.
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#industries">Industries</a>
+          <a href="#services">Services</a>
+          <a href="#opportunities">Opportunities</a>
+          <a href="#contact">Contact</a>
         </div>
+      </div>
 
-        <div>
-          United States · India
+      <div>
+        <h4>Candidate Resources</h4>
+
+        <div class="footer-links">
+          <a href="skills-checklist.html">Skills Checklist</a>
+          <a href="#contact">Professional References</a>
+          <a href="#contact">Candidate Portal</a>
         </div>
-
       </div>
 
     </div>
 
-  </footer>
-
-
-  <!-- ================= JOB DETAIL MODAL ================= -->
-
-  <div
-    class="modal"
-    id="jobModal"
-  >
-
-    <div class="modal-box">
-
-      <button
-        class="modal-close"
-        onclick="closeJob()"
-      >
-        ×
-      </button>
-
-      <div id="jobContent"></div>
-
+    <div class="copyright">
+      © 2026 Korus Talent. All rights reserved.
     </div>
 
   </div>
+</footer>
 
 
-  <!-- ================= JAVASCRIPT ================= -->
+<!-- JOB MODAL -->
+<div class="modal" id="jobModal">
+  <div class="modal-box">
 
-  <script>
+    <button class="close" onclick="closeJob()">×</button>
 
-    /* ================= MOBILE NAVIGATION ================= */
+    <h2 id="jobTitle"></h2>
+    <p id="jobLocation"></p>
 
-    const menuBtn = document.getElementById("menuBtn");
-    const navLinks = document.getElementById("navLinks");
+    <div style="margin-top:20px;">
+      <p id="jobDescription"></p>
+    </div>
 
-    menuBtn.addEventListener("click", () => {
+    <div class="buttons" style="margin-top:25px;">
+      <a href="#contact" class="btn btn-primary" onclick="closeJob()">
+        Contact Recruiter
+      </a>
 
-      navLinks.classList.toggle("open");
+      <button class="btn btn-secondary" onclick="closeJob()">
+        Close
+      </button>
+    </div>
 
-    });
+  </div>
+</div>
 
 
-    document
-      .querySelectorAll(".nav-links a")
-      .forEach(link => {
+<script>
+  function toggleMore() {
+    document.getElementById("moreMenu").classList.toggle("show");
+  }
 
-        link.addEventListener("click", () => {
+  document.addEventListener("click", function(event) {
+    const more = document.querySelector(".more");
 
-          navLinks.classList.remove("open");
-
-        });
-
-      });
-
-
-    /* ================= JOB DATA ================= */
-
-    const jobs = {
-
-      "rn-med-surg": {
-
-        sector: "Healthcare",
-
-        title: "RN – Med Surg / Tele",
-
-        location: "Columbus, OH · United States",
-
-        type: "Contract",
-
-        description:
-          "Travel/contract nursing opportunity for a qualified Registered Nurse with relevant Med Surg / Tele experience.",
-
-        requirements: [
-
-          "Active RN license applicable to the assignment",
-
-          "Relevant Med Surg / Tele nursing experience",
-
-          "Current BLS certification",
-
-          "Additional certifications may be required based on facility requirements"
-
-        ],
-
-        note:
-          "Compensation, schedule and facility-specific requirements should be confirmed against the active job order before candidate submission."
-
-      },
-
-
-      "rn-pcu": {
-
-        sector: "Healthcare",
-
-        title: "RN – PCU",
-
-        location: "Multiple US Locations",
-
-        type: "Contract",
-
-        description:
-          "Contract opportunity for experienced Progressive Care Unit nurses at participating client facilities.",
-
-        requirements: [
-
-          "Active RN license applicable to the assignment",
-
-          "Recent PCU / Progressive Care experience",
-
-          "Current BLS certification",
-
-          "Additional clinical certifications may be required by facility"
-
-        ],
-
-        note:
-          "Location, pay, shift and facility requirements should be confirmed against the active job order."
-
-      },
-
-
-      "lvn": {
-
-        sector: "Healthcare",
-
-        title: "LPN / LVN",
-
-        location: "Texas · United States",
-
-        type: "Contract",
-
-        description:
-          "Contract nursing opportunity for qualified LPN/LVN professionals in Texas.",
-
-        requirements: [
-
-          "Active LPN/LVN license",
-
-          "Relevant clinical experience",
-
-          "Current BLS certification where required",
-
-          "Ability to meet facility credentialing requirements"
-
-        ],
-
-        note:
-          "Exact facility, schedule and compensation should be confirmed before application."
-
-      }
-
-    };
-
-
-    /* ================= OPEN JOB ================= */
-
-    function openJob(id) {
-
-      const job = jobs[id];
-
-      if (!job) return;
-
-
-      const requirements = job.requirements
-        .map(item => `<li>${item}</li>`)
-        .join("");
-
-
-      document.getElementById("jobContent").innerHTML = `
-
-        <div class="job-sector">
-          ${job.sector}
-        </div>
-
-        <h2>
-          ${job.title}
-        </h2>
-
-        <div class="modal-location">
-          ${job.location} · ${job.type}
-        </div>
-
-        <div class="modal-section">
-
-          <h4>
-            Position Overview
-          </h4>
-
-          <p>
-            ${job.description}
-          </p>
-
-        </div>
-
-
-        <div class="modal-section">
-
-          <h4>
-            Requirements
-          </h4>
-
-          <ul>
-            ${requirements}
-          </ul>
-
-        </div>
-
-
-        <div class="modal-section">
-
-          <h4>
-            Important Information
-          </h4>
-
-          <p>
-            ${job.note}
-          </p>
-
-        </div>
-
-
-        <div style="margin-top:25px;">
-
-          <button
-            class="btn btn-primary"
-            onclick="applyForJob('${id}')"
-          >
-            Apply for This Position
-          </button>
-
-        </div>
-
-      `;
-
-
-      document
-        .getElementById("jobModal")
-        .classList
-        .add("active");
-
+    if (!more.contains(event.target)) {
+      document.getElementById("moreMenu").classList.remove("show");
     }
+  });
 
 
-    /* ================= CLOSE JOB ================= */
+  function openJob(title, location, description) {
+    document.getElementById("jobTitle").textContent = title;
+    document.getElementById("jobLocation").textContent = location;
+    document.getElementById("jobDescription").textContent = description;
 
-    function closeJob() {
-
-      document
-        .getElementById("jobModal")
-        .classList
-        .remove("active");
-
-    }
+    document.getElementById("jobModal").classList.add("show");
+  }
 
 
-    /* ================= APPLY FOR JOB ================= */
+  function closeJob() {
+    document.getElementById("jobModal").classList.remove("show");
+  }
 
-    function applyForJob(id) {
 
-      const job = jobs[id];
-
+  document.getElementById("jobModal").addEventListener("click", function(event) {
+    if (event.target === this) {
       closeJob();
-
-
-      document
-        .getElementById("contact")
-        .scrollIntoView({
-          behavior: "smooth"
-        });
-
-
-      setTimeout(() => {
-
-        const message =
-          document.querySelector(
-            'textarea[name="message"]'
-          );
-
-
-        const type =
-          document.querySelector(
-            'select[name="inquiry_type"]'
-          );
-
-
-        if (type) {
-
-          type.value = "Job Seeker";
-
-        }
-
-
-        if (message) {
-
-          message.value =
-            "I am interested in the position: " +
-            job.title +
-            " (" +
-            job.location +
-            "). Please share the next steps for applying.";
-
-        }
-
-      }, 600);
-
     }
-
-
-    /* ================= CLOSE MODAL OUTSIDE ================= */
-
-    document
-      .getElementById("jobModal")
-      .addEventListener("click", function(e) {
-
-        if (e.target === this) {
-
-          closeJob();
-
-        }
-
-      });
-
-
-    /* ================= ESC KEY ================= */
-
-    document.addEventListener("keydown", function(e) {
-
-      if (e.key === "Escape") {
-
-        closeJob();
-
-      }
-
-    });
-
-  </script>
+  });
+</script>
 
 </body>
 </html>
+```
