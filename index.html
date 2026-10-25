@@ -4,107 +4,78 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description"
-    content="Korus Talent connects qualified healthcare, IT and non-IT professionals with organizations across the United States.">
-
+  <meta name="description" content="Korus Talent connects healthcare, IT, non-IT and customer support talent with organizations in India and the United States.">
   <meta name="theme-color" content="#071d35">
 
   <title>Korus Talent | Talent. Opportunity. Connection.</title>
 
-  <style>
-    /* =========================================================
-       KORUS TALENT
-       Modern Staffing Website
-       GitHub Pages Compatible
-    ========================================================= */
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+  <style>
+    :root {
+      --navy: #071d35;
+      --navy-light: #103957;
+      --blue: #1684d8;
+      --cyan: #18b9b1;
+      --text: #182538;
+      --muted: #68778a;
+      --light: #f4f8fb;
+      --border: #e4ebf1;
+      --white: #fff;
+      --shadow: 0 18px 55px rgba(7, 29, 53, .10);
     }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 90px;
     }
 
     body {
-      font-family: Inter, Arial, Helvetica, sans-serif;
-      color: #172033;
-      background: #ffffff;
-      line-height: 1.6;
+      font-family: "DM Sans", Arial, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.65;
       overflow-x: hidden;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    button,
-    input,
-    textarea,
-    select {
-      font: inherit;
-    }
-
-    :root {
-      --navy: #071d35;
-      --navy2: #0b2c4d;
-      --blue: #1677c8;
-      --cyan: #19b7b1;
-      --light: #f4f9fc;
-      --light2: #edf7f8;
-      --text: #172033;
-      --muted: #667085;
-      --border: #e2e9ef;
-      --white: #ffffff;
-      --shadow: 0 20px 60px rgba(7, 29, 53, .10);
-    }
-
-    .container {
-      width: min(1180px, 92%);
-      margin: auto;
-    }
-
-    /* =========================================================
-       TOP BAR
-    ========================================================= */
+    body, button, input, textarea, select { font-family: "DM Sans", Arial, sans-serif; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; width: 100%; }
+    button { cursor: pointer; }
+    .container { width: min(1160px, 91%); margin: auto; }
 
     .topbar {
       background: var(--navy);
-      color: #dbe8f3;
+      color: #d9e7f2;
       font-size: 12px;
-      padding: 8px 0;
+      padding: 9px 0;
     }
 
     .topbar-inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 20px;
+      gap: 15px;
     }
 
-    .topbar a {
-      color: #ffffff;
-      font-weight: 700;
-    }
-
-    /* =========================================================
-       HEADER
-    ========================================================= */
+    .topbar a { color: white; font-weight: 700; }
+    .topbar-right { display: flex; gap: 20px; }
 
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(255,255,255,.94);
-      backdrop-filter: blur(15px);
-      border-bottom: 1px solid rgba(220,228,235,.8);
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(226,235,241,.9);
     }
 
     .nav {
-      min-height: 78px;
+      min-height: 76px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -115,29 +86,27 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      font-size: 25px;
-      font-weight: 900;
-      letter-spacing: -.8px;
+      font-family: "Manrope", sans-serif;
+      font-size: 23px;
+      font-weight: 800;
+      letter-spacing: -1px;
       color: var(--navy);
       white-space: nowrap;
     }
 
     .logo-mark {
-      width: 38px;
-      height: 38px;
-      border-radius: 12px;
       display: grid;
       place-items: center;
+      width: 39px;
+      height: 39px;
+      border-radius: 12px;
       color: white;
+      font-size: 19px;
       background: linear-gradient(135deg, var(--blue), var(--cyan));
-      font-size: 18px;
-      font-weight: 900;
-      box-shadow: 0 8px 22px rgba(22,119,200,.22);
+      box-shadow: 0 7px 20px rgba(22,132,216,.2);
     }
 
-    .logo span {
-      color: var(--cyan);
-    }
+    .logo span { color: var(--cyan); }
 
     .nav-links {
       display: flex;
@@ -145,385 +114,208 @@
       gap: 23px;
     }
 
-    .nav-links > a,
-    .more-btn {
+    .nav-links > a {
+      color: #354459;
       font-size: 13px;
       font-weight: 700;
-      color: #344054;
-      transition: .2s ease;
+      transition: color .2s;
     }
 
-    .nav-links > a:hover,
-    .more-btn:hover {
-      color: var(--blue);
-    }
+    .nav-links > a:hover { color: var(--blue); }
 
-    .nav-cta {
+    .nav-links .nav-cta {
+      color: white;
       background: var(--navy);
-      color: white !important;
-      padding: 11px 18px;
+      padding: 12px 17px;
       border-radius: 9px;
-      transition: .25s ease;
     }
 
-    .nav-cta:hover {
-      background: var(--blue);
-      transform: translateY(-2px);
-    }
+    .nav-links .nav-cta:hover { background: var(--blue); color: white; }
 
-    .more {
-      position: relative;
-    }
-
-    .more-btn {
-      border: 0;
-      background: transparent;
-      cursor: pointer;
-      padding: 8px 0;
-    }
-
-    .more-menu {
-      display: none;
-      position: absolute;
-      right: 0;
-      top: 40px;
-      width: 235px;
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 13px;
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-
-    .more-menu.show {
-      display: block;
-      animation: dropdown .2s ease;
-    }
-
-    @keyframes dropdown {
-      from {
-        opacity: 0;
-        transform: translateY(-8px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .more-menu a {
-      display: block;
-      padding: 13px 16px;
-      font-size: 13px;
-      font-weight: 600;
-      border-bottom: 1px solid #eef1f4;
-    }
-
-    .more-menu a:hover {
-      background: var(--light);
-      color: var(--blue);
-    }
-
-    /* MOBILE MENU */
-
-    .mobile-toggle {
+    .menu-toggle {
       display: none;
       width: 43px;
       height: 43px;
       border: 1px solid var(--border);
       background: white;
       border-radius: 10px;
-      cursor: pointer;
-      font-size: 22px;
       color: var(--navy);
+      font-size: 23px;
     }
 
-    .mobile-menu {
-      display: none;
-      background: white;
-      border-top: 1px solid var(--border);
-      padding: 15px 4%;
-    }
-
-    .mobile-menu.open {
-      display: grid;
-      gap: 5px;
-    }
-
-    .mobile-menu a {
-      padding: 12px 5px;
-      font-weight: 700;
-      color: #344054;
-    }
-
-    /* =========================================================
-       HERO
-    ========================================================= */
+    /* HERO */
 
     .hero {
       position: relative;
-      min-height: 690px;
-      display: flex;
-      align-items: center;
+      color: white;
+      padding: 88px 0 80px;
       overflow: hidden;
       background:
-        radial-gradient(circle at 80% 25%, rgba(25,183,177,.20), transparent 28%),
-        radial-gradient(circle at 90% 80%, rgba(22,119,200,.20), transparent 30%),
-        linear-gradient(135deg, #061a31 0%, #0a3154 55%, #0a4b61 100%);
-      color: white;
+        radial-gradient(circle at 80% 20%, rgba(24,185,177,.22), transparent 30%),
+        linear-gradient(125deg, #061a30, #0b3454 62%, #07525d);
     }
 
     .hero::before {
       content: "";
       position: absolute;
-      width: 520px;
-      height: 520px;
-      right: -180px;
-      top: -170px;
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 50%;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      width: 380px;
-      height: 380px;
-      right: 50px;
-      bottom: -230px;
+      width: 500px;
+      height: 500px;
       border: 1px solid rgba(255,255,255,.10);
       border-radius: 50%;
+      right: -170px;
+      top: -250px;
     }
 
     .hero-grid {
       position: relative;
-      z-index: 2;
+      z-index: 1;
       display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 70px;
+      grid-template-columns: 1fr .95fr;
       align-items: center;
+      gap: 55px;
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 8px 14px;
-      border: 1px solid rgba(255,255,255,.18);
-      background: rgba(255,255,255,.08);
-      border-radius: 30px;
-      color: #bdf5f1;
+      gap: 9px;
+      color: #baf7f0;
       font-size: 11px;
       font-weight: 800;
-      letter-spacing: 1px;
       text-transform: uppercase;
+      letter-spacing: 1.5px;
       margin-bottom: 20px;
     }
 
     .eyebrow::before {
       content: "";
-      width: 7px;
-      height: 7px;
+      width: 8px;
+      height: 8px;
       background: var(--cyan);
       border-radius: 50%;
-      box-shadow: 0 0 15px var(--cyan);
+      box-shadow: 0 0 12px var(--cyan);
     }
 
+    h1, h2, h3, h4 { font-family: "Manrope", sans-serif; }
+
     .hero h1 {
-      font-size: clamp(45px, 6vw, 75px);
-      line-height: 1.02;
-      letter-spacing: -3px;
-      margin-bottom: 23px;
-      max-width: 760px;
+      font-size: clamp(42px, 5vw, 67px);
+      line-height: 1.08;
+      letter-spacing: -2.8px;
+      margin-bottom: 22px;
     }
 
     .hero h1 span {
-      color: #52d7d0;
+      color: #55ded5;
     }
 
-    .hero-text {
-      color: #c9d9e7;
-      font-size: 18px;
-      max-width: 690px;
-      margin-bottom: 32px;
+    .hero-copy {
+      max-width: 550px;
+      color: #ccdae7;
+      font-size: 16px;
+      margin-bottom: 29px;
     }
 
-    .hero-buttons {
+    .hero-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 13px;
+      gap: 12px;
     }
 
     .btn {
       display: inline-flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       gap: 8px;
       min-height: 48px;
-      padding: 12px 20px;
-      border-radius: 9px;
+      padding: 12px 19px;
       border: 1px solid transparent;
+      border-radius: 9px;
       font-size: 13px;
       font-weight: 800;
-      cursor: pointer;
-      transition: .25s ease;
+      transition: transform .25s, background .25s, box-shadow .25s;
     }
+
+    .btn:hover { transform: translateY(-3px); }
 
     .btn-primary {
-      background: linear-gradient(135deg, #1c91e5, #15b5b0);
+      background: linear-gradient(135deg, #198ce0, #15b8b0);
       color: white;
-      box-shadow: 0 12px 28px rgba(21,181,176,.20);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 18px 35px rgba(21,181,176,.28);
+      box-shadow: 0 10px 25px rgba(21,184,176,.2);
     }
 
     .btn-outline {
-      border-color: rgba(255,255,255,.28);
-      background: rgba(255,255,255,.06);
+      border-color: rgba(255,255,255,.32);
       color: white;
+      background: rgba(255,255,255,.06);
     }
 
-    .btn-outline:hover {
-      background: white;
-      color: var(--navy);
-    }
+    .btn-outline:hover { background: white; color: var(--navy); }
 
-    /* HERO VISUAL */
-
-    .hero-visual {
-      position: relative;
-      min-height: 460px;
-    }
-
-    .visual-main {
-      position: absolute;
-      width: 330px;
-      height: 390px;
-      right: 40px;
-      top: 20px;
-      border-radius: 28px;
-      padding: 25px;
-      background: rgba(255,255,255,.10);
-      border: 1px solid rgba(255,255,255,.17);
-      backdrop-filter: blur(20px);
-      box-shadow: 0 30px 80px rgba(0,0,0,.20);
-      transform: rotate(2deg);
-    }
-
-    .visual-header {
+    .hero-points {
       display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 28px;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 30px;
+      color: #d2e4ee;
+      font-size: 12px;
+      font-weight: 600;
     }
 
-    .visual-icon {
-      width: 52px;
-      height: 52px;
-      border-radius: 16px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(135deg, #1c91e5, #19b7b1);
-      font-size: 22px;
+    .hero-points span::before {
+      content: "✓";
+      color: #55ded5;
+      margin-right: 7px;
       font-weight: 900;
     }
 
-    .visual-header strong {
-      display: block;
-      font-size: 17px;
+    .hero-image-wrap {
+      position: relative;
+      min-width: 0;
     }
 
-    .visual-header small {
-      color: #a9c2d5;
-      font-size: 11px;
+    .hero-image {
+      height: 440px;
+      object-fit: cover;
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,.22);
+      box-shadow: 0 30px 70px rgba(0,0,0,.25);
     }
 
-    .visual-line {
-      height: 10px;
-      border-radius: 20px;
-      background: rgba(255,255,255,.12);
-      margin-bottom: 13px;
-    }
-
-    .visual-line.short {
-      width: 65%;
-    }
-
-    .visual-line.medium {
-      width: 82%;
-    }
-
-    .visual-card {
-      margin-top: 26px;
-      padding: 17px;
-      border-radius: 16px;
-      background: rgba(255,255,255,.09);
-      border: 1px solid rgba(255,255,255,.10);
-    }
-
-    .visual-card strong {
-      font-size: 13px;
-    }
-
-    .visual-card p {
-      color: #a9c2d5;
-      font-size: 11px;
-      margin-top: 4px;
-    }
-
-    .floating {
+    .hero-image-wrap::after {
+      content: "";
       position: absolute;
-      padding: 15px 18px;
+      inset: 0;
+      border-radius: 24px;
+      background: linear-gradient(0deg, rgba(4,24,43,.45), transparent 55%);
+      pointer-events: none;
+    }
+
+    .hero-image-label {
+      position: absolute;
+      z-index: 2;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      padding: 17px 19px;
+      border: 1px solid rgba(255,255,255,.25);
       border-radius: 15px;
-      background: white;
-      color: var(--navy);
-      box-shadow: 0 18px 45px rgba(0,0,0,.20);
-      font-size: 12px;
-      font-weight: 800;
-      animation: float 4s ease-in-out infinite;
+      background: rgba(7,29,53,.78);
+      backdrop-filter: blur(12px);
     }
 
-    .floating.one {
-      left: 0;
-      top: 80px;
-    }
+    .hero-image-label strong { display: block; font-size: 16px; }
+    .hero-image-label span { color: #d0e3ec; font-size: 12px; }
 
-    .floating.two {
-      right: 0;
-      bottom: 65px;
-      animation-delay: 1.5s;
-    }
+    /* TRUST STRIP */
 
-    .floating span {
-      display: block;
-      color: var(--cyan);
-      font-size: 10px;
-      margin-top: 2px;
-    }
-
-    @keyframes float {
-      0%,100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-10px);
-      }
-    }
-
-    /* =========================================================
-       TRUST STRIP
-    ========================================================= */
-
-    .trust {
+    .trust-strip {
       padding: 21px 0;
       border-bottom: 1px solid var(--border);
       background: white;
     }
 
-    .trust-inner {
+    .trust-items {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -532,2197 +324,509 @@
     }
 
     .trust-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: #667085;
       font-size: 12px;
-      font-weight: 800;
+      font-weight: 700;
+      color: #59697b;
     }
 
-    .trust-item::before {
-      content: "✓";
+    .trust-item span {
       color: var(--cyan);
       font-weight: 900;
+      margin-right: 7px;
     }
 
-    /* =========================================================
-       GENERAL SECTIONS
-    ========================================================= */
+    /* GENERAL SECTIONS */
 
-    section {
-      padding: 95px 0;
+    section.section { padding: 88px 0; }
+
+    .section-heading {
+      max-width: 720px;
+      margin-bottom: 38px;
     }
 
-    .section-head {
-      max-width: 750px;
-      margin-bottom: 48px;
-    }
-
-    .section-label {
-      color: var(--cyan);
+    .section-kicker {
+      color: #079c9b;
       font-size: 11px;
       font-weight: 900;
-      letter-spacing: 1.4px;
       text-transform: uppercase;
+      letter-spacing: 1.5px;
       margin-bottom: 10px;
     }
 
-    .section-head h2 {
+    .section-heading h2,
+    .intro-copy h2 {
       color: var(--navy);
-      font-size: clamp(32px, 4vw, 48px);
-      line-height: 1.1;
+      font-size: clamp(31px, 4vw, 45px);
+      line-height: 1.15;
       letter-spacing: -1.5px;
       margin-bottom: 14px;
     }
 
-    .section-head p {
+    .section-heading p,
+    .intro-copy p {
       color: var(--muted);
-      font-size: 16px;
+      font-size: 15px;
     }
 
-    .soft {
-      background: #f6fafc;
+    .section-heading.center {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
     }
 
-    /* =========================================================
-       AUDIENCE CARDS
-    ========================================================= */
+    .soft { background: var(--light); }
 
-    .audience-grid {
+    /* SERVICE CARDS */
+
+    .services-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 25px;
     }
 
-    .audience-card {
-      position: relative;
-      padding: 32px;
-      border-radius: 22px;
-      border: 1px solid var(--border);
-      background: white;
+    .service-card {
+      min-width: 0;
       overflow: hidden;
-      transition: .3s ease;
+      border: 1px solid var(--border);
+      border-radius: 19px;
+      background: white;
+      transition: transform .3s, box-shadow .3s, border-color .3s;
     }
 
-    .audience-card::after {
-      content: "";
-      position: absolute;
-      width: 120px;
-      height: 120px;
-      right: -55px;
-      bottom: -55px;
-      border-radius: 50%;
-      background: var(--light2);
-      transition: .3s ease;
-    }
-
-    .audience-card:hover {
+    .service-card:hover {
       transform: translateY(-7px);
+      border-color: #c8e5e7;
       box-shadow: var(--shadow);
-      border-color: #cde4ec;
     }
 
-    .audience-card:hover::after {
-      transform: scale(1.5);
+    .service-image-wrap {
+      position: relative;
+      height: 250px;
+      overflow: hidden;
+      background: #eaf2f6;
     }
 
-    .card-icon {
-      width: 55px;
-      height: 55px;
-      border-radius: 16px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(135deg, #e6f6f7, #eaf4fc);
-      color: var(--blue);
-      font-size: 20px;
-      font-weight: 900;
-      margin-bottom: 22px;
+    .service-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .65s;
     }
 
-    .audience-card h3 {
+    .service-card:hover .service-image { transform: scale(1.055); }
+
+    .image-tag {
+      position: absolute;
+      left: 17px;
+      top: 17px;
+      padding: 7px 11px;
       color: var(--navy);
-      font-size: 21px;
+      background: rgba(255,255,255,.94);
+      border-radius: 30px;
+      font-size: 10px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .6px;
+    }
+
+    .service-content { padding: 25px 27px 28px; }
+
+    .service-content h3 {
+      color: var(--navy);
+      font-size: 22px;
       margin-bottom: 9px;
     }
 
-    .audience-card p {
+    .service-content p {
       color: var(--muted);
       font-size: 14px;
       margin-bottom: 18px;
     }
 
-    .text-link {
-      color: var(--blue);
-      font-size: 13px;
-      font-weight: 900;
-    }
-
-    /* =========================================================
-       INDUSTRIES
-    ========================================================= */
-
-    .industry-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .industry-card {
-      min-height: 270px;
-      padding: 30px;
-      border-radius: 20px;
-      color: white;
-      position: relative;
-      overflow: hidden;
-      background: linear-gradient(145deg, #082542, #0b4b60);
-      transition: .3s ease;
-    }
-
-    .industry-card:nth-child(2) {
-      background: linear-gradient(145deg, #073452, #146d9d);
-    }
-
-    .industry-card:nth-child(3) {
-      background: linear-gradient(145deg, #083c42, #10918d);
-    }
-
-    .industry-card:hover {
-      transform: translateY(-7px);
-      box-shadow: 0 25px 60px rgba(7,29,53,.20);
-    }
-
-    .industry-number {
-      font-size: 11px;
-      color: #8fe5e0;
-      font-weight: 900;
-      letter-spacing: 1px;
-    }
-
-    .industry-card h3 {
-      font-size: 27px;
-      margin: 65px 0 10px;
-    }
-
-    .industry-card p {
-      color: #c6dbe7;
-      font-size: 13px;
-      max-width: 340px;
-    }
-
-    .industry-circle {
-      position: absolute;
-      width: 170px;
-      height: 170px;
-      border: 1px solid rgba(255,255,255,.14);
-      border-radius: 50%;
-      right: -70px;
-      top: -60px;
-    }
-
-    /* =========================================================
-       SPECIALTIES
-    ========================================================= */
-
-    .specialty-layout {
-      display: grid;
-      grid-template-columns: .8fr 1.2fr;
-      gap: 65px;
+    .service-link {
+      display: inline-flex;
       align-items: center;
+      gap: 8px;
+      color: #087dbb;
+      font-size: 13px;
+      font-weight: 900;
     }
 
-    .specialty-intro h2 {
-      color: var(--navy);
-      font-size: 42px;
-      line-height: 1.1;
-      letter-spacing: -1.2px;
-      margin-bottom: 15px;
-    }
+    .service-link span { transition: transform .2s; }
+    .service-link:hover span { transform: translateX(5px); }
 
-    .specialty-intro p {
-      color: var(--muted);
-      margin-bottom: 25px;
-    }
+    /* TWO MARKETS */
 
-    .specialty-list {
+    .market-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 13px;
+      gap: 24px;
     }
 
-    .specialty-item {
-      padding: 17px;
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      font-size: 13px;
-      font-weight: 800;
-      color: #344054;
-      transition: .2s ease;
-    }
-
-    .specialty-item:hover {
-      border-color: var(--cyan);
-      transform: translateX(3px);
-    }
-
-    .specialty-item span {
-      color: var(--cyan);
-      margin-right: 7px;
-    }
-
-    /* =========================================================
-       SERVICES
-    ========================================================= */
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .service {
-      padding: 27px;
-      background: white;
+    .market-card {
+      display: flex;
+      gap: 20px;
+      padding: 28px;
       border: 1px solid var(--border);
       border-radius: 17px;
-      transition: .25s ease;
+      background: white;
+      transition: transform .25s, box-shadow .25s;
     }
 
-    .service:hover {
+    .market-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 15px 40px rgba(7,29,53,.08);
+      box-shadow: var(--shadow);
     }
 
-    .service-number {
-      color: var(--cyan);
-      font-size: 11px;
-      font-weight: 900;
-      margin-bottom: 20px;
+    .market-icon {
+      flex: 0 0 53px;
+      width: 53px;
+      height: 53px;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      color: #087dbb;
+      background: #e7f5f8;
+      font-size: 24px;
     }
 
-    .service h3 {
-      color: var(--navy);
-      font-size: 18px;
-      margin-bottom: 8px;
-    }
+    .market-card h3 { color: var(--navy); font-size: 20px; margin-bottom: 8px; }
+    .market-card p { color: var(--muted); font-size: 14px; margin-bottom: 13px; }
 
-    .service p {
-      color: var(--muted);
-      font-size: 13px;
-    }
+    /* PROCESS */
 
-    /* =========================================================
-       PROCESS
-    ========================================================= */
-
-    .process {
-      background: var(--navy);
+    .process-section {
       color: white;
+      background: linear-gradient(120deg, #071d35, #0b3d57);
     }
 
-    .process .section-head h2 {
-      color: white;
-    }
-
-    .process .section-head p {
-      color: #b8cad9;
-    }
+    .process-section .section-heading h2 { color: white; }
+    .process-section .section-heading p { color: #c3d4e0; }
 
     .process-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
+      gap: 17px;
     }
 
     .process-card {
-      position: relative;
-      padding: 28px;
-      min-height: 220px;
-      border-radius: 17px;
-      border: 1px solid rgba(255,255,255,.10);
+      padding: 25px;
+      min-height: 205px;
+      border: 1px solid rgba(255,255,255,.13);
+      border-radius: 15px;
       background: rgba(255,255,255,.055);
+      transition: background .25s, transform .25s;
+    }
+
+    .process-card:hover {
+      background: rgba(255,255,255,.10);
+      transform: translateY(-5px);
     }
 
     .process-number {
-      width: 38px;
-      height: 38px;
+      width: 39px;
+      height: 39px;
       display: grid;
       place-items: center;
-      border-radius: 50%;
+      border-radius: 12px;
       background: linear-gradient(135deg, var(--blue), var(--cyan));
-      font-weight: 900;
-      font-size: 13px;
-      margin-bottom: 25px;
-    }
-
-    .process-card h3 {
-      margin-bottom: 8px;
-      font-size: 18px;
-    }
-
-    .process-card p {
-      color: #afc3d2;
-      font-size: 13px;
-    }
-
-    /* =========================================================
-       OPPORTUNITIES
-    ========================================================= */
-
-    .jobs {
-      display: grid;
-      gap: 15px;
-    }
-
-    .job-card {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 25px;
-      padding: 24px;
-      border-radius: 16px;
-      background: white;
-      border: 1px solid var(--border);
-      transition: .25s ease;
-    }
-
-    .job-card:hover {
-      transform: translateX(5px);
-      box-shadow: 0 14px 40px rgba(7,29,53,.08);
-    }
-
-    .job-title {
-      color: var(--navy);
-      font-size: 18px;
-      font-weight: 900;
-      margin-bottom: 4px;
-    }
-
-    .job-location {
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-      margin-top: 10px;
-    }
-
-    .tag {
-      padding: 5px 9px;
-      border-radius: 20px;
-      background: #edf7fa;
-      color: #267078;
-      font-size: 10px;
-      font-weight: 900;
-    }
-
-    /* =========================================================
-       CTA
-    ========================================================= */
-
-    .cta-section {
-      padding-top: 30px;
-    }
-
-    .cta {
-      position: relative;
-      overflow: hidden;
-      padding: 60px;
-      border-radius: 25px;
-      background:
-        radial-gradient(circle at 90% 10%, rgba(25,183,177,.22), transparent 28%),
-        linear-gradient(135deg, #071d35, #0b4561);
       color: white;
+      font-weight: 900;
+      margin-bottom: 22px;
     }
 
-    .cta h2 {
-      font-size: clamp(30px, 4vw, 45px);
-      line-height: 1.1;
-      max-width: 700px;
-      margin-bottom: 12px;
-    }
+    .process-card h3 { font-size: 17px; margin-bottom: 8px; }
+    .process-card p { color: #c0d1dd; font-size: 13px; }
 
-    .cta p {
-      max-width: 670px;
-      color: #bdd0df;
-      margin-bottom: 25px;
-    }
-
-    /* =========================================================
-       CONTACT
-    ========================================================= */
+    /* CONTACT */
 
     .contact-grid {
       display: grid;
-      grid-template-columns: .8fr 1.2fr;
-      gap: 60px;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 45px;
+      align-items: start;
+    }
+
+    .contact-info {
+      padding: 31px;
+      border-radius: 20px;
+      color: white;
+      background: linear-gradient(145deg, #071d35, #0b4b60);
     }
 
     .contact-info h2 {
-      color: var(--navy);
-      font-size: 42px;
-      line-height: 1.1;
+      font-size: 31px;
+      line-height: 1.2;
       margin-bottom: 14px;
     }
 
     .contact-info > p {
-      color: var(--muted);
-      margin-bottom: 25px;
+      color: #c7d9e4;
+      font-size: 14px;
+      margin-bottom: 27px;
     }
 
-    .contact-item {
+    .contact-line {
       display: flex;
       gap: 13px;
-      margin-bottom: 18px;
+      align-items: flex-start;
+      margin-top: 19px;
     }
 
-    .contact-icon {
-      flex: 0 0 40px;
-      height: 40px;
-      border-radius: 11px;
+    .contact-line .symbol {
       display: grid;
       place-items: center;
-      background: var(--light2);
-      color: var(--cyan);
-      font-weight: 900;
+      flex: 0 0 39px;
+      width: 39px;
+      height: 39px;
+      border-radius: 11px;
+      background: rgba(255,255,255,.12);
     }
 
-    .contact-item strong {
+    .contact-line small {
       display: block;
-      color: var(--navy);
-      font-size: 13px;
+      color: #b6cbd9;
+      font-size: 11px;
+      margin-bottom: 3px;
     }
 
-    .contact-item span,
-    .contact-item a {
-      color: var(--muted);
-      font-size: 13px;
-    }
+    .contact-line a { font-size: 13px; font-weight: 700; overflow-wrap: anywhere; }
+    .contact-line a:hover { color: #70e3dc; }
 
     .contact-form {
       padding: 30px;
-      border-radius: 20px;
       border: 1px solid var(--border);
-      box-shadow: 0 18px 55px rgba(7,29,53,.06);
-    }
-
-    form {
-      display: grid;
-      gap: 15px;
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 6px;
-      color: #344054;
-      font-size: 12px;
-      font-weight: 800;
-    }
-
-    input,
-    textarea,
-    select {
-      width: 100%;
-      padding: 13px 14px;
-      border: 1px solid #d7e0e7;
-      border-radius: 9px;
+      border-radius: 20px;
       background: white;
-      outline: none;
+      box-shadow: 0 10px 35px rgba(7,29,53,.045);
+    }
+
+    .contact-form h3 { color: var(--navy); font-size: 23px; margin-bottom: 5px; }
+    .form-intro { color: var(--muted); font-size: 13px; margin-bottom: 23px; }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .field { display: flex; flex-direction: column; gap: 7px; }
+    .field.full { grid-column: 1 / -1; }
+
+    .field label { color: #344054; font-size: 12px; font-weight: 800; }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      padding: 12px 13px;
+      border: 1px solid #dce5ec;
+      border-radius: 9px;
+      background: #fbfdfe;
       color: var(--text);
+      outline: none;
+      font-size: 13px;
     }
 
-    input:focus,
-    textarea:focus,
-    select:focus {
-      border-color: var(--cyan);
-      box-shadow: 0 0 0 3px rgba(25,183,177,.09);
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(22,132,216,.10);
     }
 
-    textarea {
-      min-height: 125px;
-      resize: vertical;
+    .field textarea { min-height: 105px; resize: vertical; }
+    .contact-form .btn { width: 100%; margin-top: 19px; border: 0; }
+
+    .form-note { color: var(--muted); font-size: 11px; margin-top: 11px; }
+
+    /* FINAL CTA & FOOTER */
+
+    .final-cta { padding: 15px 0 85px; }
+
+    .cta-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+      padding: 37px 40px;
+      border-radius: 20px;
+      color: white;
+      background: linear-gradient(115deg, #0b3151, #087d87);
     }
 
-    /* =========================================================
-       FOOTER
-    ========================================================= */
+    .cta-box h2 { font-size: clamp(25px, 3vw, 34px); line-height: 1.2; margin-bottom: 8px; }
+    .cta-box p { color: #d1e6ed; font-size: 14px; }
+
+    .cta-box .btn { background: white; color: var(--navy); white-space: nowrap; }
 
     footer {
-      background: #061726;
-      color: white;
-      padding: 60px 0 25px;
+      background: #061729;
+      color: #c5d3df;
+      padding: 48px 0 20px;
     }
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      grid-template-columns: 1.3fr 1fr 1fr;
       gap: 45px;
-      padding-bottom: 45px;
+      padding-bottom: 35px;
     }
 
-    .footer-logo {
-      font-size: 24px;
-      font-weight: 900;
-      margin-bottom: 13px;
-    }
+    .footer-brand .logo { color: white; margin-bottom: 16px; }
+    .footer-brand p { max-width: 350px; color: #aebfce; font-size: 13px; }
 
-    .footer-logo span {
-      color: var(--cyan);
-    }
-
-    footer p,
-    footer a {
-      color: #9fb2c1;
+    .footer-col h4 { color: white; font-size: 14px; margin-bottom: 15px; }
+    .footer-col a {
+      display: block;
+      width: fit-content;
+      margin: 9px 0;
+      color: #b9c9d6;
       font-size: 13px;
     }
 
-    footer h4 {
-      margin-bottom: 14px;
-      font-size: 13px;
-    }
+    .footer-col a:hover { color: #62ddd6; }
 
-    .footer-links {
-      display: grid;
-      gap: 8px;
-    }
-
-    footer a:hover {
-      color: white;
-    }
-
-    .copyright {
-      border-top: 1px solid rgba(255,255,255,.10);
-      padding-top: 20px;
-      color: #708797;
-      font-size: 11px;
+    .footer-bottom {
       display: flex;
       justify-content: space-between;
-      gap: 15px;
+      gap: 20px;
       flex-wrap: wrap;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,.12);
+      color: #9eb1c1;
+      font-size: 11px;
     }
 
-    /* =========================================================
-       MODAL
-    ========================================================= */
+    /* FLOATING WHATSAPP */
 
-    .modal {
-      display: none;
+    .whatsapp-float {
       position: fixed;
-      inset: 0;
-      z-index: 3000;
-      padding: 20px;
-      background: rgba(4,17,30,.72);
-      place-items: center;
+      z-index: 1200;
+      right: 22px;
+      bottom: 23px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-width: 58px;
+      height: 58px;
+      padding: 0 17px;
+      border-radius: 40px;
+      color: white;
+      background: #25d366;
+      box-shadow: 0 9px 28px rgba(0,0,0,.22);
+      font-size: 14px;
+      font-weight: 900;
+      transition: transform .2s, box-shadow .2s;
     }
 
-    .modal.show {
-      display: grid;
+    .whatsapp-float:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 14px 35px rgba(37,211,102,.35);
     }
 
-    .modal-box {
-      position: relative;
-      width: min(620px, 100%);
-      padding: 32px;
-      background: white;
-      border-radius: 18px;
-      box-shadow: 0 30px 80px rgba(0,0,0,.25);
-    }
+    .whatsapp-icon { font-size: 24px; line-height: 1; }
 
-    .modal-box h2 {
-      color: var(--navy);
-      margin-bottom: 8px;
-    }
-
-    .modal-box p {
-      color: var(--muted);
-      margin-bottom: 22px;
-    }
-
-    .close {
-      position: absolute;
-      right: 16px;
-      top: 12px;
-      border: 0;
-      background: transparent;
-      cursor: pointer;
-      font-size: 26px;
-      color: #667085;
-    }
-
-    /* =========================================================
-       SCROLL REVEAL
-    ========================================================= */
+    /* SCROLL REVEAL */
 
     .reveal {
       opacity: 0;
-      transform: translateY(25px);
+      transform: translateY(28px);
       transition: opacity .7s ease, transform .7s ease;
     }
 
-    .reveal.active {
+    .reveal.visible {
       opacity: 1;
       transform: translateY(0);
     }
 
-    /* =========================================================
-       RESPONSIVE
-    ========================================================= */
+    .delay-1 { transition-delay: .10s; }
+    .delay-2 { transition-delay: .20s; }
+    .delay-3 { transition-delay: .30s; }
 
-    @media (max-width: 950px) {
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 980px) {
+      .nav-links { gap: 14px; }
+      .nav-links > a { font-size: 12px; }
+      .hero-grid { gap: 32px; }
+      .hero-image { height: 390px; }
+      .process-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 760px) {
+      .topbar-inner { justify-content: center; text-align: center; }
+      .topbar-right { display: none; }
+
+      .nav { min-height: 68px; }
+      .menu-toggle { display: block; }
 
       .nav-links {
         display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        padding: 13px 5% 20px;
+        background: white;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 15px 30px rgba(7,29,53,.08);
       }
 
-      .mobile-toggle {
-        display: block;
-      }
+      .nav-links.open { display: flex; flex-direction: column; align-items: stretch; gap: 0; }
+      .nav-links > a { padding: 12px 4px; font-size: 14px; }
+      .nav-links .nav-cta { text-align: center; margin-top: 7px; }
 
-      .hero {
-        min-height: auto;
-        padding: 90px 0;
-      }
+      .hero { padding: 62px 0 55px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+      .hero h1 { font-size: clamp(40px, 10vw, 58px); letter-spacing: -2px; }
+      .hero-copy { font-size: 15px; }
+      .hero-image { height: 330px; }
+      .hero-image-wrap { max-width: 560px; width: 100%; margin: auto; }
 
-      .hero-grid,
-      .specialty-layout,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-visual {
-        min-height: 430px;
-      }
-
-      .visual-main {
-        right: 50%;
-        transform: translateX(50%) rotate(2deg);
-      }
-
-      .floating.one {
-        left: 5%;
-      }
-
-      .floating.two {
-        right: 5%;
-      }
-
-      .audience-grid,
-      .industry-grid,
-      .service-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .process-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
+      section.section { padding: 65px 0; }
+      .services-grid, .market-grid, .contact-grid { grid-template-columns: 1fr; }
+      .service-image-wrap { height: 235px; }
+      .contact-grid { gap: 24px; }
+      .contact-info, .contact-form { padding: 25px; }
+      .cta-box { padding: 29px 25px; flex-direction: column; align-items: flex-start; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
+      .footer-brand { grid-column: 1 / -1; }
     }
 
-    @media (max-width: 650px) {
-
-      .topbar {
-        display: none;
-      }
-
-      section {
-        padding: 70px 0;
-      }
-
-      .hero {
-        padding: 70px 0;
-      }
-
-      .hero h1 {
-        letter-spacing: -2px;
-      }
-
-      .hero-text {
-        font-size: 16px;
-      }
-
-      .hero-visual {
-        min-height: 360px;
-      }
-
-      .visual-main {
-        width: 280px;
-        height: 340px;
-        padding: 21px;
-      }
-
-      .floating {
-        padding: 11px 13px;
-        font-size: 10px;
-      }
-
-      .audience-grid,
-      .industry-grid,
-      .service-grid,
-      .process-grid,
-      .specialty-list,
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .specialty-intro h2,
-      .contact-info h2 {
-        font-size: 34px;
-      }
-
-      .job-card {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .form-row {
-        grid-template-columns: 1fr;
-      }
-
-      .cta {
-        padding: 38px 25px;
-      }
-
-      .trust-inner {
-        justify-content: flex-start;
-      }
-
-      .contact-form {
-        padding: 22px;
-      }
+    @media (max-width: 480px) {
+      .logo { font-size: 20px; }
+      .logo-mark { width: 35px; height: 35px; }
+      .hero-actions .btn { width: 100%; }
+      .hero-points { gap: 10px 15px; }
+      .hero-image { height: 285px; }
+      .services-grid { gap: 18px; }
+      .service-content { padding: 21px; }
+      .service-image-wrap { height: 205px; }
+      .market-card { padding: 21px; gap: 14px; }
+      .market-icon { flex-basis: 44px; width: 44px; height: 44px; }
+      .process-grid { grid-template-columns: 1fr; }
+      .process-card { min-height: auto; }
+      .form-grid { grid-template-columns: 1fr; }
+      .field.full { grid-column: auto; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-brand { grid-column: auto; }
+      .whatsapp-float { right: 14px; bottom: 15px; height: 54px; min-width: 54px; padding: 0 15px; }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- =======================================================
-       TOP BAR
-  ======================================================== -->
-
   <div class="topbar">
-    <div class="container topbar-inner">
-      <span>Talent & Workforce Solutions</span>
-      <span>Email: <a href="mailto:info@korustalent.com">info@korustalent.com</a></span>
-    </div>
-  </div>
-
-
-  <!-- =======================================================
-       HEADER
-  ======================================================== -->
-
-  <header>
-    <div class="container nav">
-
-      <a href="#top" class="logo">
-        <div class="logo-mark">K</div>
-        Korus <span>Talent</span>
-      </a>
-
-      <nav class="nav-links">
-
-        <a href="#about">About</a>
-        <a href="#industries">Industries</a>
-        <a href="#services">Services</a>
-        <a href="#opportunities">Jobs</a>
-        <a href="#contact">Contact</a>
-
-        <div class="more">
-
-          <button class="more-btn" onclick="toggleMore()">
-            Resources ▾
-          </button>
-
-          <div class="more-menu" id="moreMenu">
-
-            <!-- KEEPING EXISTING SKILLS CHECKLIST LINK -->
-            <a href="skills-checklist.html">Skills Checklist</a>
-
-            <a href="#contact">Professional References</a>
-            <a href="#contact">Candidate Support</a>
-            <a href="mailto:info@korustalent.com">
-              Contact Korus Talent
-            </a>
-
-          </div>
-
-        </div>
-
-        <a href="#opportunities" class="nav-cta">
-          Find Opportunities
-        </a>
-
-      </nav>
-
-      <button class="mobile-toggle" onclick="toggleMobileMenu()">
-        ☰
-      </button>
-
-    </div>
-
-    <div class="mobile-menu" id="mobileMenu">
-
-      <a href="#about" onclick="closeMobileMenu()">About</a>
-      <a href="#industries" onclick="closeMobileMenu()">Industries</a>
-      <a href="#services" onclick="closeMobileMenu()">Services</a>
-      <a href="#opportunities" onclick="closeMobileMenu()">Opportunities</a>
-      <a href="#contact" onclick="closeMobileMenu()">Contact</a>
-
-      <!-- SAME CHECKLIST FILE -->
-      <a href="skills-checklist.html">Skills Checklist</a>
-
-      <a href="mailto:info@korustalent.com">info@korustalent.com</a>
-
-    </div>
-
-  </header>
-
-
-  <main id="top">
-
-
-    <!-- =====================================================
-         HERO
-    ====================================================== -->
-
-    <section class="hero">
-
-      <div class="container hero-grid">
-
-        <div class="reveal">
-
-          <div class="eyebrow">
-            Talent & Workforce Solutions
-          </div>
-
-          <h1>
-            Connecting
-            <span>Talent</span>
-            With Opportunity.
-          </h1>
-
-          <p class="hero-text">
-            Korus Talent connects qualified professionals with
-            organizations through focused recruitment, staffing,
-            and workforce solutions across Healthcare, IT, and
-            Non-IT industries.
-          </p>
-
-          <div class="hero-buttons">
-
-            <a href="#opportunities" class="btn btn-primary">
-              Explore Opportunities →
-            </a>
-
-            <a href="#contact" class="btn btn-outline">
-              Partner With Us
-            </a>
-
-          </div>
-
-        </div>
-
-
-        <!-- HERO GRAPHIC -->
-
-        <div class="hero-visual reveal">
-
-          <div class="floating one">
-            Qualified Talent
-            <span>Professionally sourced</span>
-          </div>
-
-          <div class="visual-main">
-
-            <div class="visual-header">
-
-              <div class="visual-icon">
-                KT
-              </div>
-
-              <div>
-                <strong>Korus Talent</strong>
-                <small>Workforce Solutions</small>
-              </div>
-
-            </div>
-
-            <div class="visual-line"></div>
-            <div class="visual-line medium"></div>
-            <div class="visual-line short"></div>
-
-            <div class="visual-card">
-              <strong>Healthcare</strong>
-              <p>Connecting qualified clinical professionals.</p>
-            </div>
-
-            <div class="visual-card">
-              <strong>Technology</strong>
-              <p>Supporting IT and technical talent needs.</p>
-            </div>
-
-            <div class="visual-card">
-              <strong>Professional</strong>
-              <p>Recruitment across non-IT functions.</p>
-            </div>
-
-          </div>
-
-          <div class="floating two">
-            Workforce Support
-            <span>Contract • Direct Hire • More</span>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         TRUST STRIP
-    ====================================================== -->
-
-    <div class="trust">
-
-      <div class="container trust-inner">
-
-        <div class="trust-item">Healthcare Staffing</div>
-        <div class="trust-item">IT Recruitment</div>
-        <div class="trust-item">Non-IT Recruitment</div>
-        <div class="trust-item">Contract Staffing</div>
-        <div class="trust-item">Direct Hire</div>
-        <div class="trust-item">Workforce Support</div>
-
-      </div>
-
-    </div>
-
-
-    <!-- =====================================================
-         ABOUT / AUDIENCE
-    ====================================================== -->
-
-    <section id="about">
-
-      <div class="container">
-
-        <div class="section-head reveal">
-
-          <div class="section-label">
-            Who We Work With
-          </div>
-
-          <h2>
-            Built around people, opportunity and workforce needs.
-          </h2>
-
-          <p>
-            Korus Talent works across multiple staffing environments,
-            connecting professionals with organizations while providing
-            recruitment support based on workforce requirements.
-          </p>
-
-        </div>
-
-
-        <div class="audience-grid">
-
-          <div class="audience-card reveal">
-
-            <div class="card-icon">P</div>
-
-            <h3>For Professionals</h3>
-
-            <p>
-              Explore contract, temporary, contract-to-hire and
-              permanent opportunities aligned with your skills
-              and experience.
-            </p>
-
-            <a href="#opportunities" class="text-link">
-              Explore Opportunities →
-            </a>
-
-          </div>
-
-
-          <div class="audience-card reveal">
-
-            <div class="card-icon">E</div>
-
-            <h3>For Employers</h3>
-
-            <p>
-              Recruitment support to help organizations identify,
-              screen and connect with qualified professionals.
-            </p>
-
-            <a href="#contact" class="text-link">
-              Discuss Your Needs →
-            </a>
-
-          </div>
-
-
-          <div class="audience-card reveal">
-
-            <div class="card-icon">S</div>
-
-            <h3>Staffing Partners</h3>
-
-            <p>
-              Flexible sourcing and recruitment support for ongoing
-              staffing programs and workforce requirements.
-            </p>
-
-            <a href="#contact" class="text-link">
-              Partner With Us →
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         INDUSTRIES
-    ====================================================== -->
-
-    <section id="industries" class="soft">
-
-      <div class="container">
-
-        <div class="section-head reveal">
-
-          <div class="section-label">
-            Our Focus
-          </div>
-
-          <h2>
-            Talent across three core sectors.
-          </h2>
-
-          <p>
-            Our recruitment capabilities span healthcare,
-            technology and professional non-IT staffing needs.
-          </p>
-
-        </div>
-
-
-        <div class="industry-grid">
-
-
-          <div class="industry-card reveal">
-
-            <div class="industry-number">01 / HEALTHCARE</div>
-
-            <h3>Healthcare</h3>
-
-            <p>
-              Clinical and healthcare professionals including
-              nursing, allied health and specialized healthcare
-              roles.
-            </p>
-
-            <div class="industry-circle"></div>
-
-          </div>
-
-
-          <div class="industry-card reveal">
-
-            <div class="industry-number">02 / TECHNOLOGY</div>
-
-            <h3>IT</h3>
-
-            <p>
-              Technology talent across software, technical,
-              infrastructure, support and related functions.
-            </p>
-
-            <div class="industry-circle"></div>
-
-          </div>
-
-
-          <div class="industry-card reveal">
-
-            <div class="industry-number">03 / PROFESSIONAL</div>
-
-            <h3>Non-IT</h3>
-
-            <p>
-              Professional, administrative, operational and
-              business workforce requirements.
-            </p>
-
-            <div class="industry-circle"></div>
-
-          </div>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         HEALTHCARE SPECIALTIES
-    ====================================================== -->
-
-    <section>
-
-      <div class="container specialty-layout">
-
-        <div class="specialty-intro reveal">
-
-          <div class="section-label">
-            Healthcare
-          </div>
-
-          <h2>
-            Healthcare talent across multiple specialties.
-          </h2>
-
-          <p>
-            Korus Talent supports recruitment for a range of
-            healthcare professionals and staffing requirements.
-          </p>
-
-          <a href="#contact" class="btn btn-primary">
-            Talk to Our Team
-          </a>
-
-        </div>
-
-
-        <div class="specialty-list reveal">
-
-          <div class="specialty-item">
-            <span>✓</span> Registered Nurses (RN)
-          </div>
-
-          <div class="specialty-item">
-            <span>✓</span> LPN / LVN
-          </div>
-
-          <div class="specialty-item">
-            <span>✓</span> CNA
-          </div>
-
-          <div class="specialty-item">
-            <span>✓</span> Allied Health
-          </div>
-
-          <div class="specialty-item">
-            <span>✓</span> Case Management
-          </div>
-
-          <div class="specialty-item">
-            <span>✓</span> Utilization Review
-          </div>
-
-          <div class="specialty-item">
-            <span>✓</span> Therapy
-          </div>
-
-          <div class="specialty-item">
-            <span>✓</span> Imaging
-          </div>
-
-          <div class="specialty-item">
-            <span>✓</span> Behavioral Health
-          </div>
-
-          <div class="specialty-item">
-            <span>✓</span> Other Clinical Roles
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         SERVICES
-    ====================================================== -->
-
-    <section id="services" class="soft">
-
-      <div class="container">
-
-        <div class="section-head reveal">
-
-          <div class="section-label">
-            What We Do
-          </div>
-
-          <h2>
-            Recruitment solutions built around your needs.
-          </h2>
-
-          <p>
-            From targeted sourcing to ongoing staffing support,
-            our recruitment services can be structured around
-            the requirements of each organization.
-          </p>
-
-        </div>
-
-
-        <div class="service-grid">
-
-          <div class="service reveal">
-            <div class="service-number">01</div>
-            <h3>Contract Staffing</h3>
-            <p>
-              Connect organizations with qualified professionals
-              for temporary and contract assignments.
-            </p>
-          </div>
-
-          <div class="service reveal">
-            <div class="service-number">02</div>
-            <h3>Contract-to-Hire</h3>
-            <p>
-              Recruitment support for positions that may transition
-              into longer-term employment.
-            </p>
-          </div>
-
-          <div class="service reveal">
-            <div class="service-number">03</div>
-            <h3>Direct Hire</h3>
-            <p>
-              Candidate sourcing and recruitment support for
-              permanent positions.
-            </p>
-          </div>
-
-          <div class="service reveal">
-            <div class="service-number">04</div>
-            <h3>Candidate Sourcing</h3>
-            <p>
-              Targeted sourcing based on role, specialty,
-              qualifications and workforce requirements.
-            </p>
-          </div>
-
-          <div class="service reveal">
-            <div class="service-number">05</div>
-            <h3>Candidate Screening</h3>
-            <p>
-              Initial profile review and qualification screening
-              before candidate presentation.
-            </p>
-          </div>
-
-          <div class="service reveal">
-            <div class="service-number">06</div>
-            <h3>Workforce Recruitment Support</h3>
-            <p>
-              Recruitment support for recurring and ongoing
-              staffing requirements.
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         PROCESS
-    ====================================================== -->
-
-    <section class="process">
-
-      <div class="container">
-
-        <div class="section-head reveal">
-
-          <div class="section-label">
-            Our Approach
-          </div>
-
-          <h2>
-            A straightforward recruitment process.
-          </h2>
-
-          <p>
-            We focus on understanding requirements, identifying
-            qualified talent and supporting the recruitment process.
-          </p>
-
-        </div>
-
-
-        <div class="process-grid">
-
-          <div class="process-card reveal">
-
-            <div class="process-number">01</div>
-
-            <h3>Understand</h3>
-
-            <p>
-              We review the position, qualifications,
-              requirements and workforce needs.
-            </p>
-
-          </div>
-
-
-          <div class="process-card reveal">
-
-            <div class="process-number">02</div>
-
-            <h3>Source</h3>
-
-            <p>
-              We identify professionals whose experience
-              aligns with the opportunity.
-            </p>
-
-          </div>
-
-
-          <div class="process-card reveal">
-
-            <div class="process-number">03</div>
-
-            <h3>Screen</h3>
-
-            <p>
-              Candidate profiles are reviewed against
-              the requirements of the role.
-            </p>
-
-          </div>
-
-
-          <div class="process-card reveal">
-
-            <div class="process-number">04</div>
-
-            <h3>Connect</h3>
-
-            <p>
-              Qualified candidates are presented for the
-              next stage of the recruitment process.
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         OPPORTUNITIES
-    ====================================================== -->
-
-    <section id="opportunities" class="soft">
-
-      <div class="container">
-
-        <div class="section-head reveal">
-
-          <div class="section-label">
-            Opportunities
-          </div>
-
-          <h2>
-            Explore current opportunities.
-          </h2>
-
-          <p>
-            The opportunities shown below are representative.
-            Availability, compensation and requirements can change.
-            Please contact Korus Talent for current details.
-          </p>
-
-        </div>
-
-
-        <div class="jobs">
-
-
-          <div class="job-card reveal">
-
-            <div>
-
-              <div class="job-title">
-                RN – Med Surg / Tele
-              </div>
-
-              <div class="job-location">
-                Columbus, OH
-              </div>
-
-              <div class="tags">
-                <span class="tag">Registered Nurse</span>
-                <span class="tag">Travel</span>
-                <span class="tag">13 Weeks</span>
-              </div>
-
-            </div>
-
-            <button
-              class="btn btn-primary"
-              onclick="openJob(
-                'RN – Med Surg / Tele',
-                'Columbus, OH',
-                'Contact Korus Talent for current pay, schedule, requirements and submission details.'
-              )">
-              View Position
-            </button>
-
-          </div>
-
-
-          <div class="job-card reveal">
-
-            <div>
-
-              <div class="job-title">
-                RN – PCU
-              </div>
-
-              <div class="job-location">
-                Multiple U.S. Locations
-              </div>
-
-              <div class="tags">
-                <span class="tag">RN</span>
-                <span class="tag">PCU</span>
-                <span class="tag">Contract</span>
-              </div>
-
-            </div>
-
-            <button
-              class="btn btn-primary"
-              onclick="openJob(
-                'RN – PCU',
-                'Multiple Locations',
-                'PCU opportunities may be available in selected U.S. locations. Contact Korus Talent for current openings and requirements.'
-              )">
-              View Position
-            </button>
-
-          </div>
-
-
-          <div class="job-card reveal">
-
-            <div>
-
-              <div class="job-title">
-                LPN / LVN Opportunities
-              </div>
-
-              <div class="job-location">
-                Texas & Other Locations
-              </div>
-
-              <div class="tags">
-                <span class="tag">LPN / LVN</span>
-                <span class="tag">Contract</span>
-                <span class="tag">Healthcare</span>
-              </div>
-
-            </div>
-
-            <button
-              class="btn btn-primary"
-              onclick="openJob(
-                'LPN / LVN Opportunities',
-                'Texas & Other Locations',
-                'Contact Korus Talent for current LPN/LVN openings, schedules and requirements.'
-              )">
-              View Position
-            </button>
-
-          </div>
-
-
-          <div class="job-card reveal">
-
-            <div>
-
-              <div class="job-title">
-                IT & Technology Roles
-              </div>
-
-              <div class="job-location">
-                Various Locations / Opportunities
-              </div>
-
-              <div class="tags">
-                <span class="tag">IT</span>
-                <span class="tag">Technology</span>
-                <span class="tag">Contract / Direct Hire</span>
-              </div>
-
-            </div>
-
-            <button
-              class="btn btn-primary"
-              onclick="openJob(
-                'IT & Technology Roles',
-                'Various Locations',
-                'Contact Korus Talent with your technology background and preferred opportunity type.'
-              )">
-              View Position
-            </button>
-
-          </div>
-
-
-          <div class="job-card reveal">
-
-            <div>
-
-              <div class="job-title">
-                Professional & Non-IT Roles
-              </div>
-
-              <div class="job-location">
-                Various Opportunities
-              </div>
-
-              <div class="tags">
-                <span class="tag">Non-IT</span>
-                <span class="tag">Professional</span>
-                <span class="tag">Direct Hire</span>
-              </div>
-
-            </div>
-
-            <button
-              class="btn btn-primary"
-              onclick="openJob(
-                'Professional & Non-IT Roles',
-                'Various Opportunities',
-                'Contact Korus Talent with your experience and the type of opportunity you are seeking.'
-              )">
-              View Position
-            </button>
-
-          </div>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         CTA
-    ====================================================== -->
-
-    <section class="cta-section">
-
-      <div class="container">
-
-        <div class="cta reveal">
-
-          <h2>
-            Looking for talent or your next opportunity?
-          </h2>
-
-          <p>
-            Whether you are a professional exploring your next
-            role or an organization looking for qualified talent,
-            Korus Talent is here to connect the right people with
-            the right opportunities.
-          </p>
-
-          <a href="#contact" class="btn btn-primary">
-            Connect With Korus Talent →
-          </a>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         CONTACT
-    ====================================================== -->
-
-    <section id="contact">
-
-      <div class="container contact-grid">
-
-
-        <div class="contact-info reveal">
-
-          <div class="section-label">
-            Contact
-          </div>
-
-          <h2>
-            Let's connect.
-          </h2>
-
-          <p>
-            Tell us what you are looking for and our team can
-            help you understand the available opportunities or
-            staffing solutions.
-          </p>
-
-
-          <div class="contact-item">
-
-            <div class="contact-icon">@</div>
-
-            <div>
-              <strong>Email</strong>
-
-              <a href="mailto:info@korustalent.com">
-                info@korustalent.com
-              </a>
-            </div>
-
-          </div>
-
-
-          <div class="contact-item">
-
-            <div class="contact-icon">P</div>
-
-            <div>
-              <strong>Professionals</strong>
-
-              <span>
-                Looking for your next opportunity?
-              </span>
-            </div>
-
-          </div>
-
-
-          <div class="contact-item">
-
-            <div class="contact-icon">E</div>
-
-            <div>
-              <strong>Employers</strong>
-
-              <span>
-                Need recruitment or staffing support?
-              </span>
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <div class="contact-form reveal">
-
-          <!--
-            This form currently opens the user's email client.
-            No backend required.
-          -->
-
-          <form onsubmit="sendEmail(event)">
-
-            <div class="form-row">
-
-              <div>
-                <label for="name">Name</label>
-                <input
-                  id="name"
-                  type="text"
-                  placeholder="Your name"
-                  required>
-              </div>
-
-              <div>
-                <label for="email">Email</label>
-                <input
-                  id="email"
-                  type="email"
-                  placeholder="you@example.com"
-                  required>
-              </div>
-
-            </div>
-
-
-            <div class="form-row">
-
-              <div>
-                <label for="type">I am a</label>
-
-                <select id="type">
-
-                  <option>Healthcare Professional</option>
-                  <option>IT Professional</option>
-                  <option>Non-IT Professional</option>
-                  <option>Employer</option>
-                  <option>Staffing Partner</option>
-                  <option>Other</option>
-
-                </select>
-
-              </div>
-
-
-              <div>
-
-                <label for="subject">
-                  Subject
-                </label>
-
-                <input
-                  id="subject"
-                  type="text"
-                  placeholder="How can we help?">
-
-              </div>
-
-            </div>
-
-
-            <div>
-
-              <label for="message">
-                Message
-              </label>
-
-              <textarea
-                id="message"
-                placeholder="Tell us about your requirement..."
-                required></textarea>
-
-            </div>
-
-
-            <button
-              type="submit"
-              class="btn btn-primary">
-              Send Inquiry →
-            </button>
-
-          </form>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-  </main>
-
-
-  <!-- =======================================================
-       FOOTER
-  ======================================================== -->
-
-  <footer>
-
-    <div class="container">
-
-      <div class="footer-grid">
-
-
-        <div>
-
-          <div class="footer-logo">
-            Korus <span>Talent</span>
-          </div>
-
-          <p>
-            Connecting qualified talent with organizations
-            across Healthcare, IT and Non-IT sectors.
-          </p>
-
-          <p style="margin-top:14px;">
-            <a href="mailto:info@korustalent.com">
-              info@korustalent.com
-            </a>
-          </p>
-
-        </div>
-
-
-        <div>
-
-          <h4>Industries</h4>
-
-          <div class="footer-links">
-
-            <a href="#industries">
-              Healthcare
-            </a>
-
-            <a href="#industries">
-              IT & Technology
-            </a>
-
-            <a href="#industries">
-              Non-IT
-            </a>
-
-          </div>
-
-        </div>
-
-
-        <div>
-
-          <h4>Services</h4>
-
-          <div class="footer-links">
-
-            <a href="#services">
-              Contract Staffing
-            </a>
-
-            <a href="#services">
-              Direct Hire
-            </a>
-
-            <a href="#services">
-              Candidate Sourcing
-            </a>
-
-            <a href="#services">
-              Screening
-            </a>
-
-          </div>
-
-        </div>
-
-
-        <div>
-
-          <h4>Resources</h4>
-
-          <div class="footer-links">
-
-            <!-- EXISTING CHECKLIST FILE -->
-            <a href="skills-checklist.html">
-              Skills Checklist
-            </a>
-
-            <a href="#opportunities">
-              Opportunities
-            </a>
-
-            <a href="#contact">
-              Contact
-            </a>
-
-            <a href="mailto:info@korustalent.com">
-              Email Us
-            </a>
-
-          </div>
-
-        </div>
-
-
-      </div>
-
-
-      <div class="copyright">
-
-        <span>
-          © <span id="year"></span> Korus Talent. All rights reserved.
-        </span>
-
-        <span>
-          Talent • Opportunity • Connection
-        </span>
-
-      </div>
-
-    </div>
-
-  </footer>
-
-
-  <!-- =======================================================
-       JOB MODAL
-  ======================================================== -->
-
-  <div class="modal" id="jobModal">
-
-    <div class="modal-box">
-
-      <button
-        class="close"
-        onclick="closeJob()">
-        ×
-      </button>
-
-      <h2 id="modalTitle">
-        Position
-      </h2>
-
-      <p id="modalLocation">
-        Location
-      </p>
-
-      <p id="modalDescription">
-        Details
-      </p>
-
-      <a
-        href="mailto:info@korustalent.com"
-        class="btn btn-primary">
-        Contact Korus Talent →
-      </a>
-
-    </div>
-
-  </div>
-
-
-  <!-- =======================================================
-       JAVASCRIPT
-  ======================================================== -->
-
-  <script>
-
-    /* -------------------------------------------------------
-       YEAR
-    ------------------------------------------------------- */
-
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-
-
-    /* -------------------------------------------------------
-       MORE MENU
-    ------------------------------------------------------- */
-
-    function toggleMore() {
-
-      const menu = document.getElementById("moreMenu");
-
-      menu.classList.toggle("show");
-
-    }
-
-
-    document.addEventListener("click", function(event) {
-
-      const more = document.querySelector(".more");
-      const menu = document.getElementById("moreMenu");
-
-      if (!more.contains(event.target)) {
-        menu.classList.remove("show");
-      }
-
-    });
-
-
-    /* -------------------------------------------------------
-       MOBILE MENU
-    ------------------------------------------------------- */
-
-    function toggleMobileMenu() {
-
-      const menu =
-        document.getElementById("mobileMenu");
-
-      menu.classList.toggle("open");
-
-    }
-
-
-    function closeMobileMenu() {
-
-      document
-        .getElementById("mobileMenu")
-        .classList.remove("open");
-
-    }
-
-
-    /* -------------------------------------------------------
-       JOB MODAL
-    ------------------------------------------------------- */
-
-    function openJob(title, location, description) {
-
-      document.getElementById("modalTitle")
-        .textContent = title;
-
-      document.getElementById("modalLocation")
-        .textContent = location;
-
-      document.getElementById("modalDescription")
-        .textContent = description;
-
-      document.getElementById("jobModal")
-        .classList.add("show");
-
-    }
-
-
-    function closeJob() {
-
-      document.getElementById("jobModal")
-        .classList.remove("show");
-
-    }
-
-
-    document
-      .getElementById("jobModal")
-      .addEventListener("click", function(event) {
-
-        if (event.target === this) {
-          closeJob();
-        }
-
-      });
-
-
-    /* -------------------------------------------------------
-       CONTACT FORM
-       Opens email client using info@korustalent.com
-    ------------------------------------------------------- */
-
-    function sendEmail(event) {
-
-      event.preventDefault();
-
-      const name =
-        document.getElementById("name").value;
-
-      const email =
-        document.getElementById("email").value;
-
-      const type =
-        document.getElementById("type").value;
-
-      const subject =
-        document.getElementById("subject").value ||
-        "Korus Talent Website Inquiry";
-
-      const message =
-        document.getElementById("message").value;
-
-
-      const body =
-        "Name: " + name + "\n" +
-        "Email: " + email + "\n" +
-        "I am a: " + type + "\n\n" +
-        "Message:\n" + message;
-
-
-      window.location.href =
-        "mailto:info@korustalent.com" +
-        "?subject=" +
-        encodeURIComponent(subject) +
-        "&body=" +
-        encodeURIComponent(body);
-
-    }
-
-
-    /* -------------------------------------------------------
-       SCROLL REVEAL ANIMATION
-    ------------------------------------------------------- */
-
-    const revealElements =
-      document.querySelectorAll(".reveal");
-
-
-    const observer =
-      new IntersectionObserver(
-
-        function(entries) {
-
-          entries.forEach(function(entry) {
-
-            if (entry.isIntersecting) {
-
-              entry.target.classList.add("active");
-
-              observer.unobserve(entry.target);
-
-            }
-
-          });
-
-        },
-
-        {
-          threshold: 0.10
-        }
-
-      );
-
-
-    revealElements.forEach(function(element) {
-
-      observer.observe(element);
-
-    });
-
-
-    /* -------------------------------------------------------
-       ESC KEY
-    ------------------------------------------------------- */
-
-    document.addEventListener("keydown", function(event) {
-
-      if (event.key === "Escape") {
-        closeJob();
-
-        document
-          .getElementById("moreMenu")
-          .classList.remove("show");
-
-      }
-
-    });
-
-  </script>
-
-</body>
-</html>
+    <div class="c
