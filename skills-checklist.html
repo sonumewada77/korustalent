@@ -1,2883 +1,890 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Professional Skills Checklist | Korus Talent</title>
-
-<meta name="description"
-content="Complete your Korus Talent professional skills checklist for healthcare staffing opportunities.">
-
-<style>
-:root{
-  --navy:#0b1f3a;
-  --navy2:#102d52;
-  --blue:#245cff;
-  --blue2:#5b7cff;
-  --light-blue:#eef3ff;
-  --bg:#f5f8fc;
-  --white:#ffffff;
-  --text:#172033;
-  --muted:#667085;
-  --border:#dfe5ee;
-  --green:#12a05c;
-  --red:#d92d20;
-  --shadow:0 18px 50px rgba(15,35,65,.08);
-  --shadow2:0 8px 25px rgba(15,35,65,.06);
-}
-
-*{
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  margin:0;
-  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
-  color:var(--text);
-  background:var(--bg);
-  line-height:1.55;
-}
-
-a{
-  text-decoration:none;
-  color:inherit;
-}
-
-/* ================= HEADER ================= */
-
-.header{
-  position:sticky;
-  top:0;
-  z-index:100;
-  background:rgba(255,255,255,.94);
-  backdrop-filter:blur(14px);
-  border-bottom:1px solid rgba(223,229,238,.9);
-}
-
-.header-inner{
-  max-width:1200px;
-  min-height:76px;
-  margin:auto;
-  padding:0 24px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-
-.logo{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  font-size:24px;
-  font-weight:850;
-  letter-spacing:-.7px;
-  color:var(--navy);
-}
-
-.logo-mark{
-  width:38px;
-  height:38px;
-  border-radius:12px;
-  display:grid;
-  place-items:center;
-  color:white;
-  font-size:18px;
-  font-weight:900;
-  background:linear-gradient(135deg,var(--blue),#7b8cff);
-  box-shadow:0 8px 20px rgba(36,92,255,.22);
-}
-
-.logo span{
-  color:var(--blue);
-}
-
-.back-btn{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  padding:10px 16px;
-  border:1px solid var(--border);
-  border-radius:10px;
-  background:#fff;
-  color:var(--navy);
-  font-size:14px;
-  font-weight:750;
-  transition:.2s ease;
-}
-
-.back-btn:hover{
-  border-color:#b9c7e8;
-  transform:translateY(-1px);
-  box-shadow:var(--shadow2);
-}
-
-/* ================= HERO ================= */
-
-.hero{
-  position:relative;
-  overflow:hidden;
-  background:
-    radial-gradient(circle at 10% 20%,rgba(91,124,255,.16),transparent 28%),
-    radial-gradient(circle at 90% 10%,rgba(36,92,255,.13),transparent 30%),
-    linear-gradient(135deg,#071b34 0%,#102d52 55%,#183d6b 100%);
-  color:white;
-}
-
-.hero-inner{
-  max-width:1200px;
-  margin:auto;
-  padding:72px 24px 76px;
-  position:relative;
-  z-index:2;
-}
-
-.hero-grid{
-  display:grid;
-  grid-template-columns:1.15fr .85fr;
-  gap:60px;
-  align-items:center;
-}
-
-.eyebrow{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  padding:7px 12px;
-  border:1px solid rgba(255,255,255,.18);
-  border-radius:999px;
-  background:rgba(255,255,255,.08);
-  color:#dce6ff;
-  font-size:12px;
-  font-weight:800;
-  letter-spacing:.5px;
-  text-transform:uppercase;
-}
-
-.eyebrow-dot{
-  width:7px;
-  height:7px;
-  border-radius:50%;
-  background:#7da0ff;
-  box-shadow:0 0 0 5px rgba(125,160,255,.12);
-}
-
-.hero h1{
-  margin:20px 0 14px;
-  font-size:clamp(36px,5vw,58px);
-  line-height:1.05;
-  letter-spacing:-2px;
-}
-
-.hero h1 span{
-  color:#8da8ff;
-}
-
-.hero p{
-  max-width:680px;
-  margin:0;
-  color:#c8d5e8;
-  font-size:17px;
-}
-
-.hero-note{
-  margin-top:25px;
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-}
-
-.hero-pill{
-  padding:8px 12px;
-  border-radius:8px;
-  background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.13);
-  font-size:12px;
-  color:#e1e9f7;
-}
-
-/* Hero visual */
-
-.hero-visual{
-  position:relative;
-  min-height:300px;
-}
-
-.visual-card{
-  position:absolute;
-  background:rgba(255,255,255,.1);
-  border:1px solid rgba(255,255,255,.15);
-  backdrop-filter:blur(12px);
-  border-radius:20px;
-  padding:22px;
-  box-shadow:0 20px 60px rgba(0,0,0,.18);
-}
-
-.visual-main{
-  width:82%;
-  right:0;
-  top:15px;
-}
-
-.visual-small{
-  width:55%;
-  left:0;
-  bottom:0;
-}
-
-.visual-title{
-  color:#fff;
-  font-weight:800;
-  margin-bottom:14px;
-}
-
-.visual-line{
-  height:9px;
-  background:rgba(255,255,255,.13);
-  border-radius:99px;
-  margin:9px 0;
-}
-
-.visual-line.w1{width:88%}
-.visual-line.w2{width:65%}
-.visual-line.w3{width:76%}
-
-.visual-rating{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:7px;
-  margin-top:15px;
-}
-
-.visual-rating span{
-  padding:8px 4px;
-  text-align:center;
-  border-radius:7px;
-  background:rgba(255,255,255,.1);
-  font-size:11px;
-}
-
-/* ================= PAGE ================= */
-
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:42px 20px 70px;
-}
-
-.progress-wrap{
-  position:sticky;
-  top:76px;
-  z-index:50;
-  margin-bottom:22px;
-}
-
-.progress-card{
-  background:rgba(255,255,255,.95);
-  backdrop-filter:blur(10px);
-  border:1px solid var(--border);
-  border-radius:14px;
-  padding:13px 16px;
-  box-shadow:var(--shadow2);
-}
-
-.progress-top{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:15px;
-  margin-bottom:8px;
-}
-
-.progress-label{
-  font-size:13px;
-  font-weight:800;
-  color:var(--navy);
-}
-
-.progress-count{
-  font-size:12px;
-  color:var(--muted);
-}
-
-.progress-bar{
-  height:7px;
-  border-radius:99px;
-  background:#edf1f6;
-  overflow:hidden;
-}
-
-.progress-fill{
-  width:0%;
-  height:100%;
-  border-radius:99px;
-  background:linear-gradient(90deg,var(--blue),#7892ff);
-  transition:.25s ease;
-}
-
-/* ================= CARDS ================= */
-
-.card{
-  background:var(--white);
-  border:1px solid var(--border);
-  border-radius:20px;
-  padding:30px;
-  margin-bottom:22px;
-  box-shadow:var(--shadow);
-}
-
-.card-header{
-  display:flex;
-  align-items:flex-start;
-  gap:14px;
-  margin-bottom:22px;
-}
-
-.card-icon{
-  flex:0 0 42px;
-  height:42px;
-  display:grid;
-  place-items:center;
-  border-radius:12px;
-  background:var(--light-blue);
-  color:var(--blue);
-  font-weight:900;
-}
-
-.card h2{
-  margin:0;
-  color:var(--navy);
-  font-size:21px;
-  letter-spacing:-.3px;
-}
-
-.card .sub{
-  margin:4px 0 0;
-  color:var(--muted);
-  font-size:14px;
-}
-
-/* ================= FORM ================= */
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:19px;
-}
-
-.field label{
-  display:block;
-  margin-bottom:7px;
-  color:#27344a;
-  font-size:13px;
-  font-weight:800;
-}
-
-.required{
-  color:var(--red);
-}
-
-input,
-select,
-textarea{
-  width:100%;
-  border:1px solid #cfd7e4;
-  border-radius:11px;
-  padding:12px 14px;
-  background:#fff;
-  color:var(--text);
-  font:inherit;
-  outline:none;
-  transition:.18s ease;
-}
-
-input:hover,
-select:hover,
-textarea:hover{
-  border-color:#aebbd0;
-}
-
-input:focus,
-select:focus,
-textarea:focus{
-  border-color:var(--blue);
-  box-shadow:0 0 0 4px rgba(36,92,255,.09);
-}
-
-.notice{
-  margin-top:22px;
-  padding:16px 18px;
-  border-radius:12px;
-  border:1px solid #d6e0ff;
-  background:linear-gradient(135deg,#f1f5ff,#f8faff);
-  color:#30466f;
-  font-size:13px;
-}
-
-.notice strong{
-  color:var(--navy);
-}
-
-/* ================= CHECKLIST ================= */
-
-#checklistArea{
-  display:none;
-}
-
-.checklist-intro{
-  margin-bottom:20px;
-  padding:18px 20px;
-  border-radius:15px;
-  background:linear-gradient(135deg,#0b1f3a,#173d6c);
-  color:#fff;
-}
-
-.checklist-intro h2{
-  margin:0 0 4px;
-  font-size:21px;
-}
-
-.checklist-intro p{
-  margin:0;
-  color:#c9d6e8;
-  font-size:13px;
-}
-
-.section{
-  margin-top:20px;
-  border:1px solid var(--border);
-  border-radius:15px;
-  overflow:hidden;
-  background:#fff;
-}
-
-.section-title{
-  padding:16px 18px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:15px;
-  background:linear-gradient(135deg,#f7f9ff,#eef3ff);
-  border-bottom:1px solid var(--border);
-  color:var(--navy);
-  font-weight:850;
-}
-
-.section-number{
-  min-width:28px;
-  height:28px;
-  display:inline-grid;
-  place-items:center;
-  border-radius:8px;
-  background:#dce6ff;
-  color:var(--blue);
-  font-size:12px;
-}
-
-.section-heading{
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-
-.skill-row{
-  display:grid;
-  grid-template-columns:minmax(0,1fr) 290px;
-  gap:20px;
-  align-items:center;
-  padding:15px 18px;
-  border-bottom:1px solid #edf0f4;
-  transition:.15s ease;
-}
-
-.skill-row:last-child{
-  border-bottom:0;
-}
-
-.skill-row:hover{
-  background:#fbfcff;
-}
-
-.skill-name{
-  font-size:14px;
-  font-weight:650;
-}
-
-.skill-note{
-  display:block;
-  margin-top:2px;
-  color:var(--muted);
-  font-size:11px;
-}
-
-.rating{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:6px;
-}
-
-.rating label{
-  margin:0;
-  position:relative;
-}
-
-.rating input{
-  position:absolute;
-  opacity:0;
-  pointer-events:none;
-}
-
-.rating span{
-  display:block;
-  padding:9px 3px;
-  text-align:center;
-  border:1px solid #d4dbe7;
-  border-radius:8px;
-  background:#fff;
-  color:#475467;
-  font-size:11px;
-  font-weight:800;
-  cursor:pointer;
-  transition:.15s ease;
-}
-
-.rating span:hover{
-  border-color:#9db0e4;
-  background:#f6f8ff;
-}
-
-.rating input:checked + span{
-  color:#fff;
-  background:var(--blue);
-  border-color:var(--blue);
-  box-shadow:0 5px 14px rgba(36,92,255,.2);
-}
-
-.rating-legend{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px 18px;
-  margin-top:16px;
-  padding:12px 15px;
-  border-radius:10px;
-  background:#f8fafc;
-  color:var(--muted);
-  font-size:11px;
-}
-
-.rating-legend b{
-  color:var(--navy);
-}
-
-/* ================= ATTESTATION ================= */
-
-.attestation{
-  padding:18px;
-  border:1px solid var(--border);
-  border-radius:13px;
-  background:#fafbfd;
-}
-
-.checkbox{
-  display:flex;
-  align-items:flex-start;
-  gap:11px;
-  font-size:13px;
-}
-
-.checkbox input{
-  width:auto;
-  margin-top:4px;
-  accent-color:var(--blue);
-}
-
-.actions{
-  display:flex;
-  justify-content:flex-end;
-  gap:10px;
-  margin-top:22px;
-}
-
-button{
-  border:0;
-  border-radius:11px;
-  padding:13px 21px;
-  font:inherit;
-  font-weight:800;
-  cursor:pointer;
-  transition:.18s ease;
-}
-
-.btn-primary{
-  color:#fff;
-  background:linear-gradient(135deg,var(--blue),#4e73ff);
-  box-shadow:0 8px 18px rgba(36,92,255,.2);
-}
-
-.btn-primary:hover{
-  transform:translateY(-1px);
-  box-shadow:0 11px 23px rgba(36,92,255,.25);
-}
-
-.btn-secondary{
-  color:var(--navy);
-  background:#eef2f7;
-}
-
-.btn-secondary:hover{
-  background:#e4e9f1;
-}
-
-.success{
-  display:none;
-  margin-top:18px;
-  padding:15px;
-  border-radius:11px;
-  background:#ecfdf3;
-  border:1px solid #b7ebcb;
-  color:#12643a;
-  font-size:13px;
-}
-
-/* ================= FOOTER ================= */
-
-.footer{
-  padding:35px 20px;
-  text-align:center;
-  border-top:1px solid var(--border);
-  background:#fff;
-  color:var(--muted);
-  font-size:13px;
-}
-
-.footer a{
-  color:var(--blue);
-  font-weight:700;
-}
-
-/* ================= MOBILE ================= */
-
-@media(max-width:800px){
-
-  .hero-grid{
-    grid-template-columns:1fr;
-    gap:30px;
-  }
-
-  .hero-visual{
-    display:none;
-  }
-
-  .hero-inner{
-    padding:55px 20px;
-  }
-
-  .hero h1{
-    letter-spacing:-1.3px;
-  }
-
-  .grid{
-    grid-template-columns:1fr;
-  }
-
-  .card{
-    padding:21px;
-    border-radius:16px;
-  }
-
-  .skill-row{
-    grid-template-columns:1fr;
-    gap:12px;
-  }
-
-  .rating{
-    max-width:100%;
-  }
-
-  .progress-wrap{
-    top:76px;
-  }
-}
-
-@media(max-width:560px){
-
-  .header-inner{
-    padding:0 15px;
-  }
-
-  .logo{
-    font-size:20px;
-  }
-
-  .logo-mark{
-    width:33px;
-    height:33px;
-  }
-
-  .back-btn{
-    padding:8px 10px;
-    font-size:12px;
-  }
-
-  .hero-inner{
-    padding:45px 18px;
-  }
-
-  .hero h1{
-    font-size:36px;
-  }
-
-  .hero p{
-    font-size:15px;
-  }
-
-  .container{
-    padding:25px 12px 50px;
-  }
-
-  .card{
-    padding:17px;
-  }
-
-  .section-title{
-    padding:14px;
-  }
-
-  .skill-row{
-    padding:14px;
-  }
-
-  .actions{
-    flex-direction:column;
-  }
-
-  button{
-    width:100%;
-  }
-
-  .rating span{
-    font-size:10px;
-    padding:9px 2px;
-  }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07172e">
+  <title>Home Healthcare Services | Korus Talent</title>
+  <meta name="description" content="Explore home healthcare support and submit a home care service request to Korus Talent.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #07172e;
+      --navy-light: #102746;
+      --cyan: #19d3dc;
+      --cyan-dark: #00aeb8;
+      --ink: #14243b;
+      --muted: #66758b;
+      --pale: #f3f8fb;
+      --white: #ffffff;
+      --border: #e2eaf1;
+      --radius: 22px;
+      --shadow: 0 18px 55px rgba(9, 35, 65, .09);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4 {
+      font-family: "Manrope", sans-serif;
+      line-height: 1.2;
+      letter-spacing: -.035em;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { width: 100%; display: block; }
+    button, input, select, textarea { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    .container { width: min(1160px, 90%); margin: auto; }
+
+    .topbar {
+      background: var(--navy);
+      color: #c7d8e8;
+      padding: 8px 0;
+      font-size: 12px;
+    }
+    .topbar-inner {
+      display: flex; justify-content: space-between;
+      gap: 16px; flex-wrap: wrap;
+    }
+    .topbar a { color: var(--cyan); }
+
+    header {
+      position: sticky; top: 0; z-index: 1000;
+      background: rgba(255,255,255,.94);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(226,234,241,.85);
+    }
+    .nav {
+      min-height: 76px;
+      display: flex; align-items: center;
+      justify-content: space-between; gap: 24px;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 10px;
+      font: 800 23px "Manrope", sans-serif;
+      letter-spacing: -.8px; color: var(--navy);
+      white-space: nowrap;
+    }
+    .brand-mark {
+      width: 39px; height: 39px; border-radius: 12px;
+      background: var(--navy); color: var(--cyan);
+      display: grid; place-items: center;
+      font-size: 20px; box-shadow: 0 6px 16px #07172e24;
+    }
+    .brand span em { color: var(--cyan-dark); font-style: normal; }
+    .nav-links { display: flex; align-items: center; gap: 24px; }
+    .nav-links a {
+      font-size: 13px; font-weight: 700; color: #4d5d72;
+      transition: color .25s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--cyan-dark); }
+    .nav-cta, .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      gap: 9px; padding: 13px 20px; border-radius: 12px;
+      font-weight: 700; font-size: 13px;
+      border: 1px solid transparent; cursor: pointer;
+      transition: transform .25s, box-shadow .25s, background .25s;
+    }
+    .nav-cta, .btn-primary {
+      background: var(--cyan); color: var(--navy);
+      box-shadow: 0 8px 20px rgba(25,211,220,.2);
+    }
+    .nav-cta:hover, .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(7,23,46,.15);
+    }
+    .btn-outline { border-color: #ffffff55; color: white; }
+    .btn-outline:hover { background: #ffffff15; }
+    .menu-toggle {
+      display: none; background: none; border: 0;
+      font-size: 28px; color: var(--navy); cursor: pointer;
+    }
+
+    .hero {
+      position: relative; isolation: isolate; overflow: hidden;
+      background: var(--navy); color: white;
+      min-height: 590px; display: flex; align-items: center;
+    }
+    .hero::before {
+      content: ""; position: absolute; inset: 0; z-index: -2;
+      background: url("https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=2000&q=85") center 42%/cover no-repeat;
+      opacity: .42;
+      animation: heroZoom 16s ease-in-out infinite alternate;
+    }
+    .hero::after {
+      content: ""; position: absolute; inset: 0; z-index: -1;
+      background: linear-gradient(90deg, #07172ef7 0%, #07172edc 48%, #07172e50 100%);
+    }
+    .hero-content { padding: 95px 0 105px; max-width: 730px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 9px;
+      text-transform: uppercase; letter-spacing: 2px;
+      font-size: 11px; font-weight: 800; color: var(--cyan);
+      margin-bottom: 23px;
+    }
+    .eyebrow::before {
+      content: ""; width: 26px; height: 2px; background: currentColor;
+    }
+    .hero h1 {
+      font-size: clamp(40px, 6.2vw, 70px);
+      margin-bottom: 22px; max-width: 780px;
+    }
+    .hero h1 span { color: var(--cyan); }
+    .hero p {
+      color: #d0deec; max-width: 600px;
+      font-size: 16px; margin-bottom: 31px;
+    }
+    .hero-actions { display: flex; gap: 13px; flex-wrap: wrap; }
+    .hero-note {
+      display: flex; gap: 11px; align-items: center;
+      margin-top: 35px; color: #c0d2e4; font-size: 12px;
+    }
+    .hero-note span { color: var(--cyan); font-size: 20px; }
+
+    .trust-strip { background: var(--pale); border-bottom: 1px solid var(--border); }
+    .trust-grid {
+      display: grid; grid-template-columns: repeat(3,1fr);
+      padding: 24px 0; gap: 22px;
+    }
+    .trust-item { display: flex; align-items: center; gap: 12px; }
+    .trust-icon {
+      flex: 0 0 43px; width: 43px; height: 43px;
+      display: grid; place-items: center; border-radius: 13px;
+      background: #dffbfc; font-size: 21px;
+    }
+    .trust-item strong { display: block; font-size: 13px; }
+    .trust-item small { display: block; color: var(--muted); font-size: 11px; }
+
+    section { padding: 90px 0; }
+    .section-heading { max-width: 700px; margin-bottom: 42px; }
+    .section-heading.center { text-align: center; margin-inline: auto; }
+    .section-heading .eyebrow { margin-bottom: 15px; }
+    .section-heading h2 { font-size: clamp(30px, 4vw, 44px); margin-bottom: 15px; }
+    .section-heading p { color: var(--muted); font-size: 15px; }
+
+    .services-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 23px;
+    }
+    .service-card {
+      border: 1px solid var(--border); border-radius: var(--radius);
+      overflow: hidden; background: white;
+      transition: transform .3s, box-shadow .3s, border-color .3s;
+    }
+    .service-card:hover {
+      transform: translateY(-7px);
+      box-shadow: var(--shadow); border-color: #b4eef0;
+    }
+    .service-image { height: 215px; overflow: hidden; position: relative; }
+    .service-image img {
+      height: 100%; object-fit: cover;
+      transition: transform .65s;
+    }
+    .service-card:hover .service-image img { transform: scale(1.07); }
+    .service-body { padding: 25px; }
+    .service-body h3 { font-size: 20px; margin-bottom: 10px; }
+    .service-body p { color: var(--muted); font-size: 13px; margin-bottom: 17px; }
+    .service-body ul { list-style: none; display: grid; gap: 9px; }
+    .service-body li { font-size: 12px; color: #43546a; }
+    .service-body li::before { content: "✓"; color: var(--cyan-dark); font-weight: 800; margin-right: 9px; }
+    .small-link { display: inline-flex; margin-top: 22px; font-size: 13px; font-weight: 800; color: #008f98; }
+
+    .approach { background: var(--pale); }
+    .approach-grid {
+      display: grid; grid-template-columns: .95fr 1.05fr;
+      gap: 65px; align-items: center;
+    }
+    .approach-image { position: relative; }
+    .approach-image img {
+      height: 470px; object-fit: cover; border-radius: 26px;
+      box-shadow: var(--shadow);
+    }
+    .image-caption {
+      position: absolute; bottom: 20px; left: 20px; right: 20px;
+      background: rgba(7,23,46,.88); backdrop-filter: blur(12px);
+      color: white; padding: 17px 20px; border-radius: 15px;
+      font-size: 13px;
+    }
+    .image-caption strong { display: block; color: var(--cyan); margin-bottom: 3px; }
+    .approach-copy h2 { font-size: clamp(30px, 4vw, 43px); margin-bottom: 18px; }
+    .approach-copy > p { color: var(--muted); font-size: 14px; margin-bottom: 27px; }
+    .feature {
+      display: flex; align-items: flex-start; gap: 15px;
+      margin: 22px 0;
+    }
+    .feature-icon {
+      flex: 0 0 44px; height: 44px; display: grid; place-items: center;
+      border-radius: 13px; background: #dffbfc; font-size: 20px;
+    }
+    .feature h3 { font-size: 15px; margin-bottom: 5px; letter-spacing: -.02em; }
+    .feature p { font-size: 12px; color: var(--muted); }
+
+    .steps-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+    .step-card {
+      padding: 28px; border: 1px solid var(--border);
+      border-radius: 20px; position: relative; overflow: hidden;
+    }
+    .step-number {
+      font: 800 34px "Manrope", sans-serif;
+      color: #a4e9eb; margin-bottom: 19px;
+    }
+    .step-card h3 { font-size: 18px; margin-bottom: 10px; }
+    .step-card p { color: var(--muted); font-size: 13px; }
+
+    .booking { background: var(--navy); color: white; }
+    .booking-grid {
+      display: grid; grid-template-columns: .8fr 1.2fr;
+      gap: 65px; align-items: start;
+    }
+    .booking-copy { position: sticky; top: 120px; }
+    .booking-copy .eyebrow { color: var(--cyan); }
+    .booking-copy h2 { font-size: clamp(33px, 4.5vw, 48px); margin-bottom: 18px; }
+    .booking-copy > p { color: #bdcddd; font-size: 14px; margin-bottom: 26px; }
+    .contact-line { display: flex; gap: 13px; margin-top: 20px; align-items: center; }
+    .contact-line .symbol {
+      width: 42px; height: 42px; display: grid; place-items: center;
+      background: #ffffff12; border-radius: 12px; color: var(--cyan);
+    }
+    .contact-line small { display: block; color: #9fb3c8; font-size: 11px; }
+    .contact-line a { color: white; font-size: 13px; overflow-wrap: anywhere; }
+
+    .form-panel {
+      padding: 34px; background: white; color: var(--ink);
+      border-radius: 24px; box-shadow: 0 25px 80px #0002;
+    }
+    .form-panel h3 { font-size: 24px; margin-bottom: 7px; }
+    .form-intro { font-size: 12px; color: var(--muted); margin-bottom: 25px; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 17px; }
+    .field { display: flex; flex-direction: column; gap: 7px; }
+    .field.full { grid-column: 1 / -1; }
+    .field label { font-size: 12px; font-weight: 700; color: #33455c; }
+    .field input, .field select, .field textarea {
+      width: 100%; min-width: 0; padding: 12px 13px;
+      border: 1px solid #dce5ed; border-radius: 10px;
+      outline: none; background: #fbfdff; color: var(--ink);
+      transition: border .2s, box-shadow .2s;
+    }
+    .field input:focus, .field select:focus, .field textarea:focus {
+      border-color: var(--cyan-dark); box-shadow: 0 0 0 3px #19d3dc22;
+    }
+    .field input, .field select { height: 47px; }
+    .field textarea { resize: vertical; min-height: 100px; }
+    .privacy-note { color: var(--muted); font-size: 11px; margin: 16px 0; }
+    .form-submit { width: 100%; border: 0; }
+    .form-message { display: none; margin-top: 15px; font-size: 12px; color: #087d57; }
+
+    .faq-list { max-width: 820px; margin: auto; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-question {
+      width: 100%; border: 0; background: none; cursor: pointer;
+      padding: 22px 0; text-align: left; display: flex;
+      justify-content: space-between; gap: 18px;
+      font-weight: 800; color: var(--ink); font-size: 15px;
+    }
+    .faq-question span { color: var(--cyan-dark); font-size: 22px; transition: transform .25s; }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height .35s ease; }
+    .faq-answer p { color: var(--muted); font-size: 13px; padding: 0 30px 20px 0; }
+    .faq-item.open .faq-answer { max-height: 180px; }
+    .faq-item.open .faq-question span { transform: rotate(45deg); }
+
+    .bottom-cta { padding: 0 0 85px; }
+    .cta-panel {
+      border-radius: 26px; padding: 45px;
+      background: linear-gradient(120deg, #e5fbfc, #f2f8ff);
+      display: flex; justify-content: space-between;
+      align-items: center; gap: 25px; flex-wrap: wrap;
+    }
+    .cta-panel h2 { font-size: clamp(25px, 3vw, 35px); margin-bottom: 8px; }
+    .cta-panel p { font-size: 13px; color: var(--muted); }
+
+    footer { background: #041020; color: white; padding: 55px 0 20px; }
+    .footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 45px; padding-bottom: 38px; }
+    footer .brand { color: white; margin-bottom: 17px; display: inline-flex; }
+    footer p { color: #a6b8cb; font-size: 12px; max-width: 330px; }
+    footer h4 { font-size: 13px; margin-bottom: 17px; letter-spacing: 0; }
+    .footer-links { display: grid; gap: 10px; }
+    .footer-links a { font-size: 12px; color: #a6b8cb; transition: color .2s; overflow-wrap: anywhere; }
+    .footer-links a:hover { color: var(--cyan); }
+    .copyright {
+      padding-top: 18px; border-top: 1px solid #ffffff1c;
+      display: flex; justify-content: space-between; gap: 15px; flex-wrap: wrap;
+      font-size: 11px; color: #8da1b7;
+    }
+
+    .whatsapp-float {
+      position: fixed; z-index: 900; right: 22px; bottom: 22px;
+      width: 59px; height: 59px; border-radius: 50%;
+      background: #20c66b; color: white; display: grid; place-items: center;
+      box-shadow: 0 8px 25px #20c66b55;
+      transition: transform .25s;
+    }
+    .whatsapp-float:hover { transform: translateY(-5px) scale(1.05); }
+    .whatsapp-float svg { width: 29px; height: 29px; fill: currentColor; }
+    .back-top {
+      position: fixed; right: 29px; bottom: 94px; z-index: 899;
+      width: 43px; height: 43px; border: 0; border-radius: 13px;
+      background: var(--navy); color: white; cursor: pointer;
+      opacity: 0; pointer-events: none; transform: translateY(8px);
+      transition: .25s;
+    }
+    .back-top.visible { opacity: 1; pointer-events: auto; transform: none; }
+
+    .reveal { opacity: 0; transform: translateY(25px); transition: opacity .7s, transform .7s; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    @keyframes heroZoom { from { transform: scale(1); } to { transform: scale(1.07); } }
+
+    @media (max-width: 950px) {
+      .nav-links { gap: 13px; }
+      .nav-links a { font-size: 12px; }
+      .nav-cta { padding: 11px 13px; }
+      .approach-grid, .booking-grid { gap: 35px; }
+      .services-grid { grid-template-columns: repeat(2,1fr); }
+    }
+    @media (max-width: 760px) {
+      .topbar-inner { justify-content: center; text-align: center; }
+      .nav { min-height: 68px; }
+      .brand { font-size: 21px; }
+      .menu-toggle { display: block; }
+      .nav-links {
+        display: none; position: absolute; top: 100%; left: 0; right: 0;
+        padding: 20px 5% 25px; background: white;
+        border-bottom: 1px solid var(--border); box-shadow: var(--shadow);
+        flex-direction: column; align-items: stretch; gap: 0;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 12px 0; font-size: 14px; }
+      .nav-cta { margin-top: 10px; text-align: center; }
+      .hero { min-height: 550px; }
+      .hero-content { padding: 75px 0; }
+      .hero::after { background: linear-gradient(90deg, #07172ef5, #07172ebd); }
+      .trust-grid { grid-template-columns: 1fr; gap: 17px; }
+      section { padding: 68px 0; }
+      .services-grid, .steps-grid { grid-template-columns: 1fr; }
+      .service-image { height: 235px; }
+      .approach-grid, .booking-grid { grid-template-columns: 1fr; }
+      .approach-image img { height: 350px; }
+      .booking-copy { position: static; }
+      .form-panel { padding: 25px 20px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
+      .footer-grid > div:first-child { grid-column: 1 / -1; }
+      .cta-panel { padding: 30px 24px; }
+    }
+    @media (max-width: 430px) {
+      .container { width: 91%; }
+      .hero h1 { font-size: 39px; }
+      .hero p { font-size: 14px; }
+      .hero-actions .btn { width: 100%; }
+      .form-grid { grid-template-columns: 1fr; }
+      .field.full { grid-column: auto; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-grid > div:first-child { grid-column: auto; }
+      .copyright { flex-direction: column; }
+      .whatsapp-float { width: 54px; height: 54px; right: 15px; bottom: 15px; }
+      .back-top { right: 21px; bottom: 79px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
 </head>
 
 <body>
-
-<!-- ================= HEADER ================= -->
-
-<header class="header">
-  <div class="header-inner">
-
-    <a href="index.html" class="logo">
-      <span class="logo-mark">K</span>
-      Korus <span>Talent</span>
-    </a>
-
-    <a href="index.html" class="back-btn">
-      ← Back to Website
-    </a>
-
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>People-focused healthcare support</span>
+      <span>Email us: <a href="mailto:info@korustalent.com">info@korustalent.com</a></span>
+    </div>
   </div>
-</header>
 
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Korus Talent home">
+        <span class="brand-mark">K</span>
+        <span>KORUS <em>TALENT</em></span>
+      </a>
 
-<!-- ================= HERO ================= -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
 
-<section class="hero">
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a class="active" href="home-health.html">Home Healthcare</a>
+        <a href="india-services.html">India Services</a>
+        <a href="us-staffing.html">US Staffing</a>
+        <a class="nav-cta" href="#booking">Request Home Care ↗</a>
+      </nav>
+    </div>
+  </header>
 
-  <div class="hero-inner">
-
-    <div class="hero-grid">
-
-      <div>
-
-        <div class="eyebrow">
-          <span class="eyebrow-dot"></span>
-          Korus Talent · Healthcare Staffing
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">Korus Talent · Home Healthcare</div>
+          <h1>Care feels better <span>at home.</span></h1>
+          <p>
+            Explore home healthcare support options designed around comfort,
+            dignity and individual needs. Tell us what kind of assistance you
+            are looking for, and our team can review your request.
+          </p>
+          <div class="hero-actions">
+            <a href="#booking" class="btn btn-primary">Request Home Care <span>↗</span></a>
+            <a href="#services" class="btn btn-outline">Explore Services ↓</a>
+          </div>
+          <div class="hero-note">
+            <span>✳</span>
+            <div>Personalized requests. Clear communication. Care-focused support.</div>
+          </div>
         </div>
-
-        <h1>
-          Professional<br>
-          <span>Skills Checklist</span>
-        </h1>
-
-        <p>
-          Tell us about your clinical skills and professional experience.
-          Select your specialty and complete the checklist below so our
-          recruitment team can better understand your experience.
-        </p>
-
-        <div class="hero-note">
-          <span class="hero-pill">✓ Specialty-Based Checklist</span>
-          <span class="hero-pill">✓ 1–4 Experience Rating</span>
-          <span class="hero-pill">✓ Secure Submission</span>
-        </div>
-
       </div>
+    </section>
 
-      <div class="hero-visual">
-
-        <div class="visual-card visual-main">
-
-          <div class="visual-title">
-            Clinical Skills Assessment
-          </div>
-
-          <div class="visual-line w1"></div>
-          <div class="visual-line w2"></div>
-          <div class="visual-line w3"></div>
-
-          <div class="visual-rating">
-            <span>No Experience</span>
-            <span>Limited</span>
-            <span>Experienced</span>
-            <span>Highly Experienced</span>
-          </div>
-
+    <div class="trust-strip">
+      <div class="container trust-grid">
+        <div class="trust-item">
+          <div class="trust-icon">⌂</div>
+          <div><strong>Comfort of Home</strong><small>Explore care options in familiar surroundings</small></div>
         </div>
-
-        <div class="visual-card visual-small">
-
-          <div class="visual-title">
-            Korus Talent
-          </div>
-
-          <div class="visual-line w2"></div>
-          <div class="visual-line w3"></div>
-
+        <div class="trust-item">
+          <div class="trust-icon">♡</div>
+          <div><strong>Individual Needs</strong><small>Share your requirements with our team</small></div>
         </div>
-
+        <div class="trust-item">
+          <div class="trust-icon">☏</div>
+          <div><strong>Easy Enquiries</strong><small>Start with a simple service request</small></div>
+        </div>
       </div>
-
     </div>
 
-  </div>
-
-</section>
-
-
-<!-- ================= MAIN ================= -->
-
-<main class="container">
-
-  <div class="progress-wrap">
-
-    <div class="progress-card">
-
-      <div class="progress-top">
-        <span class="progress-label">Checklist Progress</span>
-        <span class="progress-count" id="progressText">0% Complete</span>
-      </div>
-
-      <div class="progress-bar">
-        <div class="progress-fill" id="progressFill"></div>
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <form
-    id="skillsForm"
-    action="https://formsubmit.co/info@korustalent.com"
-    method="POST"
-  >
-
-    <!-- FormSubmit settings -->
-
-    <input
-      type="hidden"
-      name="_subject"
-      value="Korus Talent - Skills Checklist Submission"
-    >
-
-    <input
-      type="hidden"
-      name="_captcha"
-      value="false"
-    >
-
-    <input
-      type="hidden"
-      name="_template"
-      value="table"
-    >
-
-    <input
-      type="hidden"
-      name="_next"
-      value="https://korustalent.com/skills-checklist.html?submitted=1"
-    >
-
-
-    <!-- ================= CANDIDATE INFORMATION ================= -->
-
-    <section class="card">
-
-      <div class="card-header">
-
-        <div class="card-icon">01</div>
-
-        <div>
-          <h2>Candidate Information</h2>
-          <p class="sub">
-            Please provide your basic information before completing the checklist.
+    <section id="services">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <div class="eyebrow">Home care options</div>
+          <h2>Support that starts with your needs.</h2>
+          <p>
+            Every household is different. Explore the types of support you may
+            need and use the enquiry form to tell us more about your situation.
+            Specific services depend on availability, location and applicable requirements.
           </p>
         </div>
 
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <div class="service-image">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=900&q=80"
+                   alt="Care professional in a bright, welcoming setting" loading="lazy">
+            </div>
+            <div class="service-body">
+              <h3>Personal Care Assistance</h3>
+              <p>Explore help with everyday routines while respecting personal comfort and independence.</p>
+              <ul>
+                <li>Daily routine assistance</li>
+                <li>Personal comfort and dignity</li>
+                <li>Support based on individual needs</li>
+              </ul>
+              <a class="small-link" href="#booking">Ask about personal care ↗</a>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-image">
+              <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=80"
+                   alt="Healthcare professional reviewing care information" loading="lazy">
+            </div>
+            <div class="service-body">
+              <h3>Nursing Support Enquiries</h3>
+              <p>Discuss whether your situation may require qualified nursing support or clinical care.</p>
+              <ul>
+                <li>Care requirement discussion</li>
+                <li>Qualified provider needs</li>
+                <li>Availability and location review</li>
+              </ul>
+              <a class="small-link" href="#booking">Ask about nursing support ↗</a>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-image">
+              <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&w=900&q=80"
+                   alt="Family member using a laptop to organize information" loading="lazy">
+            </div>
+            <div class="service-body">
+              <h3>Family Care Coordination</h3>
+              <p>Share your questions and discuss the kind of help your family is trying to arrange.</p>
+              <ul>
+                <li>Initial service enquiry</li>
+                <li>Care needs and preferences</li>
+                <li>Next-step communication</li>
+              </ul>
+              <a class="small-link" href="#booking">Discuss your requirements ↗</a>
+            </div>
+          </article>
+        </div>
       </div>
-
-
-      <div class="grid">
-
-        <div class="field">
-          <label>
-            Full Name <span class="required">*</span>
-          </label>
-
-          <input
-            type="text"
-            name="Full Name"
-            placeholder="Enter your full name"
-            required
-          >
-        </div>
-
-
-        <div class="field">
-          <label>
-            Email Address <span class="required">*</span>
-          </label>
-
-          <input
-            type="email"
-            name="Email"
-            placeholder="name@example.com"
-            required
-          >
-        </div>
-
-
-        <div class="field">
-          <label>
-            Phone Number <span class="required">*</span>
-          </label>
-
-          <input
-            type="tel"
-            name="Phone"
-            placeholder="Enter phone number"
-            required
-          >
-        </div>
-
-
-        <div class="field">
-
-          <label>
-            Position / Specialty <span class="required">*</span>
-          </label>
-
-          <select
-            id="position"
-            name="Position / Specialty"
-            required
-          >
-
-            <option value="">Select your position</option>
-
-            <optgroup label="Nursing">
-
-              <option value="RN - Med Surg">RN - Med Surg</option>
-              <option value="RN - Telemetry">RN - Telemetry</option>
-              <option value="RN - PCU / Stepdown">RN - PCU / Stepdown</option>
-              <option value="RN - ICU">RN - ICU</option>
-              <option value="RN - OR">RN - OR</option>
-              <option value="RN - PACU">RN - PACU</option>
-              <option value="RN - ER / Emergency">RN - ER / Emergency</option>
-              <option value="RN - NICU">RN - NICU</option>
-              <option value="RN - PICU">RN - PICU</option>
-              <option value="RN - Labor & Delivery">RN - Labor & Delivery</option>
-              <option value="RN - Mother Baby">RN - Mother Baby</option>
-              <option value="RN - Rehab">RN - Rehab</option>
-              <option value="RN - Oncology">RN - Oncology</option>
-              <option value="RN - Dialysis">RN - Dialysis</option>
-              <option value="RN - Case Manager">RN - Case Manager</option>
-              <option value="RN - Utilization Review">RN - Utilization Review</option>
-              <option value="LPN / LVN">LPN / LVN</option>
-              <option value="CNA">CNA</option>
-
-            </optgroup>
-
-
-            <optgroup label="Allied Health">
-
-              <option value="Sterile Processing Technician">
-                Sterile Processing Technician
-              </option>
-
-              <option value="Radiologic Technologist">
-                Radiologic Technologist
-              </option>
-
-              <option value="CT Technologist">
-                CT Technologist
-              </option>
-
-              <option value="MRI Technologist">
-                MRI Technologist
-              </option>
-
-              <option value="Nuclear Medicine Technologist">
-                Nuclear Medicine Technologist
-              </option>
-
-              <option value="Ultrasound / Sonographer">
-                Ultrasound / Sonographer
-              </option>
-
-              <option value="Respiratory Therapist">
-                Respiratory Therapist
-              </option>
-
-              <option value="Physical Therapist">
-                Physical Therapist
-              </option>
-
-              <option value="Physical Therapist Assistant">
-                Physical Therapist Assistant
-              </option>
-
-              <option value="Occupational Therapist">
-                Occupational Therapist
-              </option>
-
-              <option value="Occupational Therapist Assistant">
-                Occupational Therapist Assistant
-              </option>
-
-              <option value="Speech Language Pathologist">
-                Speech Language Pathologist
-              </option>
-
-              <option value="Pharmacy Technician">
-                Pharmacy Technician
-              </option>
-
-              <option value="Medical Laboratory Technician">
-                Medical Laboratory Technician
-              </option>
-
-              <option value="Medical Laboratory Scientist">
-                Medical Laboratory Scientist
-              </option>
-
-              <option value="Other Allied Health">
-                Other Allied Health
-              </option>
-
-            </optgroup>
-
-            <option value="Other">Other</option>
-
-          </select>
-
-        </div>
-
-
-        <div class="field">
-
-          <label>
-            Years of Experience <span class="required">*</span>
-          </label>
-
-          <select
-            name="Years of Experience"
-            required
-          >
-
-            <option value="">Select</option>
-            <option>Less than 1 year</option>
-            <option>1-2 years</option>
-            <option>3-5 years</option>
-            <option>6-10 years</option>
-            <option>11-15 years</option>
-            <option>16+ years</option>
-
-          </select>
-
-        </div>
-
-
-        <div class="field">
-
-          <label>
-            Current / Most Recent Facility
-          </label>
-
-          <input
-            type="text"
-            name="Current / Most Recent Facility"
-            placeholder="Hospital / Facility name"
-          >
-
-        </div>
-
-      </div>
-
-
-      <div class="notice">
-
-        <strong>Rating Scale:</strong>
-
-        1 = No Experience &nbsp; | &nbsp;
-        2 = Limited Experience &nbsp; | &nbsp;
-        3 = Experienced / Can Perform &nbsp; | &nbsp;
-        4 = Highly Experienced / Can Teach or Supervise
-
-      </div>
-
     </section>
 
+    <section class="approach">
+      <div class="container approach-grid">
+        <div class="approach-image reveal">
+          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1100&q=85"
+               alt="Care and support professional working in a home environment" loading="lazy">
+          <div class="image-caption">
+            <strong>Care begins with listening.</strong>
+            Tell us what matters most to you and your family.
+          </div>
+        </div>
 
-    <!-- ================= DYNAMIC CHECKLIST ================= -->
-
-    <div id="checklistArea"></div>
-
-
-    <!-- ================= FINAL ================= -->
-
-    <section
-      class="card"
-      id="finalCard"
-      style="display:none;"
-    >
-
-      <div class="card-header">
-
-        <div class="card-icon">03</div>
-
-        <div>
-
-          <h2>Candidate Attestation</h2>
-
-          <p class="sub">
-            Please review your answers before submitting.
+        <div class="approach-copy reveal">
+          <div class="eyebrow">Our approach</div>
+          <h2>A more thoughtful way to start your care enquiry.</h2>
+          <p>
+            Choosing home support can involve important decisions. We aim to
+            make the initial enquiry straightforward, so your needs and
+            preferences can be understood before next steps are discussed.
           </p>
 
+          <div class="feature">
+            <div class="feature-icon">◎</div>
+            <div>
+              <h3>Understand your requirements</h3>
+              <p>Share the type of assistance, preferred schedule and location relevant to your request.</p>
+            </div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">♡</div>
+            <div>
+              <h3>Keep people at the centre</h3>
+              <p>Care conversations should respect dignity, privacy and individual preferences.</p>
+            </div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">↗</div>
+            <div>
+              <h3>Discuss possible next steps</h3>
+              <p>Enquiries can be reviewed for suitability, availability and applicable local requirements.</p>
+            </div>
+          </div>
+          <a href="#booking" class="btn btn-primary" style="margin-top:14px">Start an Enquiry ↗</a>
         </div>
-
       </div>
-
-
-      <div class="attestation">
-
-        <label class="checkbox">
-
-          <input
-            type="checkbox"
-            name="Candidate Attestation"
-            value="I certify that the information provided is accurate."
-            required
-          >
-
-          <span>
-
-            I certify that the information provided in this skills
-            checklist is accurate and reflects my professional
-            experience to the best of my knowledge.
-
-            <span class="required">*</span>
-
-          </span>
-
-        </label>
-
-      </div>
-
-
-      <div
-        class="grid"
-        style="margin-top:20px;"
-      >
-
-        <div class="field">
-
-          <label>
-            Additional Comments
-          </label>
-
-          <textarea
-            name="Additional Comments"
-            rows="4"
-            placeholder="Optional"
-          ></textarea>
-
-        </div>
-
-
-        <div class="field">
-
-          <label>
-            Date <span class="required">*</span>
-          </label>
-
-          <input
-            type="date"
-            id="dateField"
-            name="Submission Date"
-            required
-          >
-
-        </div>
-
-      </div>
-
-
-      <div class="actions">
-
-        <button
-          type="reset"
-          class="btn-secondary"
-          id="resetBtn"
-        >
-          Reset
-        </button>
-
-        <button
-          type="submit"
-          class="btn-primary"
-        >
-          Submit Skills Checklist
-        </button>
-
-      </div>
-
-
-      <div
-        class="success"
-        id="successMessage"
-      >
-        Your checklist has been submitted successfully.
-        Thank you for completing the Korus Talent skills checklist.
-      </div>
-
     </section>
 
-  </form>
+    <section>
+      <div class="container">
+        <div class="section-heading center reveal">
+          <div class="eyebrow">Simple process</div>
+          <h2>Three steps to begin.</h2>
+          <p>Start by sharing your needs. The team can then review the information and discuss what may be possible.</p>
+        </div>
 
-</main>
+        <div class="steps-grid">
+          <article class="step-card reveal">
+            <div class="step-number">01</div>
+            <h3>Send your request</h3>
+            <p>Complete the enquiry form with your contact details, preferred service and general requirements.</p>
+          </article>
+          <article class="step-card reveal">
+            <div class="step-number">02</div>
+            <h3>Discuss your needs</h3>
+            <p>Use the contact details provided to discuss your request, location and availability.</p>
+          </article>
+          <article class="step-card reveal">
+            <div class="step-number">03</div>
+            <h3>Review next steps</h3>
+            <p>Confirm the relevant service scope, provider qualifications, fees and arrangements before proceeding.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
+    <section class="booking" id="booking">
+      <div class="container booking-grid">
+        <div class="booking-copy reveal">
+          <div class="eyebrow">Home care enquiry</div>
+          <h2>Tell us what kind of support you're looking for.</h2>
+          <p>
+            Fill out the form to prepare an enquiry email. Please do not include
+            medical records, identity documents or other sensitive information
+            in this initial request.
+          </p>
 
-<!-- ================= FOOTER ================= -->
+          <div class="contact-line">
+            <div class="symbol">✉</div>
+            <div>
+              <small>Email our team</small>
+              <a href="mailto:info@korustalent.com">info@korustalent.com</a>
+            </div>
+          </div>
+          <div class="contact-line">
+            <div class="symbol">in</div>
+            <div>
+              <small>Connect on LinkedIn</small>
+              <a href="https://www.linkedin.com/company/korus-talent/" target="_blank" rel="noopener noreferrer">Korus Talent ↗</a>
+            </div>
+          </div>
+          <div class="contact-line">
+            <div class="symbol">☏</div>
+            <div>
+              <small>WhatsApp enquiries</small>
+              <a href="https://wa.me/919203637214" target="_blank" rel="noopener noreferrer">Message our team ↗</a>
+            </div>
+          </div>
+        </div>
 
-<footer class="footer">
+        <div class="form-panel reveal">
+          <h3>Home Care Request</h3>
+          <p class="form-intro">Fields marked * are required.</p>
 
-  © 2026 Korus Talent. All rights reserved.
+          <form id="careForm">
+            <div class="form-grid">
+              <div class="field">
+                <label for="fullName">Full name *</label>
+                <input id="fullName" name="fullName" autocomplete="name" required maxlength="100" placeholder="Your name">
+              </div>
+              <div class="field">
+                <label for="phone">Phone number *</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" required maxlength="30" placeholder="+91 ...">
+              </div>
+              <div class="field">
+                <label for="email">Email address</label>
+                <input id="email" name="email" type="email" autocomplete="email" maxlength="150" placeholder="you@example.com">
+              </div>
+              <div class="field">
+                <label for="location">City / service location *</label>
+                <input id="location" name="location" required maxlength="120" placeholder="City or area">
+              </div>
+              <div class="field">
+                <label for="serviceType">Type of support *</label>
+                <select id="serviceType" name="serviceType" required>
+                  <option value="">Select a service</option>
+                  <option>Personal care assistance</option>
+                  <option>Nursing support enquiry</option>
+                  <option>Family care coordination</option>
+                  <option>Post-hospital support enquiry</option>
+                  <option>Other / not sure yet</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="schedule">Preferred schedule</label>
+                <select id="schedule" name="schedule">
+                  <option value="">Choose if known</option>
+                  <option>One-time / short-term</option>
+                  <option>Daytime</option>
+                  <option>Overnight</option>
+                  <option>Ongoing / regular</option>
+                  <option>Flexible</option>
+                </select>
+              </div>
+              <div class="field full">
+                <label for="details">Briefly describe your requirements</label>
+                <textarea id="details" name="details" maxlength="1200" placeholder="Tell us the general type of assistance you are looking for. Please do not include sensitive medical information."></textarea>
+              </div>
+              <div class="field full">
+                <label style="display:flex;align-items:flex-start;gap:10px;font-weight:500">
+                  <input type="checkbox" id="consent" required style="width:17px;height:17px;flex:0 0 17px;margin-top:3px">
+                  <span>I agree that Korus Talent may use these details to respond to my enquiry. *</span>
+                </label>
+              </div>
+            </div>
 
-  ·
+            <p class="privacy-note">
+              Selecting submit opens your email application with the request prepared.
+              Nothing is sent or stored by this webpage automatically.
+            </p>
+            <button type="submit" class="btn btn-primary form-submit">Prepare Enquiry Email ↗</button>
+            <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
 
-  <a href="mailto:info@korustalent.com">
-    info@korustalent.com
+    <section id="faq">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <div class="eyebrow">Helpful information</div>
+          <h2>Frequently asked questions.</h2>
+          <p>Some common questions before you submit a home care enquiry.</p>
+        </div>
+
+        <div class="faq-list reveal">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Which locations do you cover?<span>+</span></button>
+            <div class="faq-answer"><p>Coverage depends on the service and local availability. Please include your city or area in the enquiry so the team can review your request.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Can I request a nurse for home visits?<span>+</span></button>
+            <div class="faq-answer"><p>You can enquire about nursing support. Any clinical service must be confirmed separately, including provider qualifications, availability and local regulatory requirements.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Does submitting this form confirm a booking?<span>+</span></button>
+            <div class="faq-answer"><p>No. This form prepares an email enquiry only. A booking is not confirmed until availability, scope, fees and arrangements have been discussed and agreed.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">What if I need urgent medical help?<span>+</span></button>
+            <div class="faq-answer"><p>This website is not an emergency service. If someone may be in immediate danger or needs urgent medical attention, contact your local emergency service or go to the nearest emergency department.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="bottom-cta">
+      <div class="container">
+        <div class="cta-panel reveal">
+          <div>
+            <h2>Have a question before submitting?</h2>
+            <p>Contact Korus Talent and tell us what you need help understanding.</p>
+          </div>
+          <a class="btn btn-primary" href="mailto:info@korustalent.com?subject=Home%20Healthcare%20Enquiry">Email Our Team ↗</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html">
+            <span class="brand-mark">K</span>
+            <span>KORUS <em>TALENT</em></span>
+          </a>
+          <p>People-focused recruitment and service enquiries across healthcare and other professional sectors.</p>
+        </div>
+        <div>
+          <h4>Explore Korus Talent</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="home-health.html">Home Healthcare</a>
+            <a href="india-services.html">India Services</a>
+            <a href="us-staffing.html">US Staffing</a>
+          </div>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <div class="footer-links">
+            <a href="mailto:info@korustalent.com">info@korustalent.com</a>
+            <a href="https://www.linkedin.com/company/korus-talent/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            <a href="https://wa.me/919203637214" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <span>© <span id="year"></span> Korus Talent. All rights reserved.</span>
+        <span>Service enquiries are subject to availability and applicable requirements.</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+
+  <a class="whatsapp-float" href="https://wa.me/919203637214?text=Hello%20Korus%20Talent%2C%20I%20have%20a%20home%20healthcare%20enquiry."
+     target="_blank" rel="noopener noreferrer" aria-label="Contact Korus Talent on WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M16 .8A15 15 0 0 0 3.1 23.5L1 31l7.7-2A15.1 15.1 0 1 0 16 .8zm0 27.5a12.4 12.4 0 0 1-6.3-1.7l-.5-.3-4.6 1.2 1.2-4.5-.3-.5A12.4 12.4 0 1 1 16 28.3zm6.8-9.3c-.4-.2-2.2-1.1-2.6-1.2-.3-.1-.6-.2-.8.2-.3.4-1 1.2-1.2 1.4-.2.3-.4.3-.8.1-.4-.2-1.6-.6-3.1-2-.9-.8-1.5-1.8-1.7-2.2-.2-.4 0-.6.2-.8l.6-.7.4-.6c.1-.3 0-.5 0-.7l-1.2-2.8c-.3-.7-.6-.6-.8-.6h-.7c-.3 0-.7.1-1 .5-.4.4-1.3 1.3-1.3 3.1s1.3 3.5 1.5 3.8c.2.3 2.6 4 6.2 5.5.9.4 1.6.6 2.1.7.9.3 1.7.2 2.3.1.7-.1 2.2-.9 2.5-1.8.3-.9.3-1.7.2-1.8-.1-.2-.3-.3-.7-.5z"/>
+    </svg>
   </a>
 
-</footer>
-
-
-<script>
-
-/* =========================================================
-   CHECKLIST DATA
-   ========================================================= */
-
-const checklistData = {
-
-  "RN - Med Surg": {
-
-    sections: {
-
-      "Patient Care & Assessment": [
-
-        "Head-to-toe assessment",
-        "Vital signs and pain assessment",
-        "Neurological assessment",
-        "Fall risk assessment and prevention",
-        "Admission and discharge assessment",
-        "Patient education"
-
-      ],
-
-      "Medication & IV Therapy": [
-
-        "Medication administration",
-        "IV medication administration",
-        "IV push medications",
-        "IV fluid management",
-        "Peripheral IV insertion",
-        "Central line care",
-        "Blood product administration"
-
-      ],
-
-      "Clinical Skills": [
-
-        "Wound care and dressing changes",
-        "Urinary catheter care",
-        "NG/feeding tube care",
-        "Oxygen therapy",
-        "Specimen collection",
-        "Diabetic care and insulin administration",
-        "PICC/port care"
-
-      ],
-
-      "Monitoring & Documentation": [
-
-        "Telemetry/basic rhythm recognition",
-        "Electronic documentation",
-        "Care plan documentation",
-        "Patient safety and infection prevention",
-        "Rapid response participation"
-
-      ]
-
-    }
-
-  },
-
-
-  "RN - Telemetry": {
-
-    sections: {
-
-      "Cardiac Monitoring": [
-
-        "Telemetry monitoring",
-        "Basic rhythm interpretation",
-        "12-lead ECG recognition",
-        "Recognition of dysrhythmias",
-        "Chest pain assessment",
-        "Cardiac medication monitoring"
-
-      ],
-
-      "Medication & IV Therapy": [
-
-        "IV medication administration",
-        "IV push medications",
-        "Peripheral IV insertion",
-        "Central line care",
-        "Anticoagulant administration",
-        "Medication titration"
-
-      ],
-
-      "Clinical Care": [
-
-        "Head-to-toe assessment",
-        "Oxygen therapy",
-        "Blood product administration",
-        "Wound care",
-        "Fall prevention",
-        "Patient education"
-
-      ]
-
-    }
-
-  },
-
-
-  "RN - PCU / Stepdown": {
-
-    sections: {
-
-      "Assessment & Monitoring": [
-
-        "Advanced patient assessment",
-        "Continuous cardiac monitoring",
-        "Telemetry rhythm interpretation",
-        "Hemodynamic monitoring",
-        "Recognition of patient deterioration",
-        "Rapid response participation"
-
-      ],
-
-      "IV / Medication Management": [
-
-        "IV push medications",
-        "Central line management",
-        "PICC care",
-        "Medication titration",
-        "High-alert medications",
-        "Blood product administration"
-
-      ],
-
-      "Clinical Skills": [
-
-        "Oxygen delivery devices",
-        "Non-invasive ventilation",
-        "Wound care",
-        "NG/feeding tube care",
-        "Urinary catheter management",
-        "Sepsis assessment and intervention"
-
-      ]
-
-    }
-
-  },
-
-
-  "RN - ICU": {
-
-    sections: {
-
-      "Critical Care Assessment": [
-
-        "Comprehensive critical care assessment",
-        "Hemodynamic monitoring",
-        "Recognition of acute deterioration",
-        "Sepsis management",
-        "Shock assessment and management",
-        "Neurological assessment"
-
-      ],
-
-      "Lines / Monitoring": [
-
-        "Arterial line management",
-        "Central venous catheter management",
-        "PICC management",
-        "CVP monitoring",
-        "Blood product administration",
-        "Specimen collection"
-
-      ],
-
-      "Critical Care Equipment & Therapies": [
-
-        "Mechanical ventilation monitoring",
-        "Non-invasive ventilation",
-        "CRRT exposure/management",
-        "Infusion pump management",
-        "Medication titration",
-        "Emergency response"
-
-      ],
-
-      "Medication & Safety": [
-
-        "Vasopressor titration",
-        "Sedation/analgesia management",
-        "Anticoagulation therapy",
-        "High-alert medications",
-        "Code/emergency response",
-        "Infection prevention"
-
-      ]
-
-    }
-
-  },
-
-
-  "RN - OR": {
-
-    sections: {
-
-      "Operating Room Roles": [
-
-        "Circulating nurse responsibilities",
-        "Scrub nurse responsibilities",
-        "Pre-operative assessment",
-        "Post-operative handoff",
-        "Surgical count process",
-        "Specimen handling"
-
-      ],
-
-      "Sterile Technique": [
-
-        "Sterile field maintenance",
-        "Surgical aseptic technique",
-        "Surgical hand preparation",
-        "PPE and infection prevention",
-        "Instrument handling",
-        "Room turnover"
-
-      ],
-
-      "Surgical Procedures": [
-
-        "General surgery",
-        "Orthopedic surgery",
-        "Gynecologic surgery",
-        "Urologic surgery",
-        "Vascular surgery",
-        "ENT surgery"
-
-      ]
-
-    }
-
-  },
-
-
-  "RN - PACU": {
-
-    sections: {
-
-      "Post-Anesthesia Assessment": [
-
-        "Airway assessment",
-        "Respiratory assessment",
-        "Cardiovascular monitoring",
-        "Neurological assessment",
-        "Pain assessment",
-        "Post-anesthesia recovery assessment"
-
-      ],
-
-      "Clinical Management": [
-
-        "Oxygen therapy",
-        "Medication administration",
-        "IV therapy",
-        "Post-operative bleeding assessment",
-        "Nausea/vomiting management",
-        "Emergency response"
-
-      ]
-
-    }
-
-  },
-
-
-  "RN - ER / Emergency": {
-
-    sections: {
-
-      "Emergency Assessment": [
-
-        "Triage assessment",
-        "Rapid patient assessment",
-        "Emergency stabilization",
-        "Trauma assessment",
-        "Sepsis recognition",
-        "Stroke assessment"
-
-      ],
-
-      "Emergency Procedures": [
-
-        "IV insertion",
-        "Blood draws",
-        "12-lead ECG",
-        "Medication administration",
-        "Wound care",
-        "Emergency airway support"
-
-      ],
-
-      "Critical Events": [
-
-        "Code Blue response",
-        "Rapid response",
-        "Chest pain management",
-        "Stroke protocol",
-        "Trauma response",
-        "Mass casualty/emergency preparedness"
-
-      ]
-
-    }
-
-  },
-
-
-  "RN - NICU": {
-
-    sections: {
-
-      "Neonatal Assessment": [
-
-        "Neonatal physical assessment",
-        "Vital signs monitoring",
-        "Thermoregulation",
-        "Feeding assessment",
-        "Growth monitoring",
-        "Developmental care"
-
-      ],
-
-      "Neonatal Clinical Skills": [
-
-        "IV therapy",
-        "Umbilical line care",
-        "Central line care",
-        "Phototherapy",
-        "Neonatal medication administration",
-        "Respiratory support"
-
-      ]
-
-    }
-
-  },
-
-
-  "RN - PICU": {
-
-    sections: {
-
-      "Pediatric Critical Care": [
-
-        "Pediatric assessment",
-        "Pediatric medication administration",
-        "Pediatric pain assessment",
-        "Hemodynamic monitoring",
-        "Respiratory monitoring",
-        "Family-centered care"
-
-      ],
-
-      "Critical Care Skills": [
-
-        "Central line care",
-        "Arterial line care",
-        "Ventilator monitoring",
-        "Medication titration",
-        "Emergency response",
-        "Sepsis management"
-
-      ]
-
-    }
-
-  },
-
-
-  "RN - Labor & Delivery": {
-
-    sections: {
-
-      "Maternal Assessment": [
-
-        "Maternal assessment",
-        "Fetal monitoring",
-        "Contraction monitoring",
-        "Labor assessment",
-        "Pain management",
-        "Postpartum assessment"
-
-      ],
-
-      "Delivery & Emergency Skills": [
-
-        "Vaginal delivery support",
-        "Cesarean section support",
-        "Newborn stabilization",
-        "Postpartum hemorrhage response",
-        "Hypertensive emergency management",
-        "Fetal distress response"
-
-      ]
-
-    }
-
-  },
-
-
-  "RN - Mother Baby": {
-
-    sections: {
-
-      "Maternal Care": [
-
-        "Postpartum assessment",
-        "Fundal assessment",
-        "Lochia assessment",
-        "Breastfeeding support",
-        "Maternal education",
-        "Pain management"
-
-      ],
-
-      "Newborn Care": [
-
-        "Newborn assessment",
-        "Newborn vital signs",
-        "Newborn feeding support",
-        "Newborn safety",
-        "Newborn screening",
-        "Parent education"
-
-      ]
-
-    }
-
-  },
-
-
-  "RN - Rehab": {
-
-    sections: {
-
-      "Patient Assessment": [
-
-        "Head-to-toe assessment",
-        "Neurological assessment",
-        "Fall risk assessment",
-        "Pain assessment",
-        "Mobility assessment",
-        "Functional assessment"
-
-      ],
-
-      "Clinical Care": [
-
-        "Medication administration",
-        "Wound care",
-        "Oxygen therapy",
-        "Diabetic management",
-        "Catheter care",
-        "Patient education"
-
-      ]
-
-    }
-
-  },
-
-
-  "RN - Oncology": {
-
-    sections: {
-
-      "Oncology Assessment": [
-
-        "Oncology patient assessment",
-        "Pain assessment",
-        "Chemotherapy side-effect assessment",
-        "Neutropenic precautions",
-        "Infection prevention",
-        "Patient education"
-
-      ],
-
-      "Clinical Skills": [
-
-        "Central line care",
-        "Port access",
-        "Blood product administration",
-        "Medication administration",
-        "Symptom management",
-        "Palliative/supportive care"
-
-      ]
-
-    }
-
-  },
-
-
-  "RN - Dialysis": {
-
-    sections: {
-
-      "Dialysis Care": [
-
-        "Hemodialysis patient assessment",
-        "Dialysis machine setup",
-        "AV fistula assessment",
-        "AV graft assessment",
-        "Dialysis catheter care",
-        "Pre/post dialysis assessment"
-
-      ],
-
-      "Clinical Management": [
-
-        "Fluid management",
-        "Electrolyte monitoring",
-        "Hypotension management",
-        "Medication administration",
-        "Infection prevention",
-        "Emergency response"
-
-      ]
-
-    }
-
-  },
-
-
-  "RN - Case Manager": {
-
-    sections: {
-
-      "Case Management": [
-
-        "Care coordination",
-        "Discharge planning",
-        "Utilization review",
-        "Patient resource coordination",
-        "Interdisciplinary collaboration",
-        "Patient education"
-
-      ],
-
-      "Documentation & Communication": [
-
-        "Electronic medical record documentation",
-        "Insurance authorization",
-        "Clinical documentation review",
-        "Physician communication",
-        "Care plan development",
-        "Follow-up coordination"
-
-      ]
-
-    }
-
-  },
-
-
-  "RN - Utilization Review": {
-
-    sections: {
-
-      "Utilization Review": [
-
-        "Clinical documentation review",
-        "Medical necessity review",
-        "Level of care review",
-        "Admission review",
-        "Concurrent review",
-        "Retrospective review"
-
-      ],
-
-      "Payer & Documentation Skills": [
-
-        "InterQual criteria",
-        "MCG criteria",
-        "Insurance authorization",
-        "Denial prevention",
-        "Clinical validation",
-        "Physician advisor communication"
-
-      ]
-
-    }
-
-  },
-
-
-  "LPN / LVN": {
-
-    sections: {
-
-      "Patient Care": [
-
-        "Head-to-toe assessment",
-        "Vital signs monitoring",
-        "Pain assessment",
-        "Fall prevention",
-        "Patient hygiene",
-        "Patient education"
-
-      ],
-
-      "Medication & Clinical Skills": [
-
-        "Medication administration",
-        "Subcutaneous injections",
-        "IM injections",
-        "Wound care",
-        "Urinary catheter care",
-        "Blood glucose monitoring",
-        "Insulin administration",
-        "Oxygen therapy"
-
-      ]
-
-    }
-
-  },
-
-
-  "CNA": {
-
-    sections: {
-
-      "Basic Patient Care": [
-
-        "Activities of daily living",
-        "Bathing and hygiene",
-        "Feeding assistance",
-        "Mobility assistance",
-        "Patient positioning",
-        "Vital signs"
-
-      ],
-
-      "Safety & Documentation": [
-
-        "Fall prevention",
-        "Infection prevention",
-        "Patient safety",
-        "Intake and output",
-        "Patient observation",
-        "Documentation"
-
-      ]
-
-    }
-
-  },
-
-
-  "Sterile Processing Technician": {
-
-    sections: {
-
-      "Sterile Processing": [
-
-        "Decontamination",
-        "Instrument inspection",
-        "Instrument assembly",
-        "Sterilization",
-        "Packaging",
-        "Sterile storage"
-
-      ],
-
-      "Equipment & Quality": [
-
-        "Steam sterilization",
-        "Low-temperature sterilization",
-        "Biological indicators",
-        "Chemical indicators",
-        "Surgical instrument identification",
-        "OR case cart preparation"
-
-      ]
-
-    }
-
-  },
-
-
-  "Radiologic Technologist": {
-
-    sections: {
-
-      "Radiology Procedures": [
-
-        "General radiography",
-        "Portable radiography",
-        "Fluoroscopy assistance",
-        "Trauma imaging",
-        "Patient positioning",
-        "Contrast administration"
-
-      ],
-
-      "Safety & Equipment": [
-
-        "Radiation safety",
-        "PPE and infection prevention",
-        "Equipment operation",
-        "Image quality evaluation",
-        "Patient identification",
-        "EMR/PACS documentation"
-
-      ]
-
-    }
-
-  },
-
-
-  "CT Technologist": {
-
-    sections: {
-
-      "CT Procedures": [
-
-        "CT head",
-        "CT chest",
-        "CT abdomen/pelvis",
-        "CT trauma",
-        "CT angiography",
-        "Contrast administration"
-
-      ],
-
-      "Safety & Patient Care": [
-
-        "Radiation safety",
-        "Contrast reaction management",
-        "Patient screening",
-        "IV access",
-        "Image quality evaluation",
-        "PACS documentation"
-
-      ]
-
-    }
-
-  },
-
-
-  "MRI Technologist": {
-
-    sections: {
-
-      "MRI Procedures": [
-
-        "MRI patient screening",
-        "Brain MRI",
-        "Spine MRI",
-        "Joint MRI",
-        "Abdominal MRI",
-        "Contrast-enhanced MRI"
-
-      ],
-
-      "MRI Safety": [
-
-        "MRI safety screening",
-        "Implant screening",
-        "Contrast safety",
-        "Patient monitoring",
-        "Emergency procedures",
-        "PACS documentation"
-
-      ]
-
-    }
-
-  },
-
-
-  "Nuclear Medicine Technologist": {
-
-    sections: {
-
-      "Nuclear Medicine": [
-
-        "Radiopharmaceutical preparation",
-        "Radiopharmaceutical administration",
-        "Patient preparation",
-        "Nuclear medicine imaging",
-        "SPECT procedures",
-        "PET procedures"
-
-      ],
-
-      "Safety & Quality": [
-
-        "Radiation safety",
-        "Radiopharmaceutical handling",
-        "Quality control",
-        "Patient identification",
-        "Emergency procedures",
-        "Documentation"
-
-      ]
-
-    }
-
-  },
-
-
-  "Ultrasound / Sonographer": {
-
-    sections: {
-
-      "Ultrasound Procedures": [
-
-        "Abdominal ultrasound",
-        "Pelvic ultrasound",
-        "Obstetric ultrasound",
-        "Vascular ultrasound",
-        "Small parts ultrasound",
-        "Patient positioning"
-
-      ],
-
-      "Technical Skills": [
-
-        "Image optimization",
-        "Doppler techniques",
-        "Measurements",
-        "Patient communication",
-        "Equipment operation",
-        "PACS documentation"
-
-      ]
-
-    }
-
-  },
-
-
-  "Respiratory Therapist": {
-
-    sections: {
-
-      "Respiratory Assessment": [
-
-        "Respiratory assessment",
-        "Oxygen therapy",
-        "Pulse oximetry",
-        "ABG interpretation",
-        "Airway assessment",
-        "Respiratory treatments"
-
-      ],
-
-      "Critical Care": [
-
-        "Mechanical ventilation",
-        "Non-invasive ventilation",
-        "Ventilator troubleshooting",
-        "Airway suctioning",
-        "Emergency airway support",
-        "Code response"
-
-      ]
-
-    }
-
-  },
-
-
-  "Physical Therapist": {
-
-    sections: {
-
-      "Patient Assessment": [
-
-        "Functional assessment",
-        "Mobility assessment",
-        "Strength assessment",
-        "Range of motion assessment",
-        "Gait assessment",
-        "Fall risk assessment"
-
-      ],
-
-      "Therapy Skills": [
-
-        "Therapeutic exercise",
-        "Gait training",
-        "Balance training",
-        "Transfer training",
-        "Assistive device training",
-        "Patient education"
-
-      ]
-
-    }
-
-  },
-
-
-  "Occupational Therapist": {
-
-    sections: {
-
-      "Patient Assessment": [
-
-        "Functional assessment",
-        "ADL assessment",
-        "Upper extremity assessment",
-        "Cognitive assessment",
-        "Home safety assessment",
-        "Patient goal setting"
-
-      ],
-
-      "Therapy Skills": [
-
-        "ADL training",
-        "Adaptive equipment training",
-        "Fine motor activities",
-        "Patient education",
-        "Home exercise programs",
-        "Discharge planning"
-
-      ]
-
-    }
-
-  },
-
-
-  "Speech Language Pathologist": {
-
-    sections: {
-
-      "Assessment": [
-
-        "Speech assessment",
-        "Language assessment",
-        "Cognitive assessment",
-        "Swallowing assessment",
-        "Communication assessment",
-        "Patient history"
-
-      ],
-
-      "Treatment": [
-
-        "Swallow therapy",
-        "Speech therapy",
-        "Language therapy",
-        "Cognitive therapy",
-        "Patient education",
-        "Caregiver education"
-
-      ]
-
-    }
-
-  },
-
-
-  "Pharmacy Technician": {
-
-    sections: {
-
-      "Pharmacy Operations": [
-
-        "Medication preparation",
-        "Medication dispensing",
-        "Prescription processing",
-        "Inventory management",
-        "Medication labeling",
-        "Pharmacy documentation"
-
-      ],
-
-      "Safety & Compliance": [
-
-        "Medication safety",
-        "Controlled substance procedures",
-        "Patient identification",
-        "Sterile compounding",
-        "Non-sterile compounding",
-        "Quality control"
-
-      ]
-
-    }
-
-  },
-
-
-  "Medical Laboratory Technician": {
-
-    sections: {
-
-      "Laboratory Procedures": [
-
-        "Specimen collection",
-        "Specimen processing",
-        "Hematology",
-        "Chemistry",
-        "Microbiology",
-        "Urinalysis"
-
-      ],
-
-      "Quality & Safety": [
-
-        "Quality control",
-        "Laboratory safety",
-        "Equipment operation",
-        "Result verification",
-        "Specimen identification",
-        "Documentation"
-
-      ]
-
-    }
-
-  },
-
-
-  "Medical Laboratory Scientist": {
-
-    sections: {
-
-      "Laboratory Testing": [
-
-        "Hematology",
-        "Clinical chemistry",
-        "Microbiology",
-        "Blood bank",
-        "Immunology",
-        "Urinalysis"
-
-      ],
-
-      "Laboratory Quality": [
-
-        "Quality control",
-        "Quality assurance",
-        "Instrument calibration",
-        "Result verification",
-        "Specimen management",
-        "Laboratory safety"
-
-      ]
-
-    }
-
-  },
-
-
-  "Other Allied Health": {
-
-    sections: {
-
-      "Professional Skills": [
-
-        "Patient assessment",
-        "Patient communication",
-        "Patient safety",
-        "Infection prevention",
-        "Electronic documentation",
-        "Patient education"
-
-      ],
-
-      "Clinical / Technical Skills": [
-
-        "Equipment operation",
-        "Clinical procedures",
-        "Specimen handling",
-        "Emergency response",
-        "Interdisciplinary collaboration",
-        "Quality and safety procedures"
-
-      ]
-
-    }
-
-  },
-
-
-  "Other": {
-
-    sections: {
-
-      "Professional Skills": [
-
-        "Patient assessment",
-        "Patient communication",
-        "Patient safety",
-        "Infection prevention",
-        "Electronic documentation",
-        "Patient education"
-
-      ],
-
-      "Role-Specific Skills": [
-
-        "Equipment operation",
-        "Clinical procedures",
-        "Emergency response",
-        "Interdisciplinary collaboration",
-        "Quality and safety procedures",
-        "Professional communication"
-
-      ]
-
-    }
-
-  }
-
-};
-
-
-/* =========================================================
-   ELEMENTS
-   ========================================================= */
-
-const positionSelect =
-  document.getElementById("position");
-
-const checklistArea =
-  document.getElementById("checklistArea");
-
-const finalCard =
-  document.getElementById("finalCard");
-
-const form =
-  document.getElementById("skillsForm");
-
-const dateField =
-  document.getElementById("dateField");
-
-const progressFill =
-  document.getElementById("progressFill");
-
-const progressText =
-  document.getElementById("progressText");
-
-
-/* =========================================================
-   DATE
-   ========================================================= */
-
-const today =
-  new Date().toISOString().split("T")[0];
-
-dateField.value = today;
-
-
-/* =========================================================
-   CREATE CHECKLIST
-   ========================================================= */
-
-positionSelect.addEventListener("change", function(){
-
-  const position = this.value;
-
-  checklistArea.innerHTML = "";
-
-  finalCard.style.display = "none";
-
-  updateProgress();
-
-  if(!position || !checklistData[position]){
-    checklistArea.style.display = "none";
-    return;
-  }
-
-  checklistArea.style.display = "block";
-
-  const wrapper =
-    document.createElement("section");
-
-  wrapper.className = "card";
-
-  const intro =
-    document.createElement("div");
-
-  intro.className = "checklist-intro";
-
-  intro.innerHTML = `
-    <h2>${escapeHTML(position)} Skills Checklist</h2>
-    <p>
-      Please rate your experience with each skill below.
-      Select one rating for every skill.
-    </p>
-  `;
-
-  wrapper.appendChild(intro);
-
-
-  let sectionNumber = 0;
-
-
-  Object.entries(
-    checklistData[position].sections
-  ).forEach(([sectionName, skills]) => {
-
-    sectionNumber++;
-
-    const section =
-      document.createElement("div");
-
-    section.className = "section";
-
-
-    const sectionTitle =
-      document.createElement("div");
-
-    sectionTitle.className = "section-title";
-
-    sectionTitle.innerHTML = `
-      <div class="section-heading">
-        <span class="section-number">
-          ${sectionNumber}
-        </span>
-
-        <span>
-          ${escapeHTML(sectionName)}
-        </span>
-      </div>
-    `;
-
-    section.appendChild(sectionTitle);
-
-
-    skills.forEach((skill, index) => {
-
-      const row =
-        document.createElement("div");
-
-      row.className = "skill-row";
-
-
-      const skillText =
-        document.createElement("div");
-
-      skillText.innerHTML = `
-        <div class="skill-name">
-          ${escapeHTML(skill)}
-        </div>
-
-        <span class="skill-note">
-          Select your level of experience
-        </span>
-      `;
-
-
-      const rating =
-        document.createElement("div");
-
-      rating.className = "rating";
-
-
-      /*
-       IMPORTANT:
-       The position is NOT included in the input name.
-
-       OLD:
-       Skill - RN - Med Surg - Patient Care & Assessment - Head-to-toe assessment
-
-       NEW:
-       Skill - Patient Care & Assessment - Head-to-toe assessment
-
-       This fixes the long FormSubmit field name.
-      */
-
-      for(let value = 1; value <= 4; value++){
-
-        const label =
-          document.createElement("label");
-
-        const input =
-          document.createElement("input");
-
-        input.type = "radio";
-
-        /*
-         IMPORTANT FIELD NAME
-        */
-
-        input.name =
-          `Skill - ${sectionName} - ${skill}`;
-
-        input.value =
-          `${value} - ${getRatingText(value)}`;
-
-        input.required = true;
-
-        input.addEventListener(
-          "change",
-          updateProgress
-        );
-
-
-        const span =
-          document.createElement("span");
-
-        span.textContent = value;
-
-
-        label.appendChild(input);
-
-        label.appendChild(span);
-
-        rating.appendChild(label);
-
-      }
-
-
-      row.appendChild(skillText);
-
-      row.appendChild(rating);
-
-      section.appendChild(row);
-
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+      menuToggle.textContent = isOpen ? "×" : "☰";
     });
 
-
-    wrapper.appendChild(section);
-
-  });
-
-
-  const legend =
-    document.createElement("div");
-
-  legend.className =
-    "rating-legend";
-
-  legend.innerHTML = `
-    <span><b>1</b> — No Experience</span>
-    <span><b>2</b> — Limited Experience</span>
-    <span><b>3</b> — Experienced / Can Perform</span>
-    <span><b>4</b> — Highly Experienced / Can Teach or Supervise</span>
-  `;
-
-  wrapper.appendChild(legend);
-
-
-  checklistArea.appendChild(wrapper);
-
-  finalCard.style.display = "block";
-
-  setTimeout(() => {
-
-    finalCard.scrollIntoView({
-      behavior:"smooth",
-      block:"start"
-    });
-
-  },100);
-
-  updateProgress();
-
-});
-
-
-/* =========================================================
-   RATING TEXT
-   ========================================================= */
-
-function getRatingText(value){
-
-  if(value === 1)
-    return "No Experience";
-
-  if(value === 2)
-    return "Limited Experience";
-
-  if(value === 3)
-    return "Experienced / Can Perform";
-
-  return "Highly Experienced / Can Teach or Supervise";
-
-}
-
-
-/* =========================================================
-   PROGRESS
-   ========================================================= */
-
-function updateProgress(){
-
-  if(!positionSelect.value){
-
-    progressFill.style.width = "0%";
-
-    progressText.textContent =
-      "0% Complete";
-
-    return;
-  }
-
-
-  const inputs =
-    checklistArea.querySelectorAll(
-      'input[type="radio"]'
-    );
-
-
-  if(!inputs.length){
-
-    progressFill.style.width = "0%";
-
-    progressText.textContent =
-      "0% Complete";
-
-    return;
-  }
-
-
-  const names = new Set();
-
-  inputs.forEach(input => {
-    names.add(input.name);
-  });
-
-
-  let completed = 0;
-
-
-  names.forEach(name => {
-
-    const selected =
-      checklistArea.querySelector(
-        `input[name="${CSS.escape(name)}"]:checked`
-      );
-
-    if(selected){
-      completed++;
-    }
-
-  });
-
-
-  const percentage =
-    Math.round(
-      (completed / names.size) * 100
-    );
-
-
-  progressFill.style.width =
-    percentage + "%";
-
-  progressText.textContent =
-    `${percentage}% Complete · ${completed}/${names.size} Skills`;
-
-}
-
-
-/* =========================================================
-   HTML ESCAPE
-   ========================================================= */
-
-function escapeHTML(value){
-
-  return String(value)
-    .replace(/&/g,"&amp;")
-    .replace(/</g,"&lt;")
-    .replace(/>/g,"&gt;")
-    .replace(/"/g,"&quot;")
-    .replace(/'/g,"&#039;");
-
-}
-
-
-/* =========================================================
-   FORM SUBMIT
-   ========================================================= */
-
-form.addEventListener("submit", function(e){
-
-  /*
-   Make sure all generated skill ratings are completed.
-  */
-
-  const requiredInputs =
-    checklistArea.querySelectorAll(
-      'input[type="radio"][required]'
-    );
-
-
-  const names = new Set();
-
-  requiredInputs.forEach(input => {
-    names.add(input.name);
-  });
-
-
-  for(const name of names){
-
-    const checked =
-      checklistArea.querySelector(
-        `input[name="${CSS.escape(name)}"]:checked`
-      );
-
-    if(!checked){
-
-      e.preventDefault();
-
-      alert(
-        "Please complete all skill ratings before submitting the checklist."
-      );
-
-      return;
-    }
-
-  }
-
-});
-
-
-/* =========================================================
-   RESET
-   ========================================================= */
-
-document
-  .getElementById("resetBtn")
-  .addEventListener("click", function(){
-
-    setTimeout(() => {
-
-      checklistArea.innerHTML = "";
-
-      checklistArea.style.display =
-        "none";
-
-      finalCard.style.display =
-        "none";
-
-      positionSelect.value = "";
-
-      dateField.value =
-        new Date()
-          .toISOString()
-          .split("T")[0];
-
-      updateProgress();
-
-      window.scrollTo({
-        top:0,
-        behavior:"smooth"
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation");
+        menuToggle.textContent = "☰";
       });
+    });
 
-    },10);
+    // Reveal sections as the visitor scrolls.
+    const revealItems = document.querySelectorAll(".reveal");
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      revealItems.forEach(item => observer.observe(item));
+    } else {
+      revealItems.forEach(item => item.classList.add("visible"));
+    }
 
-  });
+    // Accessible expandable FAQ items.
+    document.querySelectorAll(".faq-question").forEach(button => {
+      button.addEventListener("click", () => {
+        const item = button.closest(".faq-item");
+        const isOpen = item.classList.toggle("open");
+        button.setAttribute("aria-expanded", String(isOpen));
+      });
+    });
 
+    // Prepare an email draft; this does not submit to a server.
+    document.getElementById("careForm").addEventListener("submit", event => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      if (!form.reportValidity()) return;
 
-/* =========================================================
-   SUBMITTED MESSAGE
-   ========================================================= */
+      const get = id => document.getElementById(id).value.trim();
+      const subject = "Home Healthcare Enquiry - " + get("fullName");
+      const body = [
+        "Home Healthcare Enquiry",
+        "",
+        "Name: " + get("fullName"),
+        "Phone: " + get("phone"),
+        "Email: " + (get("email") || "Not provided"),
+        "Location: " + get("location"),
+        "Requested service: " + get("serviceType"),
+        "Preferred schedule: " + (get("schedule") || "Not specified"),
+        "",
+        "General requirements:",
+        get("details") || "Not provided",
+        "",
+        "Consent to contact: Yes"
+      ].join("\n");
 
-const params =
-  new URLSearchParams(
-    window.location.search
-  );
+      document.getElementById("formMessage").style.display = "block";
+      document.getElementById("formMessage").textContent =
+        "Your email application should open with the enquiry prepared. Please review it and press Send.";
 
-if(params.get("submitted") === "1"){
+      window.location.href =
+        "mailto:info@korustalent.com?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+    });
 
-  const message =
-    document.getElementById(
-      "successMessage"
-    );
+    const backTop = document.getElementById("backTop");
+    window.addEventListener("scroll", () => {
+      backTop.classList.toggle("visible", window.scrollY > 500);
+    }, { passive: true });
+    backTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
 
-  if(message){
-
-    message.style.display =
-      "block";
-
-  }
-
-}
-
-</script>
-
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
